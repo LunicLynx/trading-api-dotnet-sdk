@@ -69,7 +69,7 @@ namespace eBay.Service.Call
 		/// fixed-price listing.
 		/// </param>
 		///
-		public FeeTypeCollection VerifyAddFixedPriceItem(ItemType Item)
+		public FeeType[] VerifyAddFixedPriceItem(ItemType Item)
 		{
 			this.Item = Item;
 
@@ -91,7 +91,7 @@ namespace eBay.Service.Call
 					Item.UUID = NewUUID();
 				}
 
-				if (ApiContext.EPSServerUrl != null && PictureFileList != null && PictureFileList.Count > 0)
+				if (ApiContext.EPSServerUrl != null && PictureFileList != null && PictureFileList.Length > 0)
 				{
 					if (Item.PictureDetails == null)
 					{
@@ -103,13 +103,12 @@ namespace eBay.Service.Call
                     //    Item.PictureDetails.PhotoDisplay = PhotoDisplayCodeType.None;
                     //}
 
-					string[] pics = new string[mPictureFileList.Count];
+					string[] pics = new string[mPictureFileList.Length];
 
-					Item.PictureDetails.PictureURL = new StringCollection();
-					Item.PictureDetails.PictureURL.AddRange(pics);
+                    Item.PictureDetails.PictureURL = pics;
 
-					
-				}		
+
+                }		
 			}
 
 			base.Execute();
@@ -202,7 +201,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		///
 		/// </summary>
-										public StringCollection PictureFileList
+										public String[] PictureFileList
 		{ 
 			get { return mPictureFileList; }
 			set { mPictureFileList = value; }
@@ -226,9 +225,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="VerifyAddFixedPriceItemResponseType.Fees"/> of type <see cref="FeeTypeCollection"/>.
+		/// Gets the returned <see cref="VerifyAddFixedPriceItemResponseType.Fees"/> of type <see cref="FeeType[]"/>.
 		/// </summary>
-		public FeeTypeCollection FeeList
+		public FeeType[] FeeList
 		{ 
 			get { return ApiResponse.Fees; }
 		}
@@ -236,18 +235,18 @@ namespace eBay.Service.Call
  		/// <summary>
 		/// Gets the returned <see cref="VerifyAddFixedPriceItemResponseType.ExpressListing"/> of type <see cref="bool"/>.
 		/// </summary>
-		public bool ExpressListing
-		{ 
-			get { return ApiResponse.ExpressListing; }
-		}
+		//public bool ExpressListing
+		//{ 
+		//	get { return ApiResponse.ExpressListing; }
+		//}
 		
  		/// <summary>
 		/// Gets the returned <see cref="VerifyAddFixedPriceItemResponseType.ExpressItemRequirements"/> of type <see cref="ExpressItemRequirementsType"/>.
 		/// </summary>
-		public ExpressItemRequirementsType ExpressItemRequirements
-		{ 
-			get { return ApiResponse.ExpressItemRequirements; }
-		}
+		//public ExpressItemRequirementsType ExpressItemRequirements
+		//{ 
+		//	get { return ApiResponse.ExpressItemRequirements; }
+		//}
 		
  		/// <summary>
 		/// Gets the returned <see cref="VerifyAddFixedPriceItemResponseType.CategoryID"/> of type <see cref="string"/>.
@@ -266,9 +265,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="VerifyAddFixedPriceItemResponseType.DiscountReason"/> of type <see cref="DiscountReasonCodeTypeCollection"/>.
+		/// Gets the returned <see cref="VerifyAddFixedPriceItemResponseType.DiscountReason"/> of type <see cref="DiscountReasonCodeType[]"/>.
 		/// </summary>
-		public DiscountReasonCodeTypeCollection DiscountReasonList
+		public DiscountReasonCodeType[] DiscountReasonList
 		{ 
 			get { return ApiResponse.DiscountReason; }
 		}
@@ -286,7 +285,7 @@ namespace eBay.Service.Call
 
 		#region Private Fields
 		private bool mAutoSetItemUUID = false;
-		private StringCollection mPictureFileList = new StringCollection();
+		private String[] mPictureFileList = new String[0];
 		#endregion
 		
 	}

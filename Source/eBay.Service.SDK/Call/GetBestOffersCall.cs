@@ -84,7 +84,7 @@ namespace eBay.Service.Call
 		/// This container can be used if the seller is expecting that the <b>GetBestOffers</b> call will retrieve a large number of results, so that seller wishes to view just a subset (one page of multiple pages) of those results at a time. See this container's child fields for more information on how pagination is used.
 		/// </param>
 		///
-		public BestOfferTypeCollection GetBestOffers(string ItemID, string BestOfferID, BestOfferStatusCodeType BestOfferStatus, PaginationType Pagination)
+		public BestOfferType[] GetBestOffers(string ItemID, string BestOfferID, BestOfferStatusCodeType BestOfferStatus, PaginationType Pagination)
 		{
 			this.ItemID = ItemID;
 			this.BestOfferID = BestOfferID;
@@ -99,7 +99,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public BestOfferTypeCollection GetBestOffers(string ItemID)
+		public BestOfferType[] GetBestOffers(string ItemID)
 		{
 			this.ItemID = ItemID;
 			Execute();
@@ -107,9 +107,9 @@ namespace eBay.Service.Call
 		}
 		
 		/// <summary>
-		/// Gets the returned <see cref="GetBestOffersResponseType.ItemBestOffersArray"/> of type <see cref="ItemBestOffersTypeCollection"/>.
+		/// Gets the returned <see cref="GetBestOffersResponseType.ItemBestOffersArray"/> of type <see cref="ItemBestOffersType[]"/>.
 		/// </summary>
-		public ItemBestOffersTypeCollection ItemBestOffersList
+		public ItemBestOffersType[] ItemBestOffersList
 		{ 
 			get {
 				if (ApiResponse.ItemBestOffersArray == null)
@@ -188,9 +188,9 @@ namespace eBay.Service.Call
 		
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetBestOffersResponseType.BestOfferArray"/> of type <see cref="BestOfferTypeCollection"/>.
+		/// Gets the returned <see cref="GetBestOffersResponseType.BestOfferArray"/> of type <see cref="BestOfferType[]"/>.
 		/// </summary>
-		public BestOfferTypeCollection BestOfferList
+		public BestOfferType[] BestOfferList
 		{ 
 			get { return ApiResponse.BestOfferArray; }
 		}

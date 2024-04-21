@@ -74,7 +74,7 @@ namespace eBay.Service.Call
 		/// listing.
 		/// </param>
 		///
-		public FeeTypeCollection VerifyAddItem(ItemType Item)
+		public FeeType[] VerifyAddItem(ItemType Item)
 		{
 			this.Item = Item;
 
@@ -96,17 +96,16 @@ namespace eBay.Service.Call
 					Item.UUID = NewUUID();
 				}
 
-				if (ApiContext.EPSServerUrl != null && PictureFileList != null && PictureFileList.Count > 0)
+				if (ApiContext.EPSServerUrl != null && PictureFileList != null && PictureFileList.Length > 0)
 				{
 					if (Item.PictureDetails == null)
 					{
 						Item.PictureDetails = new PictureDetailsType();
 					} 
 
-					string[] pics = new string[mPictureFileList.Count];
+					string[] pics = new string[mPictureFileList.Length];
 
-					Item.PictureDetails.PictureURL = new StringCollection();
-					Item.PictureDetails.PictureURL.AddRange(pics);
+					Item.PictureDetails.PictureURL =pics;
 
 					
 				}		
@@ -133,7 +132,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		//public FeeTypeCollection VerifyAddItem(ItemType Item)
+		//public FeeType[] VerifyAddItem(ItemType Item)
 		//{
 		//	this.Item = Item;
 		//	this.Execute();
@@ -142,7 +141,7 @@ namespace eBay.Service.Call
 		///// <summary>
 		///// For backward compatibility with old wrappers.
 		///// </summary>
-		//public FeeTypeCollection VerifyAddItem(ItemType Item, ExternalProductIDType ExternalProductID)
+		//public FeeType[] VerifyAddItem(ItemType Item, ExternalProductIDType ExternalProductID)
 		//{
 		//	this.Item = Item;
 		//	this.ExternalProductID = ExternalProductID;
@@ -222,7 +221,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		///
 		/// </summary>
-										public StringCollection PictureFileList
+										public String[] PictureFileList
 		{ 
 			get { return mPictureFileList; }
 			set { mPictureFileList = value; }
@@ -238,9 +237,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="VerifyAddItemResponseType.Fees"/> of type <see cref="FeeTypeCollection"/>.
+		/// Gets the returned <see cref="VerifyAddItemResponseType.Fees"/> of type <see cref="FeeType[]"/>.
 		/// </summary>
-		public FeeTypeCollection FeeList
+		public FeeType[] FeeList
 		{ 
 			get { return ApiResponse.Fees; }
 		}
@@ -248,18 +247,18 @@ namespace eBay.Service.Call
  		/// <summary>
 		/// Gets the returned <see cref="VerifyAddItemResponseType.ExpressListing"/> of type <see cref="bool"/>.
 		/// </summary>
-		public bool ExpressListing
-		{ 
-			get { return ApiResponse.ExpressListing; }
-		}
+		//public bool ExpressListing
+		//{ 
+		//	get { return ApiResponse.ExpressListing; }
+		//}
 		
  		/// <summary>
 		/// Gets the returned <see cref="VerifyAddItemResponseType.ExpressItemRequirements"/> of type <see cref="ExpressItemRequirementsType"/>.
 		/// </summary>
-		public ExpressItemRequirementsType ExpressItemRequirements
-		{ 
-			get { return ApiResponse.ExpressItemRequirements; }
-		}
+		//public ExpressItemRequirementsType ExpressItemRequirements
+		//{ 
+		//	get { return ApiResponse.ExpressItemRequirements; }
+		//}
 		
  		/// <summary>
 		/// Gets the returned <see cref="VerifyAddItemResponseType.CategoryID"/> of type <see cref="string"/>.
@@ -278,9 +277,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="VerifyAddItemResponseType.DiscountReason"/> of type <see cref="DiscountReasonCodeTypeCollection"/>.
+		/// Gets the returned <see cref="VerifyAddItemResponseType.DiscountReason"/> of type <see cref="DiscountReasonCodeType[]"/>.
 		/// </summary>
-		public DiscountReasonCodeTypeCollection DiscountReasonList
+		public DiscountReasonCodeType[] DiscountReasonList
 		{ 
 			get { return ApiResponse.DiscountReason; }
 		}
@@ -306,7 +305,7 @@ namespace eBay.Service.Call
 
 		#region Private Fields
 		private bool mAutoSetItemUUID = false;
-		private StringCollection mPictureFileList = new StringCollection();
+		private String[] mPictureFileList = new String[0];
 		#endregion
 		
 	}

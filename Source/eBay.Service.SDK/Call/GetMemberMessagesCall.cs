@@ -117,7 +117,7 @@ namespace eBay.Service.Call
 		/// An eBay ID that uniquely identifies a user. For <b>GetMemberMessages</b>, this is the sender of the message. If included in the request, returns only messages from the specified sender.
 		/// </param>
 		///
-		public MemberMessageExchangeTypeCollection GetMemberMessages(string ItemID, MessageTypeCodeType MailMessageType, MessageStatusTypeCodeType MessageStatus, bool DisplayToPublic, DateTime StartCreationTime, DateTime EndCreationTime, PaginationType Pagination, string MemberMessageID, string SenderID)
+		public MemberMessageExchangeType[] GetMemberMessages(string ItemID, MessageTypeCodeType MailMessageType, MessageStatusTypeCodeType MessageStatus, bool DisplayToPublic, DateTime StartCreationTime, DateTime EndCreationTime, PaginationType Pagination, string MemberMessageID, string SenderID)
 		{
 			this.ItemID = ItemID;
 			this.MailMessageType = MailMessageType;
@@ -137,7 +137,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public MemberMessageExchangeTypeCollection GetMemberMessages(string ItemID, MessageTypeCodeType MailMessageType, MessageStatusTypeCodeType MessageStatus)
+		public MemberMessageExchangeType[] GetMemberMessages(string ItemID, MessageTypeCodeType MailMessageType, MessageStatusTypeCodeType MessageStatus)
 		{
 			this.ItemID = ItemID;
 			this.MailMessageType = MailMessageType;
@@ -148,7 +148,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public MemberMessageExchangeTypeCollection GetMemberMessages(TimeFilter CreateTimeFilter, MessageTypeCodeType MailMessageType, MessageStatusTypeCodeType MessageStatus)
+		public MemberMessageExchangeType[] GetMemberMessages(TimeFilter CreateTimeFilter, MessageTypeCodeType MailMessageType, MessageStatusTypeCodeType MessageStatus)
 		{
 			this.CreateTimeFilter = CreateTimeFilter;
 			this.MailMessageType = MailMessageType;
@@ -159,7 +159,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public MemberMessageExchangeTypeCollection GetMemberMessages(DateTime TimeFrom, DateTime TimeTo, MessageTypeCodeType MailMessageType, MessageStatusTypeCodeType MessageStatus)
+		public MemberMessageExchangeType[] GetMemberMessages(DateTime TimeFrom, DateTime TimeTo, MessageTypeCodeType MailMessageType, MessageStatusTypeCodeType MessageStatus)
 		{
 			this.CreateTimeFilter = new TimeFilter(TimeFrom, TimeTo);
 			this.MailMessageType = MailMessageType;
@@ -298,9 +298,9 @@ namespace eBay.Service.Call
 
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetMemberMessagesResponseType.MemberMessage"/> of type <see cref="MemberMessageExchangeTypeCollection"/>.
+		/// Gets the returned <see cref="GetMemberMessagesResponseType.MemberMessage"/> of type <see cref="MemberMessageExchangeType[]"/>.
 		/// </summary>
-		public MemberMessageExchangeTypeCollection MemberMessageList
+		public MemberMessageExchangeType[] MemberMessageList
 		{ 
 			get { return ApiResponse.MemberMessage; }
 		}

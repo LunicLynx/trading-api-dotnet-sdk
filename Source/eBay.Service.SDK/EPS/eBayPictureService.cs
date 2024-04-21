@@ -81,9 +81,9 @@ namespace eBay.Service.EPS
 
 				respObj = (UploadSiteHostedPicturesResponseType)deserializeFromXml(respStr, typeof(UploadSiteHostedPicturesResponseType));
 
-				if (respObj != null && respObj.Errors != null && respObj.Errors.Count > 0)
+				if (respObj != null && respObj.Errors != null && respObj.Errors.Length > 0)
 				{
-					throw new ApiException(new ErrorTypeCollection(respObj.Errors));
+					throw new ApiException(respObj.Errors);
 				}
 
 				return respObj;

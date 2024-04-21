@@ -103,7 +103,7 @@ namespace eBay.Service.Call
 		/// You can control some of the fields returned in the response by specifying one of two values in the <b>GranularityLevel</b> field: <code>Fine</code> or <code>Medium</code>. <code>Fine</code> returns more fields than the default, while setting this field to <code>Medium</code> returns an abbreviated set of results.
 		/// </param>
 		///
-		public ItemTypeCollection GetBidderList(bool ActiveItemsOnly, DateTime EndTimeFrom, DateTime EndTimeTo, string UserID, GranularityLevelCodeType GranularityLevel)
+		public ItemType[] GetBidderList(bool ActiveItemsOnly, DateTime EndTimeFrom, DateTime EndTimeTo, string UserID, GranularityLevelCodeType GranularityLevel)
 		{
 			this.ActiveItemsOnly = ActiveItemsOnly;
 			this.EndTimeFrom = EndTimeFrom;
@@ -205,9 +205,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetBidderListResponseType.BidItemArray"/> of type <see cref="ItemTypeCollection"/>.
+		/// Gets the returned <see cref="GetBidderListResponseType.BidItemArray"/> of type <see cref="ItemType[]"/>.
 		/// </summary>
-		public ItemTypeCollection BidItemList
+		public ItemType[] BidItemList
 		{ 
 			get { return ApiResponse.BidItemArray; }
 		}

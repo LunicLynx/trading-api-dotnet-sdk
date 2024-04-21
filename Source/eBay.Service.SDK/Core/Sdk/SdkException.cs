@@ -23,6 +23,8 @@ using System;
 using System.Runtime.Serialization;
 using System.Runtime.InteropServices;
 using System.Security.Permissions;
+using System.Xml;
+
 #endregion
 
 namespace eBay.Service.Core.Sdk
@@ -87,4 +89,10 @@ namespace eBay.Service.Core.Sdk
 		#endregion
 
 	}
+
+    public class SoapException : Exception
+    {
+        public XmlNode Detail { get; set; }
+        public XmlQualifiedName Code { get; set; }
+    }
 }

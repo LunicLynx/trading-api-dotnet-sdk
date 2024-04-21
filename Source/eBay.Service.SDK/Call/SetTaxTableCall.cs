@@ -69,7 +69,7 @@ namespace eBay.Service.Call
 		/// This table is used to set or modify sales tax rates for one or more tax jurisdictions within that country. A <b>TaxJurisdiction</b> container is required for each tax jurisdiction that is being added/updated.
 		/// </param>
 		///
-		public void SetTaxTable(TaxJurisdictionTypeCollection TaxTableList)
+		public void SetTaxTable(TaxJurisdictionType[] TaxTableList)
 		{
 			this.TaxTableList = TaxTableList;
 
@@ -113,9 +113,9 @@ namespace eBay.Service.Call
 
 		
  		/// <summary>
-		/// Gets or sets the <see cref="SetTaxTableRequestType.TaxTable"/> of type <see cref="TaxJurisdictionTypeCollection"/>.
+		/// Gets or sets the <see cref="SetTaxTableRequestType.TaxTable"/> of type <see cref="TaxJurisdictionType[]"/>.
 		/// </summary>
-		public TaxJurisdictionTypeCollection TaxTableList
+		public TaxJurisdictionType[] TaxTableList
 		{ 
 			get { return ApiRequest.TaxTable; }
 			set { ApiRequest.TaxTable = value; }

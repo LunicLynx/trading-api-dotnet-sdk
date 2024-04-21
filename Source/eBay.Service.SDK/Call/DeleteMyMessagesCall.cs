@@ -71,7 +71,7 @@ namespace eBay.Service.Call
 		/// Contains a list of up to 10 <b>MessageID</b> values.
 		/// </param>
 		///
-		public void DeleteMyMessages(StringCollection AlertIDList, StringCollection MessageIDList)
+		public void DeleteMyMessages(String[] AlertIDList, String[] MessageIDList)
 		{
 			this.MessageIDList = MessageIDList;
 			Execute();
@@ -112,9 +112,9 @@ namespace eBay.Service.Call
 		}
 
  		/// <summary>
-		/// Gets or sets the <see cref="DeleteMyMessagesRequestType.MessageIDs"/> of type <see cref="StringCollection"/>.
+		/// Gets or sets the <see cref="DeleteMyMessagesRequestType.MessageIDs"/> of type <see cref="String[]"/>.
 		/// </summary>
-		public StringCollection MessageIDList
+		public String[] MessageIDList
 		{ 
 			get { return ApiRequest.MessageIDs; }
 			set { ApiRequest.MessageIDs = value; }

@@ -20,6 +20,8 @@
 
 #region Namespaces
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices;
 using eBay.Service.Core.Sdk;
 using eBay.Service.Core.Soap;
@@ -135,7 +137,7 @@ namespace eBay.Service.Call
 		/// </span>
 		/// </param>
 		///
-		public AccountEntryTypeCollection GetAccount(AccountHistorySelectionCodeType AccountHistorySelection, DateTime InvoiceDate, DateTime BeginDate, DateTime EndDate, PaginationType Pagination, bool ExcludeBalance, bool ExcludeSummary, bool IncludeConversionRate, AccountEntrySortTypeCodeType AccountEntrySortType, CurrencyCodeType Currency, string ItemID, string OrderID)
+		public List<AccountEntryType> GetAccount(AccountHistorySelectionCodeType AccountHistorySelection, DateTime InvoiceDate, DateTime BeginDate, DateTime EndDate, PaginationType Pagination, bool ExcludeBalance, bool ExcludeSummary, bool IncludeConversionRate, AccountEntrySortTypeCodeType AccountEntrySortType, CurrencyCodeType Currency, string ItemID, string OrderID)
 		{
 			this.AccountHistorySelection = AccountHistorySelection;
 			this.InvoiceDate = InvoiceDate;
@@ -151,14 +153,14 @@ namespace eBay.Service.Call
 			this.OrderID = OrderID;
 
 			Execute();
-			return ApiResponse.AccountEntries.AccountEntry;
+			return ApiResponse.AccountEntries.AccountEntry.ToList();
 		}
 
 
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public AccountEntryTypeCollection GetAccount(AccountHistorySelectionCodeType AccountHistorySelection)
+		public AccountEntryType[] GetAccount(AccountHistorySelectionCodeType AccountHistorySelection)
 		{
 			this.AccountHistorySelection = AccountHistorySelection;
 			Execute();
@@ -327,7 +329,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// Gets the <see cref="GetAccountResponseType.AccountEntries.AccountEntry"/> of type <see cref="AccountEntryList"/>.
 		/// </summary>
-		public AccountEntryTypeCollection AccountEntryList
+		public AccountEntryType[] AccountEntryList
 		{ 
 			get 
 			{

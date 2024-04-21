@@ -21,6 +21,8 @@
 #region Namespaces
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices;
 using eBay.Service.Core.Soap;
 
@@ -86,13 +88,13 @@ namespace eBay.Service.Core.Sdk
 			if (ex == null)
 				return false;
 
-			if ((mTriggerErrorCodes == null || mTriggerErrorCodes.Count == 0) && (mTriggerExceptions == null || mTriggerExceptions.Count == 0)
-				&& (mTriggerHttpStatusCodes == null || mTriggerHttpStatusCodes.Count == 0))
+			if ((mTriggerErrorCodes == null || mTriggerErrorCodes.Length == 0) && (mTriggerExceptions == null || mTriggerExceptions.Length == 0)
+				&& (mTriggerHttpStatusCodes == null || mTriggerHttpStatusCodes.Length == 0))
 			{
 				return false;
 			}
 
-			if (mTriggerErrorCodes != null && mTriggerErrorCodes.Count > 0 && ex.GetType() == typeof(ApiException))
+			if (mTriggerErrorCodes != null && mTriggerErrorCodes.Length > 0 && ex.GetType() == typeof(ApiException))
 			{
 				ApiException apiex = (ApiException) ex;
 				IEnumerator itenum = apiex.Errors.GetEnumerator();
@@ -107,82 +109,80 @@ namespace eBay.Service.Core.Sdk
 			if (ex.GetType() == typeof(ApiException) && ex.InnerException != null && ex.InnerException.GetType() == typeof(HttpException))
 				ex = ex.InnerException;
 
-			if (mTriggerHttpStatusCodes != null && mTriggerHttpStatusCodes.Count > 0 && ex.GetType() == typeof(HttpException))
+			if (mTriggerHttpStatusCodes != null && mTriggerHttpStatusCodes.Length > 0 && ex.GetType() == typeof(HttpException))
 			{
 				HttpException httpex = (HttpException) ex;
 				int code = httpex.StatusCode;
 				if (InTriggerHttpStatusCodes(code))
 					return true;
 			}
-			if (mTriggerExceptions != null && mTriggerExceptions.Count > 0)
+			if (mTriggerExceptions != null && mTriggerExceptions.Length > 0)
 				if (InTriggerExceptions(ex))
 					return true;
 
 			return false;
 		}
 		/// <summary>
-		/// Converts comma-separated list of error codes into the appropriate StringCollection ready to set into the filter.
+		/// Converts comma-separated list of error codes into the appropriate String[] ready to set into the filter.
 		/// </summary>
 		/// <param name="configString"></param>
 		/// <returns></returns>
-		public static StringCollection ParseTriggerErrorCodes(string configString)
+		public static string[] ParseTriggerErrorCodes(string configString)
 		{
 			if (configString == null || configString.Length == 0)
 				return null;
-			StringCollection outCollection = new StringCollection();
 			string[] tokens = configString.Split(SEPS);
-			for (int i = 0; i < tokens.Length; i++) 
-			{
-				outCollection.Add(tokens[i]);
-				//val.ValueID = int.Parse(tokens[i]);
-			}
-			return outCollection;
+			return tokens;
 		}
 		/// <summary>
-		/// Converts comma-separated list of integer status codes into the appropriate Int32Collection ready to set into the filter.
+		/// Converts comma-separated list of integer status codes into the appropriate Int32[] ready to set into the filter.
 		/// </summary>
 		/// <param name="configString"></param>
 		/// <returns></returns>
-		public static Int32Collection ParseTriggerHttpStatusCodes(string configString)
+		public static int[] ParseTriggerHttpStatusCodes(string configString)
 		{
 			if (configString == null || configString.Length == 0)
 				return null;
-			Int32Collection outCollection = new Int32Collection();
-			string[] tokens = configString.Split(SEPS);
-			for (int i = 0; i < tokens.Length; i++) 
-			{
-				outCollection.Add(Int32.Parse(tokens[i]));
-			}
-			return outCollection;
-		}
+			
+            string[] tokens = configString.Split(SEPS);
+
+            return tokens.Select(int.Parse).ToArray();
+        }
 		/// <summary>
-		/// Converts comma-separated list of exception type names into the appropriate TypeCollection ready to set into the filter.
+		/// Converts comma-separated list of exception type names into the appropriate Type[] ready to set into the filter.
 		/// </summary>
 		/// <param name="configString"></param>
 		/// <returns></returns>
-		public static TypeCollection ParseTriggerExceptions(string configString)
+		public static Type[] ParseTriggerExceptions(string configString)
 		{
 			if (configString == null || configString.Length == 0)
 				return null;
-			TypeCollection outCollection = new TypeCollection();
+		    var outCollection = new List<Type>();
 			string[] tokens = configString.Split(SEPS);
-			for (int i = 0; i < tokens.Length; i++) 
-			{
-				string typename = tokens[i];
-				Type t = null;
-				// Normally you must fully-qualify the name, e.g. eBay.Service.Core.Sdk.ApiException.
-				// We allow shorthand for the 3 obvious ones.
-				if (tokens[i].ToLower(System.Globalization.CultureInfo.InvariantCulture).Equals("apiexception"))
-					t = typeof(ApiException);
-				else if (tokens[i].ToLower(System.Globalization.CultureInfo.InvariantCulture).Equals("httpexception"))
-					t = typeof(HttpException);
-				else if (tokens[i].ToLower(System.Globalization.CultureInfo.InvariantCulture).Equals("sdkexception"))
-					t = typeof(SdkException);
-				else
-					t = Type.GetType(tokens[i]);
-				outCollection.Add(t);
-			}
-			return outCollection;
+			foreach (var token in tokens)
+            {
+                string typename = token.ToLower(System.Globalization.CultureInfo.InvariantCulture);
+                Type t;
+                switch (typename)
+                {
+                    // Normally you must fully-qualify the name, e.g. eBay.Service.Core.Sdk.ApiException.
+                    // We allow shorthand for the 3 obvious ones.
+                    case "apiexception":
+                        t = typeof(ApiException);
+                        break;
+                    case "httpexception":
+                        t = typeof(HttpException);
+                        break;
+                    case "sdkexception":
+                        t = typeof(SdkException);
+                        break;
+                    default:
+                        t = Type.GetType(token);
+                        break;
+                }
+                outCollection.Add(t);
+            }
+			return outCollection.ToArray();
 		}
 		#endregion
 
@@ -224,27 +224,27 @@ namespace eBay.Service.Core.Sdk
 
 		#region Properties
 		/// <summary>
-		/// Gets or sets the error codes that retry should occur for of type <see cref="StringCollection"/>.
+		/// Gets or sets the error codes that retry should occur for of type <see cref="String[]"/>.
 		/// </summary>
-		public StringCollection TriggerErrorCodes
+		public string[] TriggerErrorCodes
 		{
 			get { return mTriggerErrorCodes; }
 			set { mTriggerErrorCodes = value ; }
 		}
 
 		/// <summary>
-		/// Gets or sets the error codes that retry should occur for of type <see cref="StringCollection"/>.
+		/// Gets or sets the error codes that retry should occur for of type <see cref="String[]"/>.
 		/// </summary>
-		public Int32Collection TriggerHttpStatusCodes
+		public int[] TriggerHttpStatusCodes
 		{
 			get { return mTriggerHttpStatusCodes; }
 			set { mTriggerHttpStatusCodes = value ; }
 		}
 
 		/// <summary>
-		/// Gets or sets the exception types that retry should occur for of type <see cref="TypeCollection"/>.
+		/// Gets or sets the exception types that retry should occur for of type <see cref="Type[]"/>.
 		/// </summary>
-		public TypeCollection TriggerExceptions
+		public Type[] TriggerExceptions
 		{
 			get { return mTriggerExceptions; }
 			set { mTriggerExceptions = value ; }
@@ -252,9 +252,9 @@ namespace eBay.Service.Core.Sdk
 		#endregion
 
 		#region Private Fields
-		private StringCollection mTriggerErrorCodes = new StringCollection();
-		private Int32Collection mTriggerHttpStatusCodes = new Int32Collection();
-		private TypeCollection mTriggerExceptions = new TypeCollection();
+		private string[] mTriggerErrorCodes = Array.Empty<string>();
+		private int[] mTriggerHttpStatusCodes = Array.Empty<int>();
+		private Type[] mTriggerExceptions = new Type[0];
 		private static char [] SEPS = {';'};
 		#endregion
 

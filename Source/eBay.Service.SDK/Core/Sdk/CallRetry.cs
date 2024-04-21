@@ -99,30 +99,30 @@ namespace eBay.Service.Core.Sdk
 		}
 
 		/// <summary>
-		/// If using the getter, this gets the error codes that will result in a retry. Type <see cref="StringCollection"/>.
+		/// If using the getter, this gets the error codes that will result in a retry. Type <see cref="string[]"/>.
         /// If using the setter, this specifies the error codes that are to cause a retry.
 		/// </summary>
-		public StringCollection TriggerErrorCodes
+		public string[] TriggerErrorCodes
 		{
 			get { return mFilter.TriggerErrorCodes; }
 			set { mFilter.TriggerErrorCodes = value ; }
 		}
 
 		/// <summary>
-		/// If using the getter, this gets the status codes that will result in a retry. Type <see cref="StringCollection"/>.
+		/// If using the getter, this gets the status codes that will result in a retry. Type <see cref="int[]"/>.
         /// If using the setter, this specifies the status codes that are to cause a retry.
 		/// </summary>
-		public Int32Collection TriggerHttpStatusCodes
+		public int[] TriggerHttpStatusCodes
 		{
 			get { return mFilter.TriggerHttpStatusCodes; }
 			set { mFilter.TriggerHttpStatusCodes = value ; }
 		}
 
 		/// <summary>
-        /// If using the getter, this gets the exceptions that will result in a retry. Type <see cref="TypeCollection"/>..
+        /// If using the getter, this gets the exceptions that will result in a retry. Type <see cref="Type[]"/>..
         /// If using the setter, this specifies the exceptions that are to cause a retry.
 		/// </summary>
-		public TypeCollection TriggerExceptions
+		public Type[] TriggerExceptions
 		{
 			get { return mFilter.TriggerExceptions; }
 			set { mFilter.TriggerExceptions = value ; }

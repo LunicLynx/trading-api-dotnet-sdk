@@ -80,7 +80,7 @@ namespace eBay.Service.Call
 		/// for example, Item.ListingEnhancement[BoldTitle].
 		/// </param>
 		///
-		public string VerifyRelistItem(ItemType Item, StringCollection DeletedFieldList)
+		public string VerifyRelistItem(ItemType Item, String[] DeletedFieldList)
 		{
 			this.Item = Item;
 			this.DeletedFieldList = DeletedFieldList;
@@ -134,9 +134,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="VerifyRelistItemRequestType.DeletedField"/> of type <see cref="StringCollection"/>.
+		/// Gets or sets the <see cref="VerifyRelistItemRequestType.DeletedField"/> of type <see cref="String[]"/>.
 		/// </summary>
-		public StringCollection DeletedFieldList
+		public String[] DeletedFieldList
 		{ 
 			get { return ApiRequest.DeletedField; }
 			set { ApiRequest.DeletedField = value; }
@@ -152,9 +152,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="VerifyRelistItemResponseType.Fees"/> of type <see cref="FeeTypeCollection"/>.
+		/// Gets the returned <see cref="VerifyRelistItemResponseType.Fees"/> of type <see cref="FeeType[]"/>.
 		/// </summary>
-		public FeeTypeCollection FeeList
+		public FeeType[] FeeList
 		{ 
 			get { return ApiResponse.Fees; }
 		}
@@ -176,9 +176,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="VerifyRelistItemResponseType.DiscountReason"/> of type <see cref="DiscountReasonCodeTypeCollection"/>.
+		/// Gets the returned <see cref="VerifyRelistItemResponseType.DiscountReason"/> of type <see cref="DiscountReasonCodeType[]"/>.
 		/// </summary>
-		public DiscountReasonCodeTypeCollection DiscountReasonList
+		public DiscountReasonCodeType[] DiscountReasonList
 		{ 
 			get { return ApiResponse.DiscountReason; }
 		}

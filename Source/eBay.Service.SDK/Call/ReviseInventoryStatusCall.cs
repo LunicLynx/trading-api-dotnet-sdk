@@ -70,7 +70,7 @@ namespace eBay.Service.Call
 		/// One <b>InventoryStatus</b> container is required for each item or item variation that is being revised. Whether updating the price and/or quantity of a single-variation listing or a specific variation within a multiple-variation listing, the limit of items or item variations that can be modified with one call is four.
 		/// </param>
 		///
-		public InventoryStatusTypeCollection ReviseInventoryStatus(InventoryStatusTypeCollection InventoryStatuList)
+		public InventoryStatusType[] ReviseInventoryStatus(InventoryStatusType[] InventoryStatuList)
 		{
 			this.InventoryStatuList = InventoryStatuList;
 
@@ -114,9 +114,9 @@ namespace eBay.Service.Call
 
 		
  		/// <summary>
-		/// Gets or sets the <see cref="ReviseInventoryStatusRequestType.InventoryStatus"/> of type <see cref="InventoryStatusTypeCollection"/>.
+		/// Gets or sets the <see cref="ReviseInventoryStatusRequestType.InventoryStatus"/> of type <see cref="InventoryStatusType[]"/>.
 		/// </summary>
-		public InventoryStatusTypeCollection InventoryStatuList
+		public InventoryStatusType[] InventoryStatuList
 		{ 
 			get { return ApiRequest.InventoryStatus; }
 			set { ApiRequest.InventoryStatus = value; }
@@ -124,17 +124,17 @@ namespace eBay.Service.Call
 		
 		
  		/// <summary>
-		/// Gets the returned <see cref="ReviseInventoryStatusResponseType.InventoryStatus"/> of type <see cref="InventoryStatusTypeCollection"/>.
+		/// Gets the returned <see cref="ReviseInventoryStatusResponseType.InventoryStatus"/> of type <see cref="InventoryStatusType[]"/>.
 		/// </summary>
-		public InventoryStatusTypeCollection InventoryStatuListReturn
+		public InventoryStatusType[] InventoryStatuListReturn
 		{ 
 			get { return ApiResponse.InventoryStatus; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="ReviseInventoryStatusResponseType.Fees"/> of type <see cref="InventoryFeesTypeCollection"/>.
+		/// Gets the returned <see cref="ReviseInventoryStatusResponseType.Fees"/> of type <see cref="InventoryFeesType[]"/>.
 		/// </summary>
-		public InventoryFeesTypeCollection FeeList
+		public InventoryFeesType[] FeeList
 		{ 
 			get { return ApiResponse.Fees; }
 		}

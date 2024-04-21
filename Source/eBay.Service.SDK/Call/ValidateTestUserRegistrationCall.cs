@@ -93,12 +93,14 @@ namespace eBay.Service.Call
 		/// Selling Manager Pro. You cannot request to unsubscribe a user.
 		/// </param>
 		///
-		public void ValidateTestUserRegistration(int FeedbackScore, DateTime RegistrationDate, bool SubscribeSA, bool SubscribeSAPro, bool SubscribeSM, bool SubscribeSMPro)
+		public void ValidateTestUserRegistration(int FeedbackScore, DateTime RegistrationDate, 
+            //bool SubscribeSA, bool SubscribeSAPro, 
+            bool SubscribeSM, bool SubscribeSMPro)
 		{
 			this.FeedbackScore = FeedbackScore;
 			this.RegistrationDate = RegistrationDate;
-			this.SubscribeSA = SubscribeSA;
-			this.SubscribeSAPro = SubscribeSAPro;
+			//this.SubscribeSA = SubscribeSA;
+			//this.SubscribeSAPro = SubscribeSAPro;
 			this.SubscribeSM = SubscribeSM;
 			this.SubscribeSMPro = SubscribeSMPro;
 
@@ -169,20 +171,20 @@ namespace eBay.Service.Call
  		/// <summary>
 		/// Gets or sets the <see cref="ValidateTestUserRegistrationRequestType.SubscribeSA"/> of type <see cref="bool"/>.
 		/// </summary>
-		public bool SubscribeSA
-		{ 
-			get { return ApiRequest.SubscribeSA; }
-			set { ApiRequest.SubscribeSA = value; }
-		}
+		//public bool SubscribeSA
+		//{ 
+		//	get { return ApiRequest.SubscribeSA; }
+		//	set { ApiRequest.SubscribeSA = value; }
+		//}
 		
  		/// <summary>
 		/// Gets or sets the <see cref="ValidateTestUserRegistrationRequestType.SubscribeSAPro"/> of type <see cref="bool"/>.
 		/// </summary>
-		public bool SubscribeSAPro
-		{ 
-			get { return ApiRequest.SubscribeSAPro; }
-			set { ApiRequest.SubscribeSAPro = value; }
-		}
+		//public bool SubscribeSAPro
+		//{ 
+		//	get { return ApiRequest.SubscribeSAPro; }
+		//	set { ApiRequest.SubscribeSAPro = value; }
+		//}
 		
  		/// <summary>
 		/// Gets or sets the <see cref="ValidateTestUserRegistrationRequestType.SubscribeSM"/> of type <see cref="bool"/>.

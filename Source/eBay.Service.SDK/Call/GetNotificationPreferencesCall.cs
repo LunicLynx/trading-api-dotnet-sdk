@@ -139,9 +139,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetNotificationPreferencesResponseType.UserDeliveryPreferenceArray"/> of type <see cref="NotificationEnableTypeCollection"/>.
+		/// Gets the returned <see cref="GetNotificationPreferencesResponseType.UserDeliveryPreferenceArray"/> of type <see cref="NotificationEnableType[]"/>.
 		/// </summary>
-		public NotificationEnableTypeCollection UserDeliveryPreferenceList
+		public NotificationEnableType[] UserDeliveryPreferenceList
 		{ 
 			get { return ApiResponse.UserDeliveryPreferenceArray; }
 		}
@@ -155,9 +155,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetNotificationPreferencesResponseType.EventProperty"/> of type <see cref="NotificationEventPropertyTypeCollection"/>.
+		/// Gets the returned <see cref="GetNotificationPreferencesResponseType.EventProperty"/> of type <see cref="NotificationEventPropertyType[]"/>.
 		/// </summary>
-		public NotificationEventPropertyTypeCollection EventPropertyList
+		public NotificationEventPropertyType[] EventPropertyList
 		{ 
 			get { return ApiResponse.EventProperty; }
 		}

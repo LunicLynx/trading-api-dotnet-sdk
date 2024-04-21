@@ -88,7 +88,7 @@ namespace eBay.Service.Call
 		/// Specifies up to 25 ApplicationDeliveryPreferences.DeliveryURLDetails.DeliveryURLName to associate with a user token sent in a SetNotificationPreferences request. To specify multiple DeliveryURLNames, create separate instances of ApplicationDeliveryPreferences.DeliveryURLDetails.DeliveryURLName, and then enable up to 25 DeliveryURLNames by including them in comma-separated format in this field.
 		/// </param>
 		///
-		public void SetNotificationPreferences(ApplicationDeliveryPreferencesType ApplicationDeliveryPreferences, NotificationEnableTypeCollection UserDeliveryPreferenceList, NotificationUserDataType UserData, NotificationEventPropertyTypeCollection EventPropertyList, string DeliveryURLName)
+		public void SetNotificationPreferences(ApplicationDeliveryPreferencesType ApplicationDeliveryPreferences, NotificationEnableType[] UserDeliveryPreferenceList, NotificationUserDataType UserData, NotificationEventPropertyType[] EventPropertyList, string DeliveryURLName)
 		{
 			this.ApplicationDeliveryPreferences = ApplicationDeliveryPreferences;
 			this.UserDeliveryPreferenceList = UserDeliveryPreferenceList;
@@ -104,7 +104,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public void SetNotificationPreferences(NotificationEnableTypeCollection UserDeliveryPreferenceList)
+		public void SetNotificationPreferences(NotificationEnableType[] UserDeliveryPreferenceList)
 		{
 			this.UserDeliveryPreferenceList = UserDeliveryPreferenceList;
 			Execute();
@@ -120,7 +120,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public void SetNotificationPreferences(ApplicationDeliveryPreferencesType ApplicationDeliveryPreferences, NotificationEnableTypeCollection UserDeliveryPreferenceList)
+		public void SetNotificationPreferences(ApplicationDeliveryPreferencesType ApplicationDeliveryPreferences, NotificationEnableType[] UserDeliveryPreferenceList)
 		{
 			this.ApplicationDeliveryPreferences = ApplicationDeliveryPreferences;
 			this.UserDeliveryPreferenceList = UserDeliveryPreferenceList;
@@ -172,9 +172,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="SetNotificationPreferencesRequestType.UserDeliveryPreferenceArray"/> of type <see cref="NotificationEnableTypeCollection"/>.
+		/// Gets or sets the <see cref="SetNotificationPreferencesRequestType.UserDeliveryPreferenceArray"/> of type <see cref="NotificationEnableType[]"/>.
 		/// </summary>
-		public NotificationEnableTypeCollection UserDeliveryPreferenceList
+		public NotificationEnableType[] UserDeliveryPreferenceList
 		{ 
 			get { return ApiRequest.UserDeliveryPreferenceArray; }
 			set { ApiRequest.UserDeliveryPreferenceArray = value; }
@@ -190,9 +190,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="SetNotificationPreferencesRequestType.EventProperty"/> of type <see cref="NotificationEventPropertyTypeCollection"/>.
+		/// Gets or sets the <see cref="SetNotificationPreferencesRequestType.EventProperty"/> of type <see cref="NotificationEventPropertyType[]"/>.
 		/// </summary>
-		public NotificationEventPropertyTypeCollection EventPropertyList
+		public NotificationEventPropertyType[] EventPropertyList
 		{ 
 			get { return ApiRequest.EventProperty; }
 			set { ApiRequest.EventProperty = value; }

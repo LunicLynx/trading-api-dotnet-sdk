@@ -97,7 +97,7 @@ namespace eBay.Service.Call
 		/// 
 		/// </param>
 		///
-		public CategoryTypeCollection GetCategories(string CategorySiteID, StringCollection CategoryParent, int LevelLimit, bool ViewAllNodes)
+		public CategoryType[] GetCategories(string CategorySiteID, String[] CategoryParent, int LevelLimit, bool ViewAllNodes)
 		{
 			this.CategorySiteID = CategorySiteID;
 			this.CategoryParent = CategoryParent;
@@ -124,7 +124,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public CategoryTypeCollection GetCategories()
+		public CategoryType[] GetCategories()
 		{
 			Execute();
 			return CategoryList;
@@ -173,9 +173,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="GetCategoriesRequestType.CategoryParent"/> of type <see cref="StringCollection"/>.
+		/// Gets or sets the <see cref="GetCategoriesRequestType.CategoryParent"/> of type <see cref="String[]"/>.
 		/// </summary>
-		public StringCollection CategoryParent
+		public String[] CategoryParent
 		{ 
 			get { return ApiRequest.CategoryParent; }
 			set { ApiRequest.CategoryParent = value; }
@@ -201,9 +201,9 @@ namespace eBay.Service.Call
 		
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetCategoriesResponseType.CategoryArray"/> of type <see cref="CategoryTypeCollection"/>.
+		/// Gets the returned <see cref="GetCategoriesResponseType.CategoryArray"/> of type <see cref="CategoryType[]"/>.
 		/// </summary>
-		public CategoryTypeCollection CategoryList
+		public CategoryType[] CategoryList
 		{ 
 			get { return ApiResponse.CategoryArray; }
 		}

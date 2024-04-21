@@ -103,7 +103,7 @@ namespace eBay.Service.Call
 		/// <span class="tablenote"><b>Note:</b> Messages in the Sent folder of My Messages cannot be moved, marked as read, or flagged. </span>
 		/// </param>
 		///
-		public void ReviseMyMessages(StringCollection MessageIDList, StringCollection AlertIDList, bool Read, bool Flagged, long FolderID)
+		public void ReviseMyMessages(String[] MessageIDList, String[] AlertIDList, bool Read, bool Flagged, long FolderID)
 		{
 			this.MessageIDList = MessageIDList;
 			//this.AlertIDList = AlertIDList;
@@ -119,7 +119,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public void ReviseMyMessages(bool Read, bool Flagged, StringCollection MessageIDList)
+		public void ReviseMyMessages(bool Read, bool Flagged, String[] MessageIDList)
 		{
 			this.Read = Read;
 			this.Flagged = Flagged;
@@ -161,9 +161,9 @@ namespace eBay.Service.Call
 
 		
  		/// <summary>
-		/// Gets or sets the <see cref="ReviseMyMessagesRequestType.MessageIDs"/> of type <see cref="StringCollection"/>.
+		/// Gets or sets the <see cref="ReviseMyMessagesRequestType.MessageIDs"/> of type <see cref="String[]"/>.
 		/// </summary>
-		public StringCollection MessageIDList
+		public String[] MessageIDList
 		{ 
 			get { return ApiRequest.MessageIDs; }
 			set { ApiRequest.MessageIDs = value; }

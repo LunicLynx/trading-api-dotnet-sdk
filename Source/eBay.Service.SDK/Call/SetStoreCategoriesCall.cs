@@ -86,7 +86,7 @@ namespace eBay.Service.Call
 		/// Specifies the store categories on which to act.
 		/// </param>
 		///
-		public long SetStoreCategories(StoreCategoryUpdateActionCodeType Action, long ItemDestinationCategoryID, long DestinationParentCategoryID, StoreCustomCategoryTypeCollection StoreCategoryList)
+		public long SetStoreCategories(StoreCategoryUpdateActionCodeType Action, long ItemDestinationCategoryID, long DestinationParentCategoryID, StoreCustomCategoryType[] StoreCategoryList)
 		{
 			this.Action = Action;
 			this.ItemDestinationCategoryID = ItemDestinationCategoryID;
@@ -98,7 +98,7 @@ namespace eBay.Service.Call
 		}
 
 
-		public long SetStoreCategories(StoreCategoryUpdateActionCodeType Action, StoreCustomCategoryTypeCollection StoreCategoryList)
+		public long SetStoreCategories(StoreCategoryUpdateActionCodeType Action, StoreCustomCategoryType[] StoreCategoryList)
 		{
 			this.Action = Action;
 			this.StoreCategoryList = StoreCategoryList;
@@ -167,9 +167,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="SetStoreCategoriesRequestType.StoreCategories"/> of type <see cref="StoreCustomCategoryTypeCollection"/>.
+		/// Gets or sets the <see cref="SetStoreCategoriesRequestType.StoreCategories"/> of type <see cref="StoreCustomCategoryType[]"/>.
 		/// </summary>
-		public StoreCustomCategoryTypeCollection StoreCategoryList
+		public StoreCustomCategoryType[] StoreCategoryList
 		{ 
 			get { return ApiRequest.StoreCategories; }
 			set { ApiRequest.StoreCategories = value; }
@@ -193,9 +193,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="SetStoreCategoriesResponseType.CustomCategory"/> of type <see cref="StoreCustomCategoryTypeCollection"/>.
+		/// Gets the returned <see cref="SetStoreCategoriesResponseType.CustomCategory"/> of type <see cref="StoreCustomCategoryType[]"/>.
 		/// </summary>
-		public StoreCustomCategoryTypeCollection CustomCategoryList
+		public StoreCustomCategoryType[] CustomCategoryList
 		{ 
 			get { return ApiResponse.CustomCategory; }
 		}

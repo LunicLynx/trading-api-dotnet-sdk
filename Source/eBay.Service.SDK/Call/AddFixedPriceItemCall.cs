@@ -73,7 +73,7 @@ namespace eBay.Service.Call
 		/// This container is used to specify all of the values and settings that define a new fixed-price listing.
 		/// </param>
 		///
-		public FeeTypeCollection AddFixedPriceItem(ItemType Item)
+		public FeeType[] AddFixedPriceItem(ItemType Item)
 		{
 			this.Item = Item;
 
@@ -94,7 +94,7 @@ namespace eBay.Service.Call
 					Item.UUID = NewUUID();
 				}
 
-				if (ApiContext.EPSServerUrl != null && PictureFileList != null && PictureFileList.Count > 0)
+				if (ApiContext.EPSServerUrl != null && PictureFileList != null && PictureFileList.Length > 0)
 				{
 					eBayPictureService eps = new eBayPictureService(ApiContext);
 
@@ -104,8 +104,7 @@ namespace eBay.Service.Call
 					} 
 					try
 					{
-						Item.PictureDetails.PictureURL = new StringCollection();
-                        Item.PictureDetails.PictureURL.AddRange(eps.UpLoadPictureFiles(PictureFileList.ToArray()));
+                        Item.PictureDetails.PictureURL = eps.UpLoadPictureFiles(PictureFileList);
 					} 
 					catch (Exception ex)
 					{
@@ -213,7 +212,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		///
 		/// </summary>
-										public StringCollection PictureFileList
+										public string[] PictureFileList
 		{ 
 			get { return mPictureFileList; }
 			set { mPictureFileList = value; }
@@ -253,9 +252,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="AddFixedPriceItemResponseType.Fees"/> of type <see cref="FeeTypeCollection"/>.
+		/// Gets the returned <see cref="AddFixedPriceItemResponseType.Fees"/> of type <see cref="FeeType[]"/>.
 		/// </summary>
-		public FeeTypeCollection FeeList
+		public FeeType[] FeeList
 		{ 
 			get { return ApiResponse.Fees; }
 		}
@@ -277,9 +276,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="AddFixedPriceItemResponseType.DiscountReason"/> of type <see cref="DiscountReasonCodeTypeCollection"/>.
+		/// Gets the returned <see cref="AddFixedPriceItemResponseType.DiscountReason"/> of type <see cref="DiscountReasonCodeType[]"/>.
 		/// </summary>
-		public DiscountReasonCodeTypeCollection DiscountReasonList
+		public DiscountReasonCodeType[] DiscountReasonList
 		{ 
 			get { return ApiResponse.DiscountReason; }
 		}
@@ -299,7 +298,7 @@ namespace eBay.Service.Call
 
 		#region Private Fields
 		private bool mAutoSetItemUUID = false;
-		private StringCollection mPictureFileList = new StringCollection();
+		private String[] mPictureFileList = new String[0];
 		#endregion
 		
 	}

@@ -104,7 +104,7 @@ namespace eBay.Service.Call
 		/// If this field is included in the request and set to <code>true</code>, only High Priority messages are returned in the response.
 		/// </param>
 		///
-		public MyMessagesSummaryType GetMyMessages(StringCollection AlertIDList, StringCollection MessageIDList, long FolderID, DateTime StartTime, DateTime EndTime, StringCollection ExternalMessageIDList, PaginationType Pagination, bool IncludeHighPriorityMessageOnly)
+		public MyMessagesSummaryType GetMyMessages(String[] AlertIDList, String[] MessageIDList, long FolderID, DateTime StartTime, DateTime EndTime, String[] ExternalMessageIDList, PaginationType Pagination, bool IncludeHighPriorityMessageOnly)
 		{
 			//this.AlertIDList = AlertIDList;
 			this.MessageIDList = MessageIDList;
@@ -160,7 +160,7 @@ namespace eBay.Service.Call
 		/// An ID that uniquely identifies the My Messages folder from which to retrieve alerts or messages.
 		/// </param>
 		///
-		public MyMessagesSummaryType GetMyMessages(StringCollection AlertIDList, StringCollection MessageIDList, long FolderID)
+		public MyMessagesSummaryType GetMyMessages(String[] AlertIDList, String[] MessageIDList, long FolderID)
 		{
 			//this.AlertIDList = AlertIDList;
 			this.MessageIDList = MessageIDList;
@@ -203,9 +203,9 @@ namespace eBay.Service.Call
 		}
  		 
  		/// <summary>
-		/// Gets or sets the <see cref="GetMyMessagesRequestType.MessageIDs"/> of type <see cref="StringCollection"/>.
+		/// Gets or sets the <see cref="GetMyMessagesRequestType.MessageIDs"/> of type <see cref="String[]"/>.
 		/// </summary>
-		public StringCollection MessageIDList
+		public String[] MessageIDList
 		{ 
 			get { return ApiRequest.MessageIDs; }
 			set { ApiRequest.MessageIDs = value; }
@@ -239,9 +239,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="GetMyMessagesRequestType.ExternalMessageIDs"/> of type <see cref="StringCollection"/>.
+		/// Gets or sets the <see cref="GetMyMessagesRequestType.ExternalMessageIDs"/> of type <see cref="String[]"/>.
 		/// </summary>
-		public StringCollection ExternalMessageIDList
+		public String[] ExternalMessageIDList
 		{ 
 			get { return ApiRequest.ExternalMessageIDs; }
 			set { ApiRequest.ExternalMessageIDs = value; }
@@ -275,17 +275,17 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetMyMessagesResponseType.Alerts"/> of type <see cref="MyMessagesAlertTypeCollection"/>.
+		/// Gets the returned <see cref="GetMyMessagesResponseType.Alerts"/> of type <see cref="MyMessagesAlertType[]"/>.
 		/// </summary>
-        //public MyMessagesAlertTypeCollection AlertList
+        //public MyMessagesAlertType[] AlertList
         //{ 
         //    get { return ApiResponse.Alerts; }
         //}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetMyMessagesResponseType.Messages"/> of type <see cref="MyMessagesMessageTypeCollection"/>.
+		/// Gets the returned <see cref="GetMyMessagesResponseType.Messages"/> of type <see cref="MyMessagesMessageType[]"/>.
 		/// </summary>
-		public MyMessagesMessageTypeCollection MessageList
+		public MyMessagesMessageType[] MessageList
 		{ 
 			get { return ApiResponse.Messages; }
 		}

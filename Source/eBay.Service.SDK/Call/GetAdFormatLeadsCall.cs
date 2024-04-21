@@ -89,7 +89,7 @@ namespace eBay.Service.Call
 		/// time.
 		/// </param>
 		///
-		public AdFormatLeadTypeCollection GetAdFormatLeads(string ItemID, MessageStatusTypeCodeType Status, bool IncludeMemberMessages, DateTime StartCreationTime, DateTime EndCreationTime)
+		public AdFormatLeadType[] GetAdFormatLeads(string ItemID, MessageStatusTypeCodeType Status, bool IncludeMemberMessages, DateTime StartCreationTime, DateTime EndCreationTime)
 		{
 			this.ItemID = ItemID;
 			this.Status = Status;
@@ -114,7 +114,7 @@ namespace eBay.Service.Call
 		/// to an ad format item.
 		/// </param>
 		///
-		public AdFormatLeadTypeCollection GetAdFormatLeads(string ItemID)
+		public AdFormatLeadType[] GetAdFormatLeads(string ItemID)
 		{
 			this.ItemID = ItemID;
 
@@ -201,9 +201,9 @@ namespace eBay.Service.Call
 		
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetAdFormatLeadsResponseType.AdFormatLead"/> of type <see cref="AdFormatLeadTypeCollection"/>.
+		/// Gets the returned <see cref="GetAdFormatLeadsResponseType.AdFormatLead"/> of type <see cref="AdFormatLeadType[]"/>.
 		/// </summary>
-		public AdFormatLeadTypeCollection AdFormatLeadList
+		public AdFormatLeadType[] AdFormatLeadList
 		{ 
 			get { return ApiResponse.AdFormatLead; }
 		}

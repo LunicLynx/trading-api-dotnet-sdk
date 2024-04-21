@@ -43,10 +43,10 @@ namespace eBay.Service.Util
 		private int _levelLimit = 3;
 		private bool _viewAllNodes = true;
         private bool _allFeaturesForCategory = true;
-		private FeatureIDCodeTypeCollection _featureIDs = null;
+		private FeatureIDCodeType[] _featureIDs = null;
 
 		private static Hashtable _categoryFeaturesBySite = new Hashtable(5);
-		private CategoryFeatureTypeCollection _categoryFeatures;
+		private CategoryFeatureType[] _categoryFeatures;
 	 
 		private static Hashtable _categoryVersionsBySite = new Hashtable(5);
 		private String _categoryVersion;
@@ -73,7 +73,7 @@ namespace eBay.Service.Util
 		/// <summary>
 		/// 
 		/// </summary>
-        public GetCategoryFeaturesHelper(ApiContext ApiContext, string CategoryID, int LevelLimit, bool ViewAllNodes, FeatureIDCodeTypeCollection FeatureIDList, bool AllFeaturesForCategory) 
+        public GetCategoryFeaturesHelper(ApiContext ApiContext, string CategoryID, int LevelLimit, bool ViewAllNodes, FeatureIDCodeType[] FeatureIDList, bool AllFeaturesForCategory) 
 		{
 			_apiContext = ApiContext;
 			_site = _apiContext.Site;
@@ -202,7 +202,7 @@ namespace eBay.Service.Util
 	 {
 		 if(!_categoryFeaturesBySite.ContainsKey(_site)) {
 			 Hashtable myCategoryMap = new Hashtable();
-			 for(int i = 0; i < _categoryFeatures.Count; i++) {
+			 for(int i = 0; i < _categoryFeatures.Length; i++) {
 				 CategoryFeatureType myCategory = _categoryFeatures[i];
 				 myCategoryMap.Add(myCategory.CategoryID, myCategory);
 			 }
@@ -230,7 +230,7 @@ namespace eBay.Service.Util
 	 
 	 private void getCategoryFeatures() {
 		 GetCategoryFeaturesCall api = new GetCategoryFeaturesCall(_apiContext);
-		 DetailLevelCodeTypeCollection detailLevels = new DetailLevelCodeTypeCollection( new DetailLevelCodeType[] {DetailLevelCodeType.ReturnAll});
+		 DetailLevelCodeType[] detailLevels =  {DetailLevelCodeType.ReturnAll};
 		 api.DetailLevelList = detailLevels;
 
 		 // Make API call.

@@ -75,7 +75,7 @@ namespace eBay.Service.Call
 		/// more than once in a packet if a different reason code is used each time.
 		/// </param>
 		///
-		public long VeROReportItems(string RightsOwnerID, VeROReportItemTypeCollection ReportItemList)
+		public long VeROReportItems(string RightsOwnerID, VeROReportItemType[] ReportItemList)
 		{
 			this.RightsOwnerID = RightsOwnerID;
 			this.ReportItemList = ReportItemList;
@@ -129,9 +129,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="VeROReportItemsRequestType.ReportItems"/> of type <see cref="VeROReportItemTypeCollection"/>.
+		/// Gets or sets the <see cref="VeROReportItemsRequestType.ReportItems"/> of type <see cref="VeROReportItemType[]"/>.
 		/// </summary>
-		public VeROReportItemTypeCollection ReportItemList
+		public VeROReportItemType[] ReportItemList
 		{ 
 			get { return ApiRequest.ReportItems; }
 			set { ApiRequest.ReportItems = value; }

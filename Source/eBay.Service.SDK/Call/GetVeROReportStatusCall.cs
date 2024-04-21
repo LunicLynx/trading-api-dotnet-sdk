@@ -267,9 +267,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetVeROReportStatusResponseType.ReportedItemDetails"/> of type <see cref="VeROReportedItemTypeCollection"/>.
+		/// Gets the returned <see cref="GetVeROReportStatusResponseType.ReportedItemDetails"/> of type <see cref="VeROReportedItemType[]"/>.
 		/// </summary>
-		public VeROReportedItemTypeCollection ReportedItemDetailList
+		public VeROReportedItemType[] ReportedItemDetailList
 		{ 
 			get { return ApiResponse.ReportedItemDetails; }
 		}

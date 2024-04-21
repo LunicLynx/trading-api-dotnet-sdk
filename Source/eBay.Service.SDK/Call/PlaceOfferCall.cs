@@ -94,7 +94,7 @@ namespace eBay.Service.Call
 		/// This container is used to identify a specific variation within a multiple-variation listing identified by the <b>ItemID</b> value. This container is required when attempting to perform an action on a multiple-variation listing.
 		/// </param>
 		///
-		public SellingStatusType PlaceOffer(OfferType Offer, string ItemID, bool BlockOnWarning, AffiliateTrackingDetailsType AffiliateTrackingDetails, NameValueListTypeCollection VariationSpecificList)
+		public SellingStatusType PlaceOffer(OfferType Offer, string ItemID, bool BlockOnWarning, AffiliateTrackingDetailsType AffiliateTrackingDetails, NameValueListType[] VariationSpecificList)
 		{
 			this.Offer = Offer;
 			this.ItemID = ItemID;
@@ -190,9 +190,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="PlaceOfferRequestType.VariationSpecifics"/> of type <see cref="NameValueListTypeCollection"/>.
+		/// Gets or sets the <see cref="PlaceOfferRequestType.VariationSpecifics"/> of type <see cref="NameValueListType[]"/>.
 		/// </summary>
-		public NameValueListTypeCollection VariationSpecificList
+		public NameValueListType[] VariationSpecificList
 		{ 
 			get { return ApiRequest.VariationSpecifics; }
 			set { ApiRequest.VariationSpecifics = value; }

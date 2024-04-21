@@ -65,7 +65,7 @@ namespace eBay.Service.Call
 		/// Sales tax tables are only supported on the eBay US and Candada marketplaces.
 		/// </summary>
 		/// 
-		public TaxJurisdictionTypeCollection GetTaxTable()
+		public TaxJurisdictionType[] GetTaxTable()
 		{
 
 			Execute();
@@ -117,9 +117,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetTaxTableResponseType.TaxTable"/> of type <see cref="TaxJurisdictionTypeCollection"/>.
+		/// Gets the returned <see cref="GetTaxTableResponseType.TaxTable"/> of type <see cref="TaxJurisdictionType[]"/>.
 		/// </summary>
-		public TaxJurisdictionTypeCollection TaxTableList
+		public TaxJurisdictionType[] TaxTableList
 		{ 
 			get { return ApiResponse.TaxTable; }
 		}

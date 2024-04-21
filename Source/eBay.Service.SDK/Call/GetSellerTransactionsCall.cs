@@ -134,7 +134,7 @@ namespace eBay.Service.Call
 		/// Codice Fiscale is only applicable to buyers on the Italy and Spain sites. It is required that buyers on the Italy site provide their Codice Fiscale ID before buying an item, and sellers on the Spain site have the option of requiring buyers on the Spain site to provide their taxpayer ID.
 		/// </param>
 		///
-		public TransactionTypeCollection GetSellerTransactions(DateTime ModTimeFrom, DateTime ModTimeTo, PaginationType Pagination, bool IncludeFinalValueFee, bool IncludeContainingOrder, StringCollection SKUArrayList, TransactionPlatformCodeType Platform, int NumberOfDays, InventoryTrackingMethodCodeType InventoryTrackingMethod, bool IncludeCodiceFiscale)
+		public TransactionType[] GetSellerTransactions(DateTime ModTimeFrom, DateTime ModTimeTo, PaginationType Pagination, bool IncludeFinalValueFee, bool IncludeContainingOrder, String[] SKUArrayList, TransactionPlatformCodeType Platform, int NumberOfDays, InventoryTrackingMethodCodeType InventoryTrackingMethod, bool IncludeCodiceFiscale)
 		{
 			this.ModTimeFrom = ModTimeFrom;
 			this.ModTimeTo = ModTimeTo;
@@ -155,7 +155,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public TransactionTypeCollection GetSellerTransactions(TimeFilter ModTimeFilter)
+		public TransactionType[] GetSellerTransactions(TimeFilter ModTimeFilter)
 		{
 			this.ModTimeFilter = ModTimeFilter;
 			Execute();
@@ -164,7 +164,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public TransactionTypeCollection GetSellerTransactions(DateTime TimeFrom, DateTime TimeTo)
+		public TransactionType[] GetSellerTransactions(DateTime TimeFrom, DateTime TimeTo)
 		{
 			this.ModTimeFilter = new TimeFilter(TimeFrom, TimeTo);
 			Execute();
@@ -250,9 +250,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="GetSellerTransactionsRequestType.SKUArray"/> of type <see cref="StringCollection"/>.
+		/// Gets or sets the <see cref="GetSellerTransactionsRequestType.SKUArray"/> of type <see cref="String[]"/>.
 		/// </summary>
-		public StringCollection SKUArrayList
+		public String[] SKUArrayList
 		{ 
 			get { return ApiRequest.SKUArray; }
 			set { ApiRequest.SKUArray = value; }
@@ -358,20 +358,20 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetSellerTransactionsResponseType.TransactionArray"/> of type <see cref="TransactionTypeCollection"/>.
+		/// Gets the returned <see cref="GetSellerTransactionsResponseType.TransactionArray"/> of type <see cref="TransactionType[]"/>.
 		/// </summary>
-		public TransactionTypeCollection TransactionList
+		public TransactionType[] TransactionList
 		{ 
 			get { return ApiResponse.TransactionArray; }
 		}
 		
- 		/// <summary>
-		/// Gets the returned <see cref="GetSellerTransactionsResponseType.PayPalPreferred"/> of type <see cref="bool"/>.
-		/// </summary>
-		public bool PayPalPreferred
-		{ 
-			get { return ApiResponse.PayPalPreferred; }
-		}
+ 	//	/// <summary>
+		///// Gets the returned <see cref="GetSellerTransactionsResponseType.PayPalPreferred"/> of type <see cref="bool"/>.
+		///// </summary>
+		//public bool PayPalPreferred
+		//{ 
+		//	get { return ApiResponse.PayPalPreferred; }
+		//}
 		
 
 		#endregion

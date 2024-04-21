@@ -104,7 +104,7 @@ namespace eBay.Service.Call
 		/// When the <b>VerifyOnly</b> is included and set as <code>true</code>, the active listing is not actually revised, but the same response is returned and the seller gets to see the expected fees based on the changes made, and can also view any listing recommendations if the <b>Item.IncludeRecommedations</b> boolean field is included and set to <code>true</code>.
 		/// </param>
 		///
-		public DateTime ReviseItem(ItemType Item, StringCollection DeletedFieldList, bool VerifyOnly)
+		public DateTime ReviseItem(ItemType Item, String[] DeletedFieldList, bool VerifyOnly)
 		{
 			this.Item = Item;
 			this.DeletedFieldList = DeletedFieldList;
@@ -119,7 +119,7 @@ namespace eBay.Service.Call
 		/// </summary>
 		public override void Execute()
 		{
-			if (ApiContext.EPSServerUrl != null && PictureFileList != null && PictureFileList.Count > 0)
+			if (ApiContext.EPSServerUrl != null && PictureFileList != null && PictureFileList.Length > 0)
 			{
 				eBayPictureService eps = new eBayPictureService(this.ApiContext);
 				if (Item.PictureDetails == null)
@@ -129,8 +129,7 @@ namespace eBay.Service.Call
                
 				try
 				{
-					Item.PictureDetails.PictureURL = new StringCollection();
-                    Item.PictureDetails.PictureURL.AddRange(eps.UpLoadPictureFiles(PictureFileList.ToArray()));
+                    Item.PictureDetails.PictureURL = eps.UpLoadPictureFiles(PictureFileList);
 				} 
 				catch (Exception ex)
 				{
@@ -200,9 +199,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="ReviseItemRequestType.DeletedField"/> of type <see cref="StringCollection"/>.
+		/// Gets or sets the <see cref="ReviseItemRequestType.DeletedField"/> of type <see cref="String[]"/>.
 		/// </summary>
-		public StringCollection DeletedFieldList
+		public String[] DeletedFieldList
 		{ 
 			get { return ApiRequest.DeletedField; }
 			set { ApiRequest.DeletedField = value; }
@@ -219,7 +218,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		///
 		/// </summary>
-										public StringCollection PictureFileList
+										public String[] PictureFileList
 		{ 
 			get { return mPictureFileList; }
 			set { mPictureFileList = value; }
@@ -251,9 +250,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="ReviseItemResponseType.Fees"/> of type <see cref="FeeTypeCollection"/>.
+		/// Gets the returned <see cref="ReviseItemResponseType.Fees"/> of type <see cref="FeeType[]"/>.
 		/// </summary>
-		public FeeTypeCollection FeeList
+		public FeeType[] FeeList
 		{ 
 			get { return ApiResponse.Fees; }
 		}
@@ -283,9 +282,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="ReviseItemResponseType.DiscountReason"/> of type <see cref="DiscountReasonCodeTypeCollection"/>.
+		/// Gets the returned <see cref="ReviseItemResponseType.DiscountReason"/> of type <see cref="DiscountReasonCodeType[]"/>.
 		/// </summary>
-		public DiscountReasonCodeTypeCollection DiscountReasonList
+		public DiscountReasonCodeType[] DiscountReasonList
 		{ 
 			get { return ApiResponse.DiscountReason; }
 		}
@@ -310,7 +309,7 @@ namespace eBay.Service.Call
 		#endregion
 
 		#region Private Fields
-		private StringCollection mPictureFileList = new StringCollection();
+		private String[] mPictureFileList = new String[0];
 		#endregion
 		
 	}

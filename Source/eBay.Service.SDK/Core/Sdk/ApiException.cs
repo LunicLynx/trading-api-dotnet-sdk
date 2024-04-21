@@ -21,10 +21,10 @@
 #region Namespaces
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Security.Permissions;
-using System.Web.Services.Protocols;
 using System.Xml;
 using System.Xml.XPath;
 using eBay.Service.Core.Soap;
@@ -77,10 +77,10 @@ namespace eBay.Service.Core.Sdk
 		}
 
 		/// <summary>
-		/// Construct an ApiException from the specified API error set (ErrorTypeCollection).
+		/// Construct an ApiException from the specified API error set (ErrorType[]).
 		/// </summary>
-		/// <param name="errors">The errors for this exception of type <see cref="ErrorTypeCollection"/>.</param>
-		public ApiException(ErrorTypeCollection errors)
+		/// <param name="errors">The errors for this exception of type <see cref="ErrorType[]"/>.</param>
+		public ApiException(ErrorType[] errors)
 		{
 			mErrors = errors;
 		}
@@ -92,7 +92,7 @@ namespace eBay.Service.Core.Sdk
 		/// <param name="context">The contextual information about the source or destination.</param>
 		protected ApiException(SerializationInfo info, StreamingContext context):base(info, context)
 		{
-			mErrors = (ErrorTypeCollection) info.GetValue("mErrors", typeof(ErrorTypeCollection));
+			mErrors = (ErrorType[]) info.GetValue("mErrors", typeof(ErrorType[]));
 
 		}
 		#endregion
@@ -106,7 +106,7 @@ namespace eBay.Service.Core.Sdk
 		[SecurityPermissionAttribute(SecurityAction.Demand,SerializationFormatter=true)]
 		public override void GetObjectData(SerializationInfo info, StreamingContext context)
 		{
-			info.AddValue("mErrors", mErrors, typeof(ErrorTypeCollection));
+			info.AddValue("mErrors", mErrors, typeof(ErrorType[]));
 			base.GetObjectData(info, context);
 		}
 		#endregion
@@ -119,7 +119,7 @@ namespace eBay.Service.Core.Sdk
 		/// <returns>The <see cref="ApiException"/>.</returns>
 		static public ApiException FromXmlErrors(XPathNavigator nav)
 		{
-			ApiException ex = new ApiException();
+            var errors = new List<ErrorType>();
 
 			XPathNodeIterator i = nav.Select("/eBay/Errors/Error");
 
@@ -136,11 +136,11 @@ namespace eBay.Service.Core.Sdk
 				else
 					err.SeverityCode = SeverityCodeType.Error;
 
-
-				ex.Errors.Add(err);
+				errors.Add(err);
 			}
-			return ex;
-		}
+
+            return new ApiException(errors.ToArray());
+        }
 		/// <summary>
 		/// Parses a soap fault into an ApiException.
 		/// </summary>
@@ -191,10 +191,7 @@ namespace eBay.Service.Core.Sdk
 
 			}
 			
-			ErrorTypeCollection etc = new ErrorTypeCollection();
-			etc.Add(errorType);
-		
-			return new ApiException(etc);
+			return new ApiException(new []{errorType});
 
 		}
 
@@ -202,9 +199,9 @@ namespace eBay.Service.Core.Sdk
 
 		#region Properties
 		/// <summary>
-		/// Gets the list of errors associated with this exception of type <see cref="ErrorTypeCollection"/>.
+		/// Gets the list of errors associated with this exception of type <see cref="ErrorType[]"/>.
 		/// </summary>
-		public ErrorTypeCollection Errors
+		public ErrorType[] Errors
 		{ 
 			get { return mErrors; }
 		}
@@ -218,7 +215,7 @@ namespace eBay.Service.Core.Sdk
 			{
 				string message = "";
 
-				if (mErrors.Count > 0) 
+				if (mErrors.Length > 0) 
 				{
 
 					IEnumerator eenum = mErrors.GetEnumerator();
@@ -227,7 +224,7 @@ namespace eBay.Service.Core.Sdk
 					{
 						ErrorType err = (ErrorType)eenum.Current;
 						
-						if (mErrors.IndexOf(err) > 0)
+						if (Array.IndexOf(mErrors,err) > 0)
 							message += "\r\n";
 
 						if( err.LongMessage != null && err.LongMessage.Length > 0 )
@@ -313,7 +310,7 @@ namespace eBay.Service.Core.Sdk
 		#endregion
 
 		#region Private Fields
-		private ErrorTypeCollection mErrors = new ErrorTypeCollection();
+		private ErrorType[] mErrors = new ErrorType[0];
 		#endregion
 
 	}

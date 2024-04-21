@@ -75,11 +75,13 @@ namespace eBay.Service.Call
 		/// This field was previously only used to identify and end Half.com listings, and since the Half.com site has been shut down, this element is no longer applicable.
 		/// </param>
 		///
-		public DateTime EndItem(string ItemID, EndReasonCodeType EndingReason, string SellerInventoryID)
+		public DateTime EndItem(string ItemID, EndReasonCodeType EndingReason
+            //, string SellerInventoryID
+            )
 		{
 			this.ItemID = ItemID;
 			this.EndingReason = EndingReason;
-			this.SellerInventoryID = SellerInventoryID;
+			//this.SellerInventoryID = SellerInventoryID;
 
 			Execute();
 			return ApiResponse.EndTime;
@@ -89,12 +91,12 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public void EndItem(string ItemID, EndReasonCodeType EndingReason)
-		{
-			this.ItemID = ItemID;
-			this.EndingReason = EndingReason;
-			Execute();
-		}
+		//public void EndItem(string ItemID, EndReasonCodeType EndingReason)
+		//{
+		//	this.ItemID = ItemID;
+		//	this.EndingReason = EndingReason;
+		//	Execute();
+		//}
 
 		#endregion
 
@@ -150,11 +152,11 @@ namespace eBay.Service.Call
  		/// <summary>
 		/// Gets or sets the <see cref="EndItemRequestType.SellerInventoryID"/> of type <see cref="string"/>.
 		/// </summary>
-		public string SellerInventoryID
-		{ 
-			get { return ApiRequest.SellerInventoryID; }
-			set { ApiRequest.SellerInventoryID = value; }
-		}
+		//public string SellerInventoryID
+		//{ 
+		//	get { return ApiRequest.SellerInventoryID; }
+		//	set { ApiRequest.SellerInventoryID = value; }
+		//}
 		
 		
  		/// <summary>

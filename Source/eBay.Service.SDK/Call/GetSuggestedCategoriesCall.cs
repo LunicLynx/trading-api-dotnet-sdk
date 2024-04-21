@@ -70,7 +70,7 @@ namespace eBay.Service.Call
 		/// word.
 		/// </param>
 		///
-		public SuggestedCategoryTypeCollection GetSuggestedCategories(string Query)
+		public SuggestedCategoryType[] GetSuggestedCategories(string Query)
 		{
 			this.Query = Query;
 
@@ -80,9 +80,9 @@ namespace eBay.Service.Call
 
 
 		/// <summary>
-		/// Gets the <see cref="SuggestedCategoryArrayType.SuggestedCategory"/> of type <see cref="SuggestedCategoryTypeCollection"/>.
+		/// Gets the <see cref="SuggestedCategoryArrayType.SuggestedCategory"/> of type <see cref="SuggestedCategoryType[]"/>.
 		/// </summary>
-		public SuggestedCategoryTypeCollection SuggestedCategoryList
+		public SuggestedCategoryType[] SuggestedCategoryList
 		{ 
 			get {
 				if (ApiResponse.SuggestedCategoryArray == null)

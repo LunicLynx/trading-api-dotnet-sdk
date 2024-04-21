@@ -133,7 +133,7 @@ namespace eBay.Service.Call
 		/// <b>GetMyeBaySellinging</b>.
 		/// </param>
 		///
-		public void SetUserNotes(string ItemID, SetUserNotesActionCodeType Action, string NoteText, string TransactionID, NameValueListTypeCollection VariationSpecificList, string SKU, string OrderLineItemID)
+		public void SetUserNotes(string ItemID, SetUserNotesActionCodeType Action, string NoteText, string TransactionID, NameValueListType[] VariationSpecificList, string SKU, string OrderLineItemID)
 		{
 			this.ItemID = ItemID;
 			this.Action = Action;
@@ -219,9 +219,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="SetUserNotesRequestType.VariationSpecifics"/> of type <see cref="NameValueListTypeCollection"/>.
+		/// Gets or sets the <see cref="SetUserNotesRequestType.VariationSpecifics"/> of type <see cref="NameValueListType[]"/>.
 		/// </summary>
-		public NameValueListTypeCollection VariationSpecificList
+		public NameValueListType[] VariationSpecificList
 		{ 
 			get { return ApiRequest.VariationSpecifics; }
 			set { ApiRequest.VariationSpecifics = value; }

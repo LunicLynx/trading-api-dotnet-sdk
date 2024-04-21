@@ -83,11 +83,13 @@ namespace eBay.Service.Call
 		/// If the <b>IncludeFeatureEligibility</b> flag is included and set to 'true', the call response will include a <b>QualifiesForSelling</b> flag which indicates if the eBay user is eligible to sell on eBay, and a <b>IncludeFeatureEligibility</b> container which indicates which selling features are available to the user.
 		/// </param>
 		///
-		public UserType GetUser(string ItemID, string UserID, bool IncludeExpressRequirements, bool IncludeFeatureEligibility)
+		public UserType GetUser(string ItemID, string UserID
+            //, bool IncludeExpressRequirements
+            , bool IncludeFeatureEligibility)
 		{
 			this.ItemID = ItemID;
 			this.UserID = UserID;
-			this.IncludeExpressRequirements = IncludeExpressRequirements;
+			//this.IncludeExpressRequirements = IncludeExpressRequirements;
 			this.IncludeFeatureEligibility = IncludeFeatureEligibility;
 
 			Execute();
@@ -176,14 +178,14 @@ namespace eBay.Service.Call
 			set { ApiRequest.UserID = value; }
 		}
 		
- 		/// <summary>
-		/// Gets or sets the <see cref="GetUserRequestType.IncludeExpressRequirements"/> of type <see cref="bool"/>.
-		/// </summary>
-		public bool IncludeExpressRequirements
-		{ 
-			get { return ApiRequest.IncludeExpressRequirements; }
-			set { ApiRequest.IncludeExpressRequirements = value; }
-		}
+ 	//	/// <summary>
+		///// Gets or sets the <see cref="GetUserRequestType.IncludeExpressRequirements"/> of type <see cref="bool"/>.
+		///// </summary>
+		//public bool IncludeExpressRequirements
+		//{ 
+		//	get { return ApiRequest.IncludeExpressRequirements; }
+		//	set { ApiRequest.IncludeExpressRequirements = value; }
+		//}
 		
  		/// <summary>
 		/// Gets or sets the <see cref="GetUserRequestType.IncludeFeatureEligibility"/> of type <see cref="bool"/>.

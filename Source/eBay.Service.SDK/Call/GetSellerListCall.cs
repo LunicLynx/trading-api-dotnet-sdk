@@ -149,9 +149,11 @@ namespace eBay.Service.Call
 		/// </span>
 		/// </param>
 		///
-		public ItemTypeCollection GetSellerList(string UserID, UserIDArrayType MotorsDealerUserList, DateTime EndTimeFrom, DateTime EndTimeTo, int Sort, DateTime StartTimeFrom, DateTime StartTimeTo, PaginationType Pagination, GranularityLevelCodeType GranularityLevel, StringCollection SKUArrayList, bool IncludeWatchCount, bool AdminEndedItemsOnly, int CategoryID, bool IncludeVariations)
+		public ItemType[] GetSellerList(
+            //string UserID, 
+            UserIDArrayType MotorsDealerUserList, DateTime EndTimeFrom, DateTime EndTimeTo, int Sort, DateTime StartTimeFrom, DateTime StartTimeTo, PaginationType Pagination, GranularityLevelCodeType GranularityLevel, String[] SKUArrayList, bool IncludeWatchCount, bool AdminEndedItemsOnly, int CategoryID, bool IncludeVariations)
 		{
-			this.UserID = UserID;
+			//this.UserID = UserID;
 			this.MotorsDealerUserList = MotorsDealerUserList;
 			this.EndTimeFrom = EndTimeFrom;
 			this.EndTimeTo = EndTimeTo;
@@ -174,7 +176,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public ItemTypeCollection GetSellerList()
+		public ItemType[] GetSellerList()
 		{
 			Execute();
 			return ItemList;
@@ -213,14 +215,14 @@ namespace eBay.Service.Call
 		}
 
 		
- 		/// <summary>
-		/// Gets or sets the <see cref="GetSellerListRequestType.UserID"/> of type <see cref="string"/>.
-		/// </summary>
-		public string UserID
-		{ 
-			get { return ApiRequest.UserID; }
-			set { ApiRequest.UserID = value; }
-		}
+ 	//	/// <summary>
+		///// Gets or sets the <see cref="GetSellerListRequestType.UserID"/> of type <see cref="string"/>.
+		///// </summary>
+		//public string UserID
+		//{ 
+		//	get { return ApiRequest.UserID; }
+		//	set { ApiRequest.UserID = value; }
+		//}
 		
  		/// <summary>
 		/// Gets or sets the <see cref="GetSellerListRequestType.MotorsDealerUsers"/> of type <see cref="UserIDArrayType"/>.
@@ -295,9 +297,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="GetSellerListRequestType.SKUArray"/> of type <see cref="StringCollection"/>.
+		/// Gets or sets the <see cref="GetSellerListRequestType.SKUArray"/> of type <see cref="String[]"/>.
 		/// </summary>
-		public StringCollection SKUArrayList
+		public String[] SKUArrayList
 		{ 
 			get { return ApiRequest.SKUArray; }
 			set { ApiRequest.SKUArray = value; }
@@ -387,9 +389,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetSellerListResponseType.ItemArray"/> of type <see cref="ItemTypeCollection"/>.
+		/// Gets the returned <see cref="GetSellerListResponseType.ItemArray"/> of type <see cref="ItemType[]"/>.
 		/// </summary>
-		public ItemTypeCollection ItemList
+		public ItemType[] ItemList
 		{ 
 			get { return ApiResponse.ItemArray; }
 		}

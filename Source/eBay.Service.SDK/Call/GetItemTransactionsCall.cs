@@ -131,7 +131,7 @@ namespace eBay.Service.Call
 		/// provided, any specified date range filter is ignored.
 		/// </param>
 		///
-		public TransactionTypeCollection GetItemTransactions(string ItemID, DateTime ModTimeFrom, DateTime ModTimeTo, string TransactionID, PaginationType Pagination, bool IncludeFinalValueFee, bool IncludeContainingOrder, TransactionPlatformCodeType Platform, int NumberOfDays, bool IncludeVariations, string OrderLineItemID)
+		public TransactionType[] GetItemTransactions(string ItemID, DateTime ModTimeFrom, DateTime ModTimeTo, string TransactionID, PaginationType Pagination, bool IncludeFinalValueFee, bool IncludeContainingOrder, TransactionPlatformCodeType Platform, int NumberOfDays, bool IncludeVariations, string OrderLineItemID)
 		{
 			this.ItemID = ItemID;
 			this.ModTimeFrom = ModTimeFrom;
@@ -153,7 +153,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public TransactionTypeCollection GetItemTransactions(string ItemID, TimeFilter ModTimeFilter)
+		public TransactionType[] GetItemTransactions(string ItemID, TimeFilter ModTimeFilter)
 		{
 			this.ItemID = ItemID;
 			this.ModTimeFilter = ModTimeFilter;
@@ -163,7 +163,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public TransactionTypeCollection GetItemTransactions(string ItemID, DateTime TimeFrom, DateTime TimeTo)
+		public TransactionType[] GetItemTransactions(string ItemID, DateTime TimeFrom, DateTime TimeTo)
 		{
 			this.ItemID = ItemID;
 			this.ModTimeFilter = new TimeFilter(TimeFrom, TimeTo);
@@ -368,9 +368,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetItemTransactionsResponseType.TransactionArray"/> of type <see cref="TransactionTypeCollection"/>.
+		/// Gets the returned <see cref="GetItemTransactionsResponseType.TransactionArray"/> of type <see cref="TransactionType[]"/>.
 		/// </summary>
-		public TransactionTypeCollection TransactionList
+		public TransactionType[] TransactionList
 		{ 
 			get { return ApiResponse.TransactionArray; }
 		}
@@ -378,10 +378,10 @@ namespace eBay.Service.Call
  		/// <summary>
 		/// Gets the returned <see cref="GetItemTransactionsResponseType.PayPalPreferred"/> of type <see cref="bool"/>.
 		/// </summary>
-		public bool PayPalPreferred
-		{ 
-			get { return ApiResponse.PayPalPreferred; }
-		}
+		//public bool PayPalPreferred
+		//{ 
+		//	get { return ApiResponse.PayPalPreferred; }
+		//}
 		
 
 		#endregion

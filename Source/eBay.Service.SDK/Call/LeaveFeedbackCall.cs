@@ -132,7 +132,7 @@ namespace eBay.Service.Call
 		/// <span class="tablenote"><b>Note:</b> A new "Late shipment rate" metric became a new component of Seller Standards beginning in February 2016. On-time shipping means that the seller shipped the item before the "handling time" expired and/or the item was received by the buyer within the estimated delivery date window, which is established once the buyer pays for the order line item. Previously, a seller's account could be dinged just for getting a low rating for the "shippping time" Detailed Seller Rating. </span>
 		/// </param>
 		///
-		public string LeaveFeedback(string ItemID, string CommentText, CommentTypeCodeType CommentType, string TransactionID, string TargetUser, ItemRatingDetailsTypeCollection SellerItemRatingDetailArrayList, string OrderLineItemID, ItemArrivedWithinEDDCodeType ItemArrivedWithinEDDType, bool ItemDeliveredWithinEDD)
+		public string LeaveFeedback(string ItemID, string CommentText, CommentTypeCodeType CommentType, string TransactionID, string TargetUser, ItemRatingDetailsType[] SellerItemRatingDetailArrayList, string OrderLineItemID, ItemArrivedWithinEDDCodeType ItemArrivedWithinEDDType, bool ItemDeliveredWithinEDD)
 		{
 			this.ItemID = ItemID;
 			this.CommentText = CommentText;
@@ -271,9 +271,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="LeaveFeedbackRequestType.SellerItemRatingDetailArray"/> of type <see cref="ItemRatingDetailsTypeCollection"/>.
+		/// Gets or sets the <see cref="LeaveFeedbackRequestType.SellerItemRatingDetailArray"/> of type <see cref="ItemRatingDetailsType[]"/>.
 		/// </summary>
-		public ItemRatingDetailsTypeCollection SellerItemRatingDetailArrayList
+		public ItemRatingDetailsType[] SellerItemRatingDetailArrayList
 		{ 
 			get { return ApiRequest.SellerItemRatingDetailArray; }
 			set { ApiRequest.SellerItemRatingDetailArray = value; }

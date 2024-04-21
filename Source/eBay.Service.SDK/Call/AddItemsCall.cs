@@ -67,7 +67,7 @@ namespace eBay.Service.Call
 		/// Defines a single item to be listed on eBay. This container is similar to an <b>AddItem</b> request. Up to five of these containers can be included in one <b>AddItems</b> request.
 		/// </param>
 		///
-		public AddItemResponseContainerTypeCollection AddItems(AddItemRequestContainerTypeCollection AddItemRequestContainerList)
+		public AddItemResponseContainerType[] AddItems(AddItemRequestContainerType[] AddItemRequestContainerList)
 		{
 			this.AddItemRequestContainerList = AddItemRequestContainerList;
 
@@ -111,9 +111,9 @@ namespace eBay.Service.Call
 
 		
  		/// <summary>
-		/// Gets or sets the <see cref="AddItemsRequestType.AddItemRequestContainer"/> of type <see cref="AddItemRequestContainerTypeCollection"/>.
+		/// Gets or sets the <see cref="AddItemsRequestType.AddItemRequestContainer"/> of type <see cref="AddItemRequestContainerType[]"/>.
 		/// </summary>
-		public AddItemRequestContainerTypeCollection AddItemRequestContainerList
+		public AddItemRequestContainerType[] AddItemRequestContainerList
 		{ 
 			get { return ApiRequest.AddItemRequestContainer; }
 			set { ApiRequest.AddItemRequestContainer = value; }
@@ -121,9 +121,9 @@ namespace eBay.Service.Call
 		
 		
  		/// <summary>
-		/// Gets the returned <see cref="AddItemsResponseType.AddItemResponseContainer"/> of type <see cref="AddItemResponseContainerTypeCollection"/>.
+		/// Gets the returned <see cref="AddItemsResponseType.AddItemResponseContainer"/> of type <see cref="AddItemResponseContainerType[]"/>.
 		/// </summary>
-		public AddItemResponseContainerTypeCollection AddItemResponseContainerList
+		public AddItemResponseContainerType[] AddItemResponseContainerList
 		{ 
 			get { return ApiResponse.AddItemResponseContainer; }
 		}

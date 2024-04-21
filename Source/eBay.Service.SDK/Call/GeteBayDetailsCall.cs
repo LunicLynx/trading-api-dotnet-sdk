@@ -69,7 +69,7 @@ namespace eBay.Service.Call
 		/// One or more <b>DetailName</b> fields may be used to control the the type of metadata that is returned in the response. If no <b>DetailName</b> fields are used, all metadata will be returned in the response. It is a good idea to familiarize yourself with the metadata that can be returned with <b>GeteBayDetails</b> by reading through the enumeration values in <a href="types/DetailNameCodeType.html">DetailNameCodeType</a>.
 		/// </param>
 		///
-		public void GeteBayDetails(DetailNameCodeTypeCollection DetailNameList)
+		public void GeteBayDetails(DetailNameCodeType[] DetailNameList)
 		{
 			this.DetailNameList = DetailNameList;
 
@@ -113,9 +113,9 @@ namespace eBay.Service.Call
 
 		
  		/// <summary>
-		/// Gets or sets the <see cref="GeteBayDetailsRequestType.DetailName"/> of type <see cref="DetailNameCodeTypeCollection"/>.
+		/// Gets or sets the <see cref="GeteBayDetailsRequestType.DetailName"/> of type <see cref="DetailNameCodeType[]"/>.
 		/// </summary>
-		public DetailNameCodeTypeCollection DetailNameList
+		public DetailNameCodeType[] DetailNameList
 		{ 
 			get { return ApiRequest.DetailName; }
 			set { ApiRequest.DetailName = value; }
@@ -123,129 +123,129 @@ namespace eBay.Service.Call
 		
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.CountryDetails"/> of type <see cref="CountryDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.CountryDetails"/> of type <see cref="CountryDetailsType[]"/>.
 		/// </summary>
-		public CountryDetailsTypeCollection CountryDetailList
+		public CountryDetailsType[] CountryDetailList
 		{ 
 			get { return ApiResponse.CountryDetails; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.CurrencyDetails"/> of type <see cref="CurrencyDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.CurrencyDetails"/> of type <see cref="CurrencyDetailsType[]"/>.
 		/// </summary>
-		public CurrencyDetailsTypeCollection CurrencyDetailList
+		public CurrencyDetailsType[] CurrencyDetailList
 		{ 
 			get { return ApiResponse.CurrencyDetails; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.DispatchTimeMaxDetails"/> of type <see cref="DispatchTimeMaxDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.DispatchTimeMaxDetails"/> of type <see cref="DispatchTimeMaxDetailsType[]"/>.
 		/// </summary>
-		public DispatchTimeMaxDetailsTypeCollection DispatchTimeMaxDetailList
+		public DispatchTimeMaxDetailsType[] DispatchTimeMaxDetailList
 		{ 
 			get { return ApiResponse.DispatchTimeMaxDetails; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.PaymentOptionDetails"/> of type <see cref="PaymentOptionDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.PaymentOptionDetails"/> of type <see cref="PaymentOptionDetailsType[]"/>.
 		/// </summary>
-		public PaymentOptionDetailsTypeCollection PaymentOptionDetailList
+		public PaymentOptionDetailsType[] PaymentOptionDetailList
 		{ 
 			get { return ApiResponse.PaymentOptionDetails; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.RegionDetails"/> of type <see cref="RegionDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.RegionDetails"/> of type <see cref="RegionDetailsType[]"/>.
 		/// </summary>
-		public RegionDetailsTypeCollection RegionDetailList
+		public RegionDetailsType[] RegionDetailList
 		{ 
 			get { return ApiResponse.RegionDetails; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.ShippingLocationDetails"/> of type <see cref="ShippingLocationDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.ShippingLocationDetails"/> of type <see cref="ShippingLocationDetailsType[]"/>.
 		/// </summary>
-		public ShippingLocationDetailsTypeCollection ShippingLocationDetailList
+		public ShippingLocationDetailsType[] ShippingLocationDetailList
 		{ 
 			get { return ApiResponse.ShippingLocationDetails; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.ShippingServiceDetails"/> of type <see cref="ShippingServiceDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.ShippingServiceDetails"/> of type <see cref="ShippingServiceDetailsType[]"/>.
 		/// </summary>
-		public ShippingServiceDetailsTypeCollection ShippingServiceDetailList
+		public ShippingServiceDetailsType[] ShippingServiceDetailList
 		{ 
 			get { return ApiResponse.ShippingServiceDetails; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.SiteDetails"/> of type <see cref="SiteDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.SiteDetails"/> of type <see cref="SiteDetailsType[]"/>.
 		/// </summary>
-		public SiteDetailsTypeCollection SiteDetailList
+		public SiteDetailsType[] SiteDetailList
 		{ 
 			get { return ApiResponse.SiteDetails; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.TaxJurisdiction"/> of type <see cref="TaxJurisdictionTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.TaxJurisdiction"/> of type <see cref="TaxJurisdictionType[]"/>.
 		/// </summary>
-		public TaxJurisdictionTypeCollection TaxJurisdictionList
+		public TaxJurisdictionType[] TaxJurisdictionList
 		{ 
 			get { return ApiResponse.TaxJurisdiction; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.URLDetails"/> of type <see cref="URLDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.URLDetails"/> of type <see cref="URLDetailsType[]"/>.
 		/// </summary>
-		public URLDetailsTypeCollection URLDetailList
+		public URLDetailsType[] URLDetailList
 		{ 
 			get { return ApiResponse.URLDetails; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.TimeZoneDetails"/> of type <see cref="TimeZoneDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.TimeZoneDetails"/> of type <see cref="TimeZoneDetailsType[]"/>.
 		/// </summary>
-		public TimeZoneDetailsTypeCollection TimeZoneDetailList
+		public TimeZoneDetailsType[] TimeZoneDetailList
 		{ 
 			get { return ApiResponse.TimeZoneDetails; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.ItemSpecificDetails"/> of type <see cref="ItemSpecificDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.ItemSpecificDetails"/> of type <see cref="ItemSpecificDetailsType[]"/>.
 		/// </summary>
-		public ItemSpecificDetailsTypeCollection ItemSpecificDetailList
+		public ItemSpecificDetailsType[] ItemSpecificDetailList
 		{ 
 			get { return ApiResponse.ItemSpecificDetails; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.UnitOfMeasurementDetails"/> of type <see cref="UnitOfMeasurementDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.UnitOfMeasurementDetails"/> of type <see cref="UnitOfMeasurementDetailsType[]"/>.
 		/// </summary>
-		public UnitOfMeasurementDetailsTypeCollection UnitOfMeasurementDetailList
-		{ 
-			get { return ApiResponse.UnitOfMeasurementDetails; }
-		}
+		//public UnitOfMeasurementDetailsType[] UnitOfMeasurementDetailList
+		//{ 
+		//	get { return ApiResponse.UnitOfMeasurementDetails; }
+		//}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.RegionOfOriginDetails"/> of type <see cref="RegionOfOriginDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.RegionOfOriginDetails"/> of type <see cref="RegionOfOriginDetailsType[]"/>.
 		/// </summary>
-		public RegionOfOriginDetailsTypeCollection RegionOfOriginDetailList
+		public RegionOfOriginDetailsType[] RegionOfOriginDetailList
 		{ 
 			get { return ApiResponse.RegionOfOriginDetails; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.ShippingPackageDetails"/> of type <see cref="ShippingPackageDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.ShippingPackageDetails"/> of type <see cref="ShippingPackageDetailsType[]"/>.
 		/// </summary>
-		public ShippingPackageDetailsTypeCollection ShippingPackageDetailList
+		public ShippingPackageDetailsType[] ShippingPackageDetailList
 		{ 
 			get { return ApiResponse.ShippingPackageDetails; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.ShippingCarrierDetails"/> of type <see cref="ShippingCarrierDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.ShippingCarrierDetails"/> of type <see cref="ShippingCarrierDetailsType[]"/>.
 		/// </summary>
-		public ShippingCarrierDetailsTypeCollection ShippingCarrierDetailList
+		public ShippingCarrierDetailsType[] ShippingCarrierDetailList
 		{ 
 			get { return ApiResponse.ShippingCarrierDetails; }
 		}
@@ -261,31 +261,31 @@ namespace eBay.Service.Call
  		/// <summary>
 		/// Gets the returned <see cref="GeteBayDetailsResponseType.InternationalReturnPolicyDetails"/> of type <see cref="ReturnPolicyDetailsType"/>.
 		/// </summary>
-		public ReturnPolicyDetailsType InternationalReturnPolicyDetails
-		{ 
-			get { return ApiResponse.InternationalReturnPolicyDetails; }
-		}
+		//public ReturnPolicyDetailsType InternationalReturnPolicyDetails
+		//{ 
+		//	get { return ApiResponse.InternationalReturnPolicyDetails; }
+		//}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.ListingStartPriceDetails"/> of type <see cref="ListingStartPriceDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.ListingStartPriceDetails"/> of type <see cref="ListingStartPriceDetailsType[]"/>.
 		/// </summary>
-		public ListingStartPriceDetailsTypeCollection ListingStartPriceDetailList
+		public ListingStartPriceDetailsType[] ListingStartPriceDetailList
 		{ 
 			get { return ApiResponse.ListingStartPriceDetails; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.BuyerRequirementDetails"/> of type <see cref="SiteBuyerRequirementDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.BuyerRequirementDetails"/> of type <see cref="SiteBuyerRequirementDetailsType[]"/>.
 		/// </summary>
-		public SiteBuyerRequirementDetailsTypeCollection BuyerRequirementDetailList
+		public SiteBuyerRequirementDetailsType[] BuyerRequirementDetailList
 		{ 
 			get { return ApiResponse.BuyerRequirementDetails; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.ListingFeatureDetails"/> of type <see cref="ListingFeatureDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.ListingFeatureDetails"/> of type <see cref="ListingFeatureDetailsType[]"/>.
 		/// </summary>
-		public ListingFeatureDetailsTypeCollection ListingFeatureDetailList
+		public ListingFeatureDetailsType[] ListingFeatureDetailList
 		{ 
 			get { return ApiResponse.ListingFeatureDetails; }
 		}
@@ -299,9 +299,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.ExcludeShippingLocationDetails"/> of type <see cref="ExcludeShippingLocationDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.ExcludeShippingLocationDetails"/> of type <see cref="ExcludeShippingLocationDetailsType[]"/>.
 		/// </summary>
-		public ExcludeShippingLocationDetailsTypeCollection ExcludeShippingLocationDetailList
+		public ExcludeShippingLocationDetailsType[] ExcludeShippingLocationDetailList
 		{ 
 			get { return ApiResponse.ExcludeShippingLocationDetails; }
 		}
@@ -315,17 +315,17 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.RecoupmentPolicyDetails"/> of type <see cref="RecoupmentPolicyDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.RecoupmentPolicyDetails"/> of type <see cref="RecoupmentPolicyDetailsType[]"/>.
 		/// </summary>
-		public RecoupmentPolicyDetailsTypeCollection RecoupmentPolicyDetailList
+		public RecoupmentPolicyDetailsType[] RecoupmentPolicyDetailList
 		{ 
 			get { return ApiResponse.RecoupmentPolicyDetails; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.ShippingCategoryDetails"/> of type <see cref="ShippingCategoryDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GeteBayDetailsResponseType.ShippingCategoryDetails"/> of type <see cref="ShippingCategoryDetailsType[]"/>.
 		/// </summary>
-		public ShippingCategoryDetailsTypeCollection ShippingCategoryDetailList
+		public ShippingCategoryDetailsType[] ShippingCategoryDetailList
 		{ 
 			get { return ApiResponse.ShippingCategoryDetails; }
 		}

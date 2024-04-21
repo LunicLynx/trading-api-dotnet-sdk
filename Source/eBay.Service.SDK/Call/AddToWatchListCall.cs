@@ -75,7 +75,7 @@ namespace eBay.Service.Call
 		/// The user must use either one or more <b>ItemID</b> values or one or more <b>VariationKey</b> containers, but the user may not use both of these entities in the same call.
 		/// </param>
 		///
-		public int AddToWatchList(StringCollection ItemIDList, VariationKeyTypeCollection VariationKeyList)
+		public int AddToWatchList(String[] ItemIDList, VariationKeyType[] VariationKeyList)
 		{
 			this.ItemIDList = ItemIDList;
 			this.VariationKeyList = VariationKeyList;
@@ -120,18 +120,18 @@ namespace eBay.Service.Call
 
 		
  		/// <summary>
-		/// Gets or sets the <see cref="AddToWatchListRequestType.ItemID"/> of type <see cref="StringCollection"/>.
+		/// Gets or sets the <see cref="AddToWatchListRequestType.ItemID"/> of type <see cref="String[]"/>.
 		/// </summary>
-		public StringCollection ItemIDList
+		public String[] ItemIDList
 		{ 
 			get { return ApiRequest.ItemID; }
 			set { ApiRequest.ItemID = value; }
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="AddToWatchListRequestType.VariationKey"/> of type <see cref="VariationKeyTypeCollection"/>.
+		/// Gets or sets the <see cref="AddToWatchListRequestType.VariationKey"/> of type <see cref="VariationKeyType[]"/>.
 		/// </summary>
-		public VariationKeyTypeCollection VariationKeyList
+		public VariationKeyType[] VariationKeyList
 		{ 
 			get { return ApiRequest.VariationKey; }
 			set { ApiRequest.VariationKey = value; }

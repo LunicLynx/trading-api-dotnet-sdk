@@ -75,7 +75,7 @@ namespace eBay.Service.Call
 		/// Set to true to retrieve reason codes for all sites. If not specified, reason codes are returned for the site specified in the request header only. If a <strong>ReasonCodeID</strong> value is specified, this parameter is ignored.
 		/// </param>
 		///
-		public VeROSiteDetailTypeCollection GetVeROReasonCodeDetails(long ReasonCodeID, bool ReturnAllSites)
+		public VeROSiteDetailType[] GetVeROReasonCodeDetails(long ReasonCodeID, bool ReturnAllSites)
 		{
 			this.ReasonCodeID = ReasonCodeID;
 			this.ReturnAllSites = ReturnAllSites;
@@ -139,9 +139,9 @@ namespace eBay.Service.Call
 		
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetVeROReasonCodeDetailsResponseType.VeROReasonCodeDetails"/> of type <see cref="VeROSiteDetailTypeCollection"/>.
+		/// Gets the returned <see cref="GetVeROReasonCodeDetailsResponseType.VeROReasonCodeDetails"/> of type <see cref="VeROSiteDetailType[]"/>.
 		/// </summary>
-		public VeROSiteDetailTypeCollection VeROReasonCodeDetailList
+		public VeROSiteDetailType[] VeROReasonCodeDetailList
 		{ 
 			get { return ApiResponse.VeROReasonCodeDetails; }
 		}

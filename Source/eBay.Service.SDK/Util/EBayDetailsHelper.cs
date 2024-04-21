@@ -39,21 +39,21 @@ namespace eBay.Service.Util
 		private static EBayDetailsHelper _helper;
 		private ApiContext _apiContext;
 		private SiteCodeType _site;
-		private DetailNameCodeTypeCollection _siteIndependentDetailNames = new DetailNameCodeTypeCollection (new DetailNameCodeType[] {
+		private DetailNameCodeType[] _siteIndependentDetailNames = {
 																			   DetailNameCodeType.CountryDetails,
 																			   DetailNameCodeType.CurrencyDetails, 
 																			   DetailNameCodeType.DispatchTimeMaxDetails, 
 																			   DetailNameCodeType.ShippingLocationDetails,
 																			   DetailNameCodeType.SiteDetails, 
 																			   DetailNameCodeType.TimeZoneDetails
-																		   });
-		private DetailNameCodeTypeCollection _siteRelatedDetailNames = new DetailNameCodeTypeCollection (new DetailNameCodeType[] {
+																		   };
+		private DetailNameCodeType[] _siteRelatedDetailNames = {
 																		   DetailNameCodeType.PaymentOptionDetails, 
 																		   DetailNameCodeType.RegionDetails,
 																		   DetailNameCodeType.ShippingServiceDetails,
 																		   DetailNameCodeType.TaxJurisdiction,
 																		   DetailNameCodeType.URLDetails
-																	   });
+																	   };
 
 		/* Contains site related hash maps of details arrays by detail name */
 		private static Hashtable _SiteRelatedDetailsByName = new Hashtable(5);
@@ -65,7 +65,7 @@ namespace eBay.Service.Util
 		 * regardless of the site to which you sent the request. 
 		 */
 		private static Hashtable _CountryDetailsByCountry = new Hashtable();
-		private CountryDetailsTypeCollection _countryDetails = null;
+		private CountryDetailsType[] _countryDetails = null;
 
 		/*
 		 * Details about a specific currency that can be used for listing on an eBay site. 
@@ -73,7 +73,7 @@ namespace eBay.Service.Util
 		 * regardless of the site to which you sent the request
 		 */
 		private static Hashtable _CurrencyDetailsByCurrency = new Hashtable();
-		private CurrencyDetailsTypeCollection _currencyDetails = null;
+		private CurrencyDetailsType[] _currencyDetails = null;
 
 		/*
 		 * Details about a specific max dispatch time. 
@@ -82,7 +82,7 @@ namespace eBay.Service.Util
 		 * regardless of the site to which you sent the request
 		 */
 		private static Hashtable _DispatchTimeMaxDetailsByDispatchTimeMax = new Hashtable();
-		private DispatchTimeMaxDetailsTypeCollection _dispatchTimeMaxDetails = null;
+		private DispatchTimeMaxDetailsType[] _dispatchTimeMaxDetails = null;
 
 		/*
 		 * Details about a location or region to which the seller is willing to ship. 
@@ -90,7 +90,7 @@ namespace eBay.Service.Util
 		 * regardless of the site to which you sent the request
 		 */
 		private static Hashtable _ShippingLocationDetailsByShippingLocation = new Hashtable();
-		private ShippingLocationDetailsTypeCollection _shippingLocationDetails = null;
+		private ShippingLocationDetailsType[] _shippingLocationDetails = null;
 
 		/*
 		 * Details about a specific eBay site. 
@@ -98,10 +98,10 @@ namespace eBay.Service.Util
 		 * regardless of the site to which you sent the request. 
 		 */
 		private static Hashtable _SiteDetailsBySite = new Hashtable();
-		private SiteDetailsTypeCollection _siteDetails = null;
+		private SiteDetailsType[] _siteDetails = null;
 
 		private static Hashtable _TimeZoneDetails = new Hashtable();
-		private TimeZoneDetailsTypeCollection _timeZoneDetails = null;
+		private TimeZoneDetailsType[] _timeZoneDetails = null;
 
 		/* The following details are site specific: */
 	
@@ -122,7 +122,7 @@ namespace eBay.Service.Util
 //	private static Hashtable _RegionDetailsByRegionID = new Hashtable();
 	private static Hashtable _RegionDetailsMapsBySite = new Hashtable();
 	private static Hashtable _RegionDetailsBySite = new Hashtable();
-	private RegionDetailsTypeCollection _regionDetails = null;
+	private RegionDetailsType[] _regionDetails = null;
 	
 	
 	/*
@@ -133,7 +133,7 @@ namespace eBay.Service.Util
 //	private static Hashtable _ShippingServiceDetailsByShippingServiceID = new Hashtable();
 	private static Hashtable _ShippingServiceDetailsMapsBySite = new Hashtable();
 	private static Hashtable _ShippingServiceDetailsBySite = new Hashtable();
-	private ShippingServiceDetailsTypeCollection _shippingServiceDetails = null;
+	private ShippingServiceDetailsType[] _shippingServiceDetails = null;
 	
 	/*
 	 * Details about a specific tax jurisdiction or tax region. 
@@ -143,7 +143,7 @@ namespace eBay.Service.Util
 //	private static Hashtable _TaxJurisdictionDetailsByJurisdictionID = new Hashtable();
 	private static Hashtable _TaxJurisdictionDetailsMapsBySite = new Hashtable();
 	private static Hashtable _TaxJurisdictionDetailsBySite = new Hashtable();
-	private TaxJurisdictionTypeCollection _taxJurisdictionDetails = null;
+	private TaxJurisdictionType[] _taxJurisdictionDetails = null;
 	
 	/*
 	 * URLDetails Details about a specific eBay URL. 
@@ -188,15 +188,15 @@ namespace eBay.Service.Util
 		/// <summary>
 		/// 
 		/// </summary>
-	public PaymentOptionDetailsTypeCollection getPaymentOptionDetailsForSite(SiteCodeType site)  
+	public PaymentOptionDetailsType[] getPaymentOptionDetailsForSite(SiteCodeType site)  
 	{
 		Hashtable detalisMap = (Hashtable)_SiteRelatedDetailsByName[DetailNameCodeType.PaymentOptionDetails];
 		if(!detalisMap.ContainsKey(site)) 
 		{
-			DetailNameCodeTypeCollection detailNames = new DetailNameCodeTypeCollection(new DetailNameCodeType[] {DetailNameCodeType.PaymentOptionDetails});
+		 DetailNameCodeType[] detailNames = { DetailNameCodeType.PaymentOptionDetails };
 			loadPaymentOptionsDetailsForSite(site);
 		}
-		return (PaymentOptionDetailsTypeCollection)detalisMap[site];
+		return (PaymentOptionDetailsType[])detalisMap[site];
 	}
 
 		/// <summary>
@@ -215,15 +215,15 @@ namespace eBay.Service.Util
 		/// <summary>
 		/// 
 		/// </summary>
-	public RegionDetailsTypeCollection getRegionDetailsForSite(SiteCodeType site)  
+	public RegionDetailsType[] getRegionDetailsForSite(SiteCodeType site)  
 	{
 		Hashtable detalisMap = (Hashtable)_SiteRelatedDetailsByName[DetailNameCodeType.RegionDetails];
 		if(!detalisMap.ContainsKey(site)) 
 		{
-			DetailNameCodeTypeCollection detailNames = new DetailNameCodeTypeCollection(new DetailNameCodeType[] {DetailNameCodeType.RegionDetails});
+		 DetailNameCodeType[] detailNames = { DetailNameCodeType.RegionDetails };
 			loadRegionDetailsForSite(site);
 		}
-		return (RegionDetailsTypeCollection)detalisMap[site];
+		return (RegionDetailsType[])detalisMap[site];
 	}
 		/// <summary>
 		/// 
@@ -242,14 +242,14 @@ namespace eBay.Service.Util
 		/// <summary>
 		/// 
 		/// </summary>
-	public ShippingServiceDetailsTypeCollection getShippingServiceDetailsForSite(SiteCodeType site)  {
+	public ShippingServiceDetailsType[] getShippingServiceDetailsForSite(SiteCodeType site)  {
 		Hashtable detalisMap = (Hashtable)_SiteRelatedDetailsByName[DetailNameCodeType.ShippingServiceDetails];
 		if(!detalisMap.ContainsKey(site)) 
 		{
-			DetailNameCodeTypeCollection detailNames = new DetailNameCodeTypeCollection(new DetailNameCodeType[] {DetailNameCodeType.ShippingServiceDetails});
+		 DetailNameCodeType[] detailNames = { DetailNameCodeType.ShippingServiceDetails };
 			loadShippingServiceDetailsForSite(site);
 		}
-		return (ShippingServiceDetailsTypeCollection)detalisMap[site];
+		return (ShippingServiceDetailsType[])detalisMap[site];
 	}
 		/// <summary>
 		/// 
@@ -267,15 +267,15 @@ namespace eBay.Service.Util
 		/// <summary>
 		/// 
 		/// </summary>
-	public TaxJurisdictionTypeCollection getTaxJurisdictionDetailsForSite(SiteCodeType site)  
+	public TaxJurisdictionType[] getTaxJurisdictionDetailsForSite(SiteCodeType site)  
 	{
 		Hashtable detalisMap = (Hashtable)_SiteRelatedDetailsByName[DetailNameCodeType.TaxJurisdiction];
 		if(!detalisMap.ContainsKey(site)) 
 		{
-			DetailNameCodeTypeCollection detailNames = new DetailNameCodeTypeCollection(new DetailNameCodeType[] {DetailNameCodeType.TaxJurisdiction});
+		 DetailNameCodeType[] detailNames = { DetailNameCodeType.TaxJurisdiction };
 			loadTaxJurisdictionDetailsForSite(site);
 		}
-		return (TaxJurisdictionTypeCollection)detalisMap[site];
+		return (TaxJurisdictionType[])detalisMap[site];
 	}
 		/// <summary>
 		/// 
@@ -293,13 +293,13 @@ namespace eBay.Service.Util
 		/// <summary>
 		/// 
 		/// </summary>
-	public URLDetailsTypeCollection getURLDetailsForSite(SiteCodeType site)  
+	public URLDetailsType[] getURLDetailsForSite(SiteCodeType site)  
 	{
 		Hashtable detalisMap = (Hashtable)_SiteRelatedDetailsByName[DetailNameCodeType.URLDetails];
 		if(!detalisMap.ContainsKey(site)) {
 			loadURLDetailsForSite(site);
 		}
-		return (URLDetailsTypeCollection)detalisMap[site];
+		return (URLDetailsType[])detalisMap[site];
 	}
 		/// <summary>
 		/// 
@@ -323,7 +323,7 @@ namespace eBay.Service.Util
 		/// <summary>
 		/// 
 		/// </summary>
-	public TimeZoneDetailsTypeCollection getTimeZoneDetails() 
+	public TimeZoneDetailsType[] getTimeZoneDetails() 
 	{
 		return _timeZoneDetails;
 	}
@@ -337,7 +337,7 @@ namespace eBay.Service.Util
 		/// <summary>
 		/// 
 		/// </summary>
-	public ShippingLocationDetailsTypeCollection getShippingLocationDetails() 
+	public ShippingLocationDetailsType[] getShippingLocationDetails() 
 	{
 		return _shippingLocationDetails;
 	}
@@ -351,7 +351,7 @@ namespace eBay.Service.Util
 		/// <summary>
 		/// 
 		/// </summary>
-	public SiteDetailsTypeCollection getSiteDetails() 
+	public SiteDetailsType[] getSiteDetails() 
 	{
 		return _siteDetails;
 	}
@@ -366,7 +366,7 @@ namespace eBay.Service.Util
 		/// <summary>
 		/// 
 		/// </summary>
-	public DispatchTimeMaxDetailsTypeCollection getDispatchTimeMaxDetails() 
+	public DispatchTimeMaxDetailsType[] getDispatchTimeMaxDetails() 
 	{
 		return _dispatchTimeMaxDetails;
 	}
@@ -382,7 +382,7 @@ namespace eBay.Service.Util
 		/// 
 		/// </summary>
 
-	public CurrencyDetailsTypeCollection getCurrencyDetails() 
+	public CurrencyDetailsType[] getCurrencyDetails() 
 	{
 		return _currencyDetails;
 	}
@@ -396,7 +396,7 @@ namespace eBay.Service.Util
 		/// <summary>
 		/// 
 		/// </summary>
-	public CountryDetailsTypeCollection getCountryDetails() 
+	public CountryDetailsType[] getCountryDetails() 
 	{
 		return _countryDetails;
 	}
@@ -406,14 +406,14 @@ namespace eBay.Service.Util
 
 	private void loadPaymentOptionsDetailsForSite(GeteBayDetailsResponseType resp, SiteCodeType site)  {
 		if(resp == null) {
-			DetailNameCodeTypeCollection detailNames = new DetailNameCodeTypeCollection(new DetailNameCodeType[]{DetailNameCodeType.PaymentOptionDetails});
+		 DetailNameCodeType[] detailNames = { DetailNameCodeType.PaymentOptionDetails };
 			resp = makeApiCall(detailNames, site);
 		}
-		PaymentOptionDetailsTypeCollection details = resp.PaymentOptionDetails;
+	 PaymentOptionDetailsType[] details = resp.PaymentOptionDetails;
 		if(details != null) {
 			_PaymentOptionDetailsBySite.Add(site, details);
 			Hashtable detailsByPaymentMethodMap = new Hashtable();
-			for(int i = 0; i < details.Count; i++) {
+			for(int i = 0; i < details.Length; i++) {
 				PaymentOptionDetailsType detail = details[i];
 				detailsByPaymentMethodMap.Add(detail.PaymentOption, detail);
 			}
@@ -426,14 +426,14 @@ namespace eBay.Service.Util
 
 	private void loadURLDetailsForSite(GeteBayDetailsResponseType resp, SiteCodeType site)  {	
 		if(resp == null) {
-			DetailNameCodeTypeCollection detailNames = new DetailNameCodeTypeCollection(new DetailNameCodeType[] {DetailNameCodeType.URLDetails});
+		 DetailNameCodeType[] detailNames = { DetailNameCodeType.URLDetails };
 			resp = makeApiCall(detailNames, site);
 		}
-		URLDetailsTypeCollection urlDetails = resp.URLDetails;
+	 URLDetailsType[] urlDetails = resp.URLDetails;
 		if(urlDetails != null) {
 			_URLDetailsBySite.Add(site, urlDetails);
 			Hashtable detailsByURLTypeMap = new Hashtable();
-			for(int i = 0; i < urlDetails.Count; i++) {
+			for(int i = 0; i < urlDetails.Length; i++) {
 				URLDetailsType detail = urlDetails[i];
 				detailsByURLTypeMap.Add(detail.URLType, detail);
 			}
@@ -462,16 +462,16 @@ namespace eBay.Service.Util
 	{	
 		if(resp == null) 
 		{
-			DetailNameCodeTypeCollection detailNames = 
-				new DetailNameCodeTypeCollection(new DetailNameCodeType[] {DetailNameCodeType.TaxJurisdiction});
+		 DetailNameCodeType[] detailNames = 
+				{ DetailNameCodeType.TaxJurisdiction };
 			resp = makeApiCall(detailNames, site);
 		}
-		TaxJurisdictionTypeCollection details = resp.TaxJurisdiction;
+	 TaxJurisdictionType[] details = resp.TaxJurisdiction;
 		if(details != null) 
 		{
 			_TaxJurisdictionDetailsBySite.Add(site, details);
 			Hashtable detailsByJurisdictionIDMap = new Hashtable();
-			for(int i = 0; i < details.Count; i++) 
+			for(int i = 0; i < details.Length; i++) 
 			{
 				TaxJurisdictionType detail = details[i];
 				detailsByJurisdictionIDMap.Add(detail.JurisdictionID, detail);
@@ -487,16 +487,16 @@ namespace eBay.Service.Util
 	{
 		if(resp == null) 
 		{
-			DetailNameCodeTypeCollection detailNames = 
-				new DetailNameCodeTypeCollection(new DetailNameCodeType[] {DetailNameCodeType.ShippingServiceDetails});
+		 DetailNameCodeType[] detailNames = 
+				{ DetailNameCodeType.ShippingServiceDetails };
 			resp = makeApiCall(detailNames, site);
 		}
-		ShippingServiceDetailsTypeCollection details = resp.ShippingServiceDetails;
+	 ShippingServiceDetailsType[] details = resp.ShippingServiceDetails;
 		if(details != null) 
 		{
 			_ShippingServiceDetailsBySite.Add(site, details);
 			Hashtable detailsByShippingServiceIDMap = new Hashtable();
-			for(int i = 0; i < details.Count; i++) 
+			for(int i = 0; i < details.Length; i++) 
 			{
 				ShippingServiceDetailsType detail = details[i];
 				detailsByShippingServiceIDMap.Add(detail.ShippingServiceID, detail);
@@ -512,16 +512,16 @@ namespace eBay.Service.Util
 	{	
 		if(resp == null) 
 		{
-			DetailNameCodeTypeCollection detailNames = 
-				new DetailNameCodeTypeCollection(new DetailNameCodeType[] {DetailNameCodeType.RegionDetails});
+		 DetailNameCodeType[] detailNames = 
+				{ DetailNameCodeType.RegionDetails };
 			resp = makeApiCall(detailNames, site);
 		}
-		RegionDetailsTypeCollection details = resp.RegionDetails;
+	 RegionDetailsType[] details = resp.RegionDetails;
 		if(details != null) 
 		{
 			_RegionDetailsBySite.Add(site, details);
 			Hashtable detailsByRegionIDMap = new Hashtable();
-			for(int i = 0; i < details.Count; i++) 
+			for(int i = 0; i < details.Length; i++) 
 			{
 				RegionDetailsType detail = details[i];
 				detailsByRegionIDMap.Add(detail.RegionID, detail);
@@ -534,11 +534,11 @@ namespace eBay.Service.Util
 		loadRegionDetailsForSite(null, site);
 	}
 	
-	private GeteBayDetailsResponseType makeApiCall(DetailNameCodeTypeCollection detailNames, SiteCodeType site)  {
+	private GeteBayDetailsResponseType makeApiCall(DetailNameCodeType[] detailNames, SiteCodeType site)  {
 		SiteCodeType savedSite = _site;
 		_apiContext.Site = site;
 		GeteBayDetailsCall api = new GeteBayDetailsCall(_apiContext);
-		DetailLevelCodeTypeCollection detailLevels = new DetailLevelCodeTypeCollection( new DetailLevelCodeType[] {DetailLevelCodeType.ReturnAll});
+	 DetailLevelCodeType[] detailLevels = { DetailLevelCodeType.ReturnAll };
 		api.DetailLevelList = detailLevels;
 		api.GeteBayDetails(detailNames);
 		_apiContext.Site = savedSite;
@@ -561,17 +561,17 @@ namespace eBay.Service.Util
 		 _timeZoneDetails = resp.TimeZoneDetails;
 		 loadTimeZoneDetails(_timeZoneDetails); 
 	}
-	private void loadTimeZoneDetails(TimeZoneDetailsTypeCollection details) {
+	private void loadTimeZoneDetails(TimeZoneDetailsType[] details) {
 		if(_TimeZoneDetails.Count == 0) {
-			for(int i = 0; i < details.Count; i++) {
+			for(int i = 0; i < details.Length; i++) {
 				TimeZoneDetailsType detail = details[i];
 				_TimeZoneDetails.Add(detail.TimeZoneID, detail);
 			}
 		}
 	}
-	private void loadCountryDetails(CountryDetailsTypeCollection details) {
+	private void loadCountryDetails(CountryDetailsType[] details) {
 		if(_CountryDetailsByCountry.Count == 0) {
-			for(int i = 0; i < details.Count; i++) {
+			for(int i = 0; i < details.Length; i++) {
 				CountryDetailsType detail = details[i];
 				_CountryDetailsByCountry.Add(detail.Country, detail);
 			}
@@ -593,36 +593,36 @@ namespace eBay.Service.Util
 		_SiteRelatedDetailsByName.Add(DetailNameCodeType.URLDetails, _URLDetailsBySite);
 		_SiteRelatedDetailsMapsByName.Add(DetailNameCodeType.URLDetails, _URLDetailsMapsBySite);
 	}
-	private void loadCurrencyDetails(CurrencyDetailsTypeCollection details) {
+	private void loadCurrencyDetails(CurrencyDetailsType[] details) {
 		if(_CurrencyDetailsByCurrency.Count == 0) {
-			for(int i = 0; i < details.Count; i++) {
+			for(int i = 0; i < details.Length; i++) {
 				CurrencyDetailsType currency = details[i];
 				_CurrencyDetailsByCurrency.Add(currency.Currency, currency);
 			}
 		}
 	}
 
-	private void loadDispatchTimeMaxDetails(DispatchTimeMaxDetailsTypeCollection details) {
+	private void loadDispatchTimeMaxDetails(DispatchTimeMaxDetailsType[] details) {
 		if(_DispatchTimeMaxDetailsByDispatchTimeMax.Count == 0) {
-			for(int i = 0; i < details.Count; i++) {
+			for(int i = 0; i < details.Length; i++) {
 				DispatchTimeMaxDetailsType dispatch = details[i];
 				_DispatchTimeMaxDetailsByDispatchTimeMax.Add(dispatch.DispatchTimeMax, dispatch);
 			}
 		}
 	}
 
-	private void loadSiteDetails(SiteDetailsTypeCollection details) {
+	private void loadSiteDetails(SiteDetailsType[] details) {
 		if(_SiteDetailsBySite.Count == 0) {
-			for(int i = 0; i < details.Count; i++) {
+			for(int i = 0; i < details.Length; i++) {
 				SiteDetailsType site = details[i];
 				_SiteDetailsBySite.Add(site.Site, site);
 			}
 		}
 	}
 
-	private void loadShippingLocationDetails(ShippingLocationDetailsTypeCollection details) {
+	private void loadShippingLocationDetails(ShippingLocationDetailsType[] details) {
 		if(_ShippingLocationDetailsByShippingLocation.Count == 0) {
-			for(int i = 0; i < details.Count; i++) {
+			for(int i = 0; i < details.Length; i++) {
 				ShippingLocationDetailsType detail = details[i];
 				_ShippingLocationDetailsByShippingLocation.Add(detail.ShippingLocation, detail);
 			}

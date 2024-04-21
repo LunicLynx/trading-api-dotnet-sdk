@@ -72,7 +72,7 @@ namespace eBay.Service.Call
 		/// specified image.
 		/// </param>
 		///
-		public StringCollection ExtendSiteHostedPictures(StringCollection PictureURLList, int ExtensionInDays)
+		public String[] ExtendSiteHostedPictures(String[] PictureURLList, int ExtensionInDays)
 		{
 			this.PictureURLList = PictureURLList;
 			this.ExtensionInDays = ExtensionInDays;
@@ -117,9 +117,9 @@ namespace eBay.Service.Call
 
 		
  		/// <summary>
-		/// Gets or sets the <see cref="ExtendSiteHostedPicturesRequestType.PictureURL"/> of type <see cref="StringCollection"/>.
+		/// Gets or sets the <see cref="ExtendSiteHostedPicturesRequestType.PictureURL"/> of type <see cref="String[]"/>.
 		/// </summary>
-		public StringCollection PictureURLList
+		public String[] PictureURLList
 		{ 
 			get { return ApiRequest.PictureURL; }
 			set { ApiRequest.PictureURL = value; }
@@ -136,9 +136,9 @@ namespace eBay.Service.Call
 		
 		
  		/// <summary>
-		/// Gets the returned <see cref="ExtendSiteHostedPicturesResponseType.PictureURL"/> of type <see cref="StringCollection"/>.
+		/// Gets the returned <see cref="ExtendSiteHostedPicturesResponseType.PictureURL"/> of type <see cref="String[]"/>.
 		/// </summary>
-		public StringCollection PictureURLListReturn
+		public String[] PictureURLListReturn
 		{ 
 			get { return ApiResponse.PictureURL; }
 		}

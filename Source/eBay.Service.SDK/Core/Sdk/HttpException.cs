@@ -24,7 +24,7 @@ using System.Collections;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Security.Permissions;
-using System.Web.Services.Protocols;
+//using System.Web.Services.Protocols;
 using System.Xml;
 using System.Xml.XPath;
 using eBay.Service.Core.Soap;

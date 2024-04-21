@@ -153,7 +153,7 @@ namespace eBay.Service.Call
 		/// 
 		/// </param>
 		///
-		public OrderArrayType GetOrders(StringCollection OrderIDList, DateTime CreateTimeFrom, DateTime CreateTimeTo, TradingRoleCodeType OrderRole, OrderStatusCodeType OrderStatus, ListingTypeCodeType ListingType, PaginationType Pagination, DateTime ModTimeFrom, DateTime ModTimeTo, int NumberOfDays, bool IncludeFinalValueFee, SortOrderCodeType SortingOrder)
+		public OrderArrayType GetOrders(String[] OrderIDList, DateTime CreateTimeFrom, DateTime CreateTimeTo, TradingRoleCodeType OrderRole, OrderStatusCodeType OrderStatus, ListingTypeCodeType ListingType, PaginationType Pagination, DateTime ModTimeFrom, DateTime ModTimeTo, int NumberOfDays, bool IncludeFinalValueFee, SortOrderCodeType SortingOrder)
 		{
 			this.OrderIDList = OrderIDList;
 			this.CreateTimeFrom = CreateTimeFrom;
@@ -177,7 +177,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public OrderArrayType GetOrders(StringCollection OrderIDList)
+		public OrderArrayType GetOrders(String[] OrderIDList)
 		{
 			this.OrderIDList = OrderIDList;
 			Execute();
@@ -242,9 +242,9 @@ namespace eBay.Service.Call
 
 		
  		/// <summary>
-		/// Gets or sets the <see cref="GetOrdersRequestType.OrderIDArray"/> of type <see cref="StringCollection"/>.
+		/// Gets or sets the <see cref="GetOrdersRequestType.OrderIDArray"/> of type <see cref="String[]"/>.
 		/// </summary>
-		public StringCollection OrderIDList
+		public String[] OrderIDList
 		{ 
 			get { return ApiRequest.OrderIDArray; }
 			set { ApiRequest.OrderIDArray = value; }
@@ -380,7 +380,7 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetOrdersResponseType.OrderArray"/> of type <see cref="OrderTypeCollection"/>.
+		/// Gets the returned <see cref="GetOrdersResponseType.OrderArray"/> of type <see cref="OrderType[]"/>.
 		/// </summary>
 		public OrderArrayType OrderList
 		{ 

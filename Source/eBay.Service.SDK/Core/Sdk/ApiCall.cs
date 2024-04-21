@@ -22,7 +22,7 @@
 using System;
 using System.Reflection;
 using System.Collections;
-using System.Web.Services.Protocols;
+//using System.Web.Services.Protocols;
 using System.Runtime.InteropServices;
 using eBay.Service.Call;
 using eBay.Service.Util;
@@ -239,13 +239,11 @@ namespace eBay.Service.Core.Sdk
 
                 if (!mDetailLevelOverride && AbstractRequest.DetailLevel == null)
                 {
-                    AbstractRequest.DetailLevel = new DetailLevelCodeTypeCollection();
-                    AbstractRequest.DetailLevel.AddRange(mDetailLevelList);
+                    AbstractRequest.DetailLevel = mDetailLevelList;
                 }
 
                 //Added OutputSelector to base call JIRA-SDK-561
-                AbstractRequest.OutputSelector = new StringCollection();
-                AbstractRequest.OutputSelector.AddRange(mOutputSelector);
+                AbstractRequest.OutputSelector = mOutputSelector;
 
                 if (ApiContext.ErrorLanguage != ErrorLanguageCodeType.CustomCode)
                     AbstractRequest.ErrorLanguage = ApiContext.ErrorLanguage.ToString();
@@ -306,9 +304,9 @@ namespace eBay.Service.Core.Sdk
                         }
 
 
-                        if (mResponse != null && mResponse.Errors != null && mResponse.Errors.Count > 0)
+                        if (mResponse != null && mResponse.Errors != null && mResponse.Errors.Length > 0)
                         {
-                            throw new ApiException(new ErrorTypeCollection(mResponse.Errors));
+                            throw new ApiException(mResponse.Errors);
                         }
                     }
 
@@ -554,7 +552,7 @@ namespace eBay.Service.Core.Sdk
 
 
         /// <summary>
-        /// Gets or sets the <see cref="AbstractRequestType.DetailLevel"/> of type <see cref="DetailLevelCodeTypeCollection"/>. 
+        /// Gets or sets the <see cref="AbstractRequestType.DetailLevel"/> of type <see cref="DetailLevelCodeType[]"/>. 
         /// The DetailLevel is used in some API calls that query eBay, for example, GetUserCall. The detail level specifies which
         /// data is to be returned in the query. For information on which detail levels are supported for a particular API call, 
         /// refer to the eBay Trading API Call Reference
@@ -563,7 +561,7 @@ namespace eBay.Service.Core.Sdk
 
 
 
-        public DetailLevelCodeTypeCollection DetailLevelList
+        public DetailLevelCodeType[] DetailLevelList
         {
             get { return mDetailLevelList; }
             set { mDetailLevelList = value; }
@@ -704,7 +702,7 @@ namespace eBay.Service.Core.Sdk
         private string mVersion;
         private TimeSpan mResponseTime;
         private SiteCodeType mSite = SiteCodeType.CustomCode;
-        private DetailLevelCodeTypeCollection mDetailLevelList = new DetailLevelCodeTypeCollection();
+        private DetailLevelCodeType[] mDetailLevelList = new DetailLevelCodeType[0];
         private string mSoapRequest;
         private string mSoapResponse;
         private string mOAuth;

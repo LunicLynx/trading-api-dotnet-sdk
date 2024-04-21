@@ -76,7 +76,7 @@ namespace eBay.Service.Call
 		/// The user must include this field and set its value to <code>true</code> if the user wishes to retrieve the  <b>BiddingSummary</b> container for each bidder. The <b>BiddingSummary</b> container consists of more detailed bidding information on each bidder.
 		/// </param>
 		///
-		public OfferTypeCollection GetAllBidders(string ItemID, GetAllBiddersModeCodeType CallMode, bool IncludeBiddingSummary)
+		public OfferType[] GetAllBidders(string ItemID, GetAllBiddersModeCodeType CallMode, bool IncludeBiddingSummary)
 		{
 			this.ItemID = ItemID;
 			this.CallMode = CallMode;
@@ -90,7 +90,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public OfferTypeCollection GetAllBidders(string ItemID, GetAllBiddersModeCodeType CallMode)
+		public OfferType[] GetAllBidders(string ItemID, GetAllBiddersModeCodeType CallMode)
 		{
 			this.ItemID = ItemID;
 			this.CallMode = CallMode;
@@ -161,9 +161,9 @@ namespace eBay.Service.Call
 		
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetAllBiddersResponseType.BidArray"/> of type <see cref="OfferTypeCollection"/>.
+		/// Gets the returned <see cref="GetAllBiddersResponseType.BidArray"/> of type <see cref="OfferType[]"/>.
 		/// </summary>
-		public OfferTypeCollection BidList
+		public OfferType[] BidList
 		{ 
 			get { return ApiResponse.BidArray; }
 		}

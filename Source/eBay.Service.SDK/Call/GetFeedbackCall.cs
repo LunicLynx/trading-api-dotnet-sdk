@@ -115,7 +115,7 @@ namespace eBay.Service.Call
 		/// <b>FeedbackType</b> and <b>Pagination</b> fields (if included) are ignored.
 		/// </param>
 		///
-		public FeedbackDetailTypeCollection GetFeedback(string UserID, string FeedbackID, string ItemID, string TransactionID, CommentTypeCodeTypeCollection CommentTypeList, FeedbackTypeCodeType FeedbackType, PaginationType Pagination, string OrderLineItemID)
+		public FeedbackDetailType[] GetFeedback(string UserID, string FeedbackID, string ItemID, string TransactionID, CommentTypeCodeType[] CommentTypeList, FeedbackTypeCodeType FeedbackType, PaginationType Pagination, string OrderLineItemID)
 		{
 			this.UserID = UserID;
 			this.FeedbackID = FeedbackID;
@@ -134,7 +134,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public FeedbackDetailTypeCollection GetFeedback()
+		public FeedbackDetailType[] GetFeedback()
 		{
 			Execute();
 			return FeedbackList;
@@ -142,7 +142,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public FeedbackDetailTypeCollection GetFeedback(string UserID)
+		public FeedbackDetailType[] GetFeedback(string UserID)
 		{
 			this.UserID = UserID;
 			Execute();
@@ -219,9 +219,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="GetFeedbackRequestType.CommentType"/> of type <see cref="CommentTypeCodeTypeCollection"/>.
+		/// Gets or sets the <see cref="GetFeedbackRequestType.CommentType"/> of type <see cref="CommentTypeCodeType[]"/>.
 		/// </summary>
-		public CommentTypeCodeTypeCollection CommentTypeList
+		public CommentTypeCodeType[] CommentTypeList
 		{ 
 			get { return ApiRequest.CommentType; }
 			set { ApiRequest.CommentType = value; }
@@ -256,9 +256,9 @@ namespace eBay.Service.Call
 		
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetFeedbackResponseType.FeedbackDetailArray"/> of type <see cref="FeedbackDetailTypeCollection"/>.
+		/// Gets the returned <see cref="GetFeedbackResponseType.FeedbackDetailArray"/> of type <see cref="FeedbackDetailType[]"/>.
 		/// </summary>
-		public FeedbackDetailTypeCollection FeedbackList
+		public FeedbackDetailType[] FeedbackList
 		{ 
 			get { return ApiResponse.FeedbackDetailArray; }
 		}

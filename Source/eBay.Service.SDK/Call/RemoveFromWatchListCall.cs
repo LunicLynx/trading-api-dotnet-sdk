@@ -80,7 +80,7 @@ namespace eBay.Service.Call
 		/// This container is used if the user want to remove one or more product variations (within a multiple-variation listing) from the Watch List. Note that if the <b>VariationKey</b> container is used, one or more <b>ItemID</b> fields or the <b>RemoveAllItems</b> field cannot be used.
 		/// </param>
 		///
-		public int RemoveFromWatchList(StringCollection ItemIDList, bool RemoveAllItems, VariationKeyTypeCollection VariationKeyList)
+		public int RemoveFromWatchList(String[] ItemIDList, bool RemoveAllItems, VariationKeyType[] VariationKeyList)
 		{
 			this.ItemIDList = ItemIDList;
 			this.RemoveAllItems = RemoveAllItems;
@@ -94,7 +94,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public int RemoveFromWatchList(StringCollection ItemIDList)
+		public int RemoveFromWatchList(String[] ItemIDList)
 		{
 			this.ItemIDList = ItemIDList;
 			Execute();
@@ -135,9 +135,9 @@ namespace eBay.Service.Call
 
 		
  		/// <summary>
-		/// Gets or sets the <see cref="RemoveFromWatchListRequestType.ItemID"/> of type <see cref="StringCollection"/>.
+		/// Gets or sets the <see cref="RemoveFromWatchListRequestType.ItemID"/> of type <see cref="String[]"/>.
 		/// </summary>
-		public StringCollection ItemIDList
+		public String[] ItemIDList
 		{ 
 			get { return ApiRequest.ItemID; }
 			set { ApiRequest.ItemID = value; }
@@ -153,9 +153,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="RemoveFromWatchListRequestType.VariationKey"/> of type <see cref="VariationKeyTypeCollection"/>.
+		/// Gets or sets the <see cref="RemoveFromWatchListRequestType.VariationKey"/> of type <see cref="VariationKeyType[]"/>.
 		/// </summary>
-		public VariationKeyTypeCollection VariationKeyList
+		public VariationKeyType[] VariationKeyList
 		{ 
 			get { return ApiRequest.VariationKey; }
 			set { ApiRequest.VariationKey = value; }

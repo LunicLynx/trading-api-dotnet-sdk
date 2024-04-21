@@ -82,7 +82,7 @@ namespace eBay.Service.Call
 		/// </span>
 		/// </param>
 		///
-		public DescriptionTemplateTypeCollection GetDescriptionTemplates(string CategoryID, DateTime LastModifiedTime, bool MotorVehicles)
+		public DescriptionTemplateType[] GetDescriptionTemplates(string CategoryID, DateTime LastModifiedTime, bool MotorVehicles)
 		{
 			this.CategoryID = CategoryID;
 			this.LastModifiedTime = LastModifiedTime;
@@ -156,9 +156,9 @@ namespace eBay.Service.Call
 		
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetDescriptionTemplatesResponseType.DescriptionTemplate"/> of type <see cref="DescriptionTemplateTypeCollection"/>.
+		/// Gets the returned <see cref="GetDescriptionTemplatesResponseType.DescriptionTemplate"/> of type <see cref="DescriptionTemplateType[]"/>.
 		/// </summary>
-		public DescriptionTemplateTypeCollection DescriptionTemplateList
+		public DescriptionTemplateType[] DescriptionTemplateList
 		{ 
 			get { return ApiResponse.DescriptionTemplate; }
 		}
@@ -172,25 +172,25 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetDescriptionTemplatesResponseType.ObsoleteLayoutID"/> of type <see cref="Int32Collection"/>.
+		/// Gets the returned <see cref="GetDescriptionTemplatesResponseType.ObsoleteLayoutID"/> of type <see cref="Int32[]"/>.
 		/// </summary>
-		public Int32Collection ObsoleteLayoutIDList
+		public Int32[] ObsoleteLayoutIDList
 		{ 
 			get { return ApiResponse.ObsoleteLayoutID; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetDescriptionTemplatesResponseType.ObsoleteThemeID"/> of type <see cref="Int32Collection"/>.
+		/// Gets the returned <see cref="GetDescriptionTemplatesResponseType.ObsoleteThemeID"/> of type <see cref="Int32[]"/>.
 		/// </summary>
-		public Int32Collection ObsoleteThemeIDList
+		public Int32[] ObsoleteThemeIDList
 		{ 
 			get { return ApiResponse.ObsoleteThemeID; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetDescriptionTemplatesResponseType.ThemeGroup"/> of type <see cref="ThemeGroupTypeCollection"/>.
+		/// Gets the returned <see cref="GetDescriptionTemplatesResponseType.ThemeGroup"/> of type <see cref="ThemeGroupType[]"/>.
 		/// </summary>
-		public ThemeGroupTypeCollection ThemeGroupList
+		public ThemeGroupType[] ThemeGroupList
 		{ 
 			get { return ApiResponse.ThemeGroup; }
 		}

@@ -407,17 +407,17 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetMyeBayBuyingResponseType.SecondChanceOffer"/> of type <see cref="ItemTypeCollection"/>.
+		/// Gets the returned <see cref="GetMyeBayBuyingResponseType.SecondChanceOffer"/> of type <see cref="ItemType[]"/>.
 		/// </summary>
-		public ItemTypeCollection SecondChanceOfferReturn
+		public ItemType[] SecondChanceOfferReturn
 		{ 
 			get { return ApiResponse.SecondChanceOffer; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetMyeBayBuyingResponseType.BidAssistantList"/> of type <see cref="BidGroupTypeCollection"/>.
+		/// Gets the returned <see cref="GetMyeBayBuyingResponseType.BidAssistantList"/> of type <see cref="BidGroupType[]"/>.
 		/// </summary>
-        //public BidGroupTypeCollection BidAssistantListList
+        //public BidGroupType[] BidAssistantListList
         //{ 
         //    get { return ApiResponse.BidAssistantList; }
         //}
@@ -439,9 +439,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetMyeBayBuyingResponseType.UserDefinedList"/> of type <see cref="UserDefinedListTypeCollection"/>.
+		/// Gets the returned <see cref="GetMyeBayBuyingResponseType.UserDefinedList"/> of type <see cref="UserDefinedListType[]"/>.
 		/// </summary>
-		public UserDefinedListTypeCollection UserDefinedListList
+		public UserDefinedListType[] UserDefinedListList
 		{ 
 			get { return ApiResponse.UserDefinedList; }
 		}

@@ -85,7 +85,7 @@ namespace eBay.Service.Call
 		/// </span>
 		/// </param>
 		///
-		public void ReviseMyMessagesFolders(MyMessagesFolderOperationCodeType Operation, Int64Collection FolderIDList, StringCollection FolderNameList)
+		public void ReviseMyMessagesFolders(MyMessagesFolderOperationCodeType Operation, Int64[] FolderIDList, String[] FolderNameList)
 		{
 			this.Operation = Operation;
 			this.FolderIDList = FolderIDList;
@@ -99,7 +99,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public void ReviseMyMessagesFolders(MyMessagesFolderOperationCodeType Operation, StringCollection FolderNameList, Int64Collection FolderIDList)
+		public void ReviseMyMessagesFolders(MyMessagesFolderOperationCodeType Operation, String[] FolderNameList, Int64[] FolderIDList)
 		{
 			this.Operation = Operation;
 			this.FolderNameList = FolderNameList;
@@ -150,18 +150,18 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="ReviseMyMessagesFoldersRequestType.FolderID"/> of type <see cref="Int64Collection"/>.
+		/// Gets or sets the <see cref="ReviseMyMessagesFoldersRequestType.FolderID"/> of type <see cref="Int64[]"/>.
 		/// </summary>
-		public Int64Collection FolderIDList
+		public Int64[] FolderIDList
 		{ 
 			get { return ApiRequest.FolderID; }
 			set { ApiRequest.FolderID = value; }
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="ReviseMyMessagesFoldersRequestType.FolderName"/> of type <see cref="StringCollection"/>.
+		/// Gets or sets the <see cref="ReviseMyMessagesFoldersRequestType.FolderName"/> of type <see cref="String[]"/>.
 		/// </summary>
-		public StringCollection FolderNameList
+		public String[] FolderNameList
 		{ 
 			get { return ApiRequest.FolderName; }
 			set { ApiRequest.FolderName = value; }

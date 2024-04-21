@@ -167,17 +167,17 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetNotificationsUsageResponseType.NotificationDetailsArray"/> of type <see cref="NotificationDetailsTypeCollection"/>.
+		/// Gets the returned <see cref="GetNotificationsUsageResponseType.NotificationDetailsArray"/> of type <see cref="NotificationDetailsType[]"/>.
 		/// </summary>
-		public NotificationDetailsTypeCollection NotificationDetailsList
+		public NotificationDetailsType[] NotificationDetailsList
 		{ 
 			get { return ApiResponse.NotificationDetailsArray; }
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetNotificationsUsageResponseType.MarkUpMarkDownHistory"/> of type <see cref="MarkUpMarkDownEventTypeCollection"/>.
+		/// Gets the returned <see cref="GetNotificationsUsageResponseType.MarkUpMarkDownHistory"/> of type <see cref="MarkUpMarkDownEventType[]"/>.
 		/// </summary>
-		public MarkUpMarkDownEventTypeCollection MarkUpMarkDownHistoryList
+		public MarkUpMarkDownEventType[] MarkUpMarkDownHistoryList
 		{ 
 			get { return ApiResponse.MarkUpMarkDownHistory; }
 		}

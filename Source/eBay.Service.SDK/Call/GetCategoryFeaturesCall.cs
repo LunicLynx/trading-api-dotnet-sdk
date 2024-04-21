@@ -121,7 +121,7 @@ namespace eBay.Service.Call
 		/// features only, for the specified category.
 		/// </param>
 		///
-		public CategoryFeatureTypeCollection GetCategoryFeatures(string CategoryID, int LevelLimit, bool ViewAllNodes, FeatureIDCodeTypeCollection FeatureIDList, bool AllFeaturesForCategory)
+		public CategoryFeatureType[] GetCategoryFeatures(string CategoryID, int LevelLimit, bool ViewAllNodes, FeatureIDCodeType[] FeatureIDList, bool AllFeaturesForCategory)
 		{
 			this.CategoryID = CategoryID;
 			this.LevelLimit = LevelLimit;
@@ -149,7 +149,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public CategoryFeatureTypeCollection GetCategoryFeatures(/*FeatureIDCodeTypeCollection FeatureIDList*/)
+		public CategoryFeatureType[] GetCategoryFeatures(/*FeatureIDCodeType[] FeatureIDList*/)
 		{
 			Execute();
 			return CategoryList;
@@ -216,9 +216,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="GetCategoryFeaturesRequestType.FeatureID"/> of type <see cref="FeatureIDCodeTypeCollection"/>.
+		/// Gets or sets the <see cref="GetCategoryFeaturesRequestType.FeatureID"/> of type <see cref="FeatureIDCodeType[]"/>.
 		/// </summary>
-		public FeatureIDCodeTypeCollection FeatureIDList
+		public FeatureIDCodeType[] FeatureIDList
 		{ 
 			get { return ApiRequest.FeatureID; }
 			set { ApiRequest.FeatureID = value; }
@@ -251,9 +251,9 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetCategoryFeaturesResponseType.Category"/> of type <see cref="CategoryFeatureTypeCollection"/>.
+		/// Gets the returned <see cref="GetCategoryFeaturesResponseType.Category"/> of type <see cref="CategoryFeatureType[]"/>.
 		/// </summary>
-		public CategoryFeatureTypeCollection CategoryList
+		public CategoryFeatureType[] CategoryList
 		{ 
 			get { return ApiResponse.Category; }
 		}

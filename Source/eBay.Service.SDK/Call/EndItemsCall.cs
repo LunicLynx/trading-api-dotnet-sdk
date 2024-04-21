@@ -67,7 +67,7 @@ namespace eBay.Service.Call
 		/// An <b>EndItemRequestContainer</b> container is required for each eBay listing that the seller plans to end through the <b>EndItems</b> call. Up to 10 eBay listings can be ended with one <b>EndItems</b> call.
 		/// </param>
 		///
-		public EndItemResponseContainerTypeCollection EndItems(EndItemRequestContainerTypeCollection EndItemRequestContainerList)
+		public EndItemResponseContainerType[] EndItems(EndItemRequestContainerType[] EndItemRequestContainerList)
 		{
 			this.EndItemRequestContainerList = EndItemRequestContainerList;
 
@@ -111,9 +111,9 @@ namespace eBay.Service.Call
 
 		
  		/// <summary>
-		/// Gets or sets the <see cref="EndItemsRequestType.EndItemRequestContainer"/> of type <see cref="EndItemRequestContainerTypeCollection"/>.
+		/// Gets or sets the <see cref="EndItemsRequestType.EndItemRequestContainer"/> of type <see cref="EndItemRequestContainerType[]"/>.
 		/// </summary>
-		public EndItemRequestContainerTypeCollection EndItemRequestContainerList
+		public EndItemRequestContainerType[] EndItemRequestContainerList
 		{ 
 			get { return ApiRequest.EndItemRequestContainer; }
 			set { ApiRequest.EndItemRequestContainer = value; }
@@ -121,9 +121,9 @@ namespace eBay.Service.Call
 		
 		
  		/// <summary>
-		/// Gets the returned <see cref="EndItemsResponseType.EndItemResponseContainer"/> of type <see cref="EndItemResponseContainerTypeCollection"/>.
+		/// Gets the returned <see cref="EndItemsResponseType.EndItemResponseContainer"/> of type <see cref="EndItemResponseContainerType[]"/>.
 		/// </summary>
-		public EndItemResponseContainerTypeCollection EndItemResponseContainerList
+		public EndItemResponseContainerType[] EndItemResponseContainerList
 		{ 
 			get { return ApiResponse.EndItemResponseContainer; }
 		}
