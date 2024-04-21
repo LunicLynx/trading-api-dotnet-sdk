@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "Helper\Helper.csp
 		{068A6C45-FAAF-49F5-B3F2-3928DA55D01A} = {068A6C45-FAAF-49F5-B3F2-3928DA55D01A}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eBay.Service.SDK.Attribute", "eBay.Service.SDK.Attribute\eBay.Service.SDK.Attribute.csproj", "{3F7B51BE-720D-44EF-86D2-F80FE3AE5081}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eBay.Service.SDK.Attribute", "eBay.Service.SDK.Attribute\eBay.Service.SDK.Attribute.csproj", "{3F7B51BE-720D-44EF-86D2-F80FE3AE5081}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
