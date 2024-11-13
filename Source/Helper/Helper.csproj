@@ -1,14 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>8.0.50727</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{08CCEE58-05A8-4F41-8085-20DC797CF402}</ProjectGuid>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ApplicationIcon>
-    </ApplicationIcon>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
     <AssemblyName>Samples.Helper</AssemblyName>
@@ -18,18 +11,10 @@
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
     <DelaySign>false</DelaySign>
     <OutputType>Library</OutputType>
-    <RootNamespace>Helper</RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
     <StartupObject>
     </StartupObject>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
     <SignAssembly>true</SignAssembly>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <OldToolsVersion>2.0</OldToolsVersion>
-    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -45,139 +30,54 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>bin\Debug\</OutputPath>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DocumentationFile>bin\Debug\Samples.Helper.XML</DocumentationFile>
-    <DebugSymbols>true</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
     <NoStdLib>false</NoStdLib>
     <NoWarn>
     </NoWarn>
-    <Optimize>false</Optimize>
     <RegisterForComInterop>false</RegisterForComInterop>
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningLevel>4</WarningLevel>
-    <DebugType>full</DebugType>
-    <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>bin\Release\</OutputPath>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
-    <DefineConstants>TRACE</DefineConstants>
     <DocumentationFile>Samples.Helper.xml</DocumentationFile>
-    <DebugSymbols>false</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
     <NoStdLib>false</NoStdLib>
     <NoWarn>
     </NoWarn>
-    <Optimize>true</Optimize>
     <RegisterForComInterop>false</RegisterForComInterop>
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
-    <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="eBay.Service">
-      <HintPath>..\eBay.Service.SDK\bin\Debug\eBay.Service.dll</HintPath>
-    </Reference>
-    <Reference Include="System">
-      <Name>System</Name>
-    </Reference>
-    <Reference Include="System.configuration" />
-    <Reference Include="System.Data">
-      <Name>System.Data</Name>
-    </Reference>
-    <Reference Include="System.Drawing">
-      <Name>System.Drawing</Name>
-    </Reference>
-    <Reference Include="System.Windows.Forms">
-      <Name>System.Windows.Forms</Name>
-    </Reference>
-    <Reference Include="System.Xml">
-      <Name>System.XML</Name>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AppSettingHelper.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Cache\BaseDownloader.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Cache\CategoriesDownloader.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Cache\DetailsDownloader.cs" />
-    <Compile Include="Cache\FeaturesDownloader.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="PaymentServiceHelper.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ShippingServiceHelper.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="UI\CheckBoxControlBuilder.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="UI\CheckBoxGroupControl.cs">
+    <Compile Update="UI\CheckBoxGroupControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\ControlTagItem.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="UI\EditListView.cs">
+    <Compile Update="UI\EditListView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UI\InternationalShippingServiceControl.cs">
+    <Compile Update="UI\InternationalShippingServiceControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\IntlShippingServiceListView.cs">
+    <Compile Update="UI\IntlShippingServiceListView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UI\ShippingServiceControl.cs">
+    <Compile Update="UI\ShippingServiceControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\ShippingServiceListView.cs">
+    <Compile Update="UI\ShippingServiceListView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="UI\CheckBoxGroupControl.resx">
-      <DependentUpon>CheckBoxGroupControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\EditListView.resx">
-      <DependentUpon>EditListView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\InternationalShippingServiceControl.resx">
-      <DependentUpon>InternationalShippingServiceControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\IntlShippingServiceListView.resx">
-      <DependentUpon>IntlShippingServiceListView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\ShippingServiceControl.resx">
-      <DependentUpon>ShippingServiceControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\ShippingServiceListView.resx">
-      <DependentUpon>ShippingServiceListView.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\eBay.snk">
@@ -201,17 +101,13 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\eBay.Service.SDK.Attribute\eBay.Service.SDK.Attribute.csproj">
-      <Project>{3f7b51be-720d-44ef-86d2-f80fe3ae5081}</Project>
-      <Name>eBay.Service.SDK.Attribute</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <AssemblyVersion>3.1131.0.0</AssemblyVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eBay.Service.SDK\eBay.Service.csproj" />
+  </ItemGroup>
 </Project>

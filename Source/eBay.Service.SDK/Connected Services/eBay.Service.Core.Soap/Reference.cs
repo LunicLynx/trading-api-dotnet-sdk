@@ -16,532 +16,884 @@ namespace eBay.Service.Core.Soap
     public interface eBayAPIInterface
     {
         
+        // CODEGEN: Generating message contract since the operation AddFixedPriceItem is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.AddFixedPriceItemResponse AddFixedPriceItem(eBay.Service.Core.Soap.AddFixedPriceItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.AddFixedPriceItemResponse> AddFixedPriceItemAsync(eBay.Service.Core.Soap.AddFixedPriceItemRequest request);
         
+        // CODEGEN: Generating message contract since the operation AddItem is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.AddItemResponse AddItem(eBay.Service.Core.Soap.AddItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.AddItemResponse> AddItemAsync(eBay.Service.Core.Soap.AddItemRequest request);
         
+        // CODEGEN: Generating message contract since the operation AddItems is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.AddItemsResponse AddItems(eBay.Service.Core.Soap.AddItemsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.AddItemsResponse> AddItemsAsync(eBay.Service.Core.Soap.AddItemsRequest request);
         
+        // CODEGEN: Generating message contract since the operation AddMemberMessageAAQToPartner is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.AddMemberMessageAAQToPartnerResponse AddMemberMessageAAQToPartner(eBay.Service.Core.Soap.AddMemberMessageAAQToPartnerRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.AddMemberMessageAAQToPartnerResponse> AddMemberMessageAAQToPartnerAsync(eBay.Service.Core.Soap.AddMemberMessageAAQToPartnerRequest request);
         
+        // CODEGEN: Generating message contract since the operation AddMemberMessageRTQ is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.AddMemberMessageRTQResponse AddMemberMessageRTQ(eBay.Service.Core.Soap.AddMemberMessageRTQRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.AddMemberMessageRTQResponse> AddMemberMessageRTQAsync(eBay.Service.Core.Soap.AddMemberMessageRTQRequest request);
         
+        // CODEGEN: Generating message contract since the operation AddMemberMessagesAAQToBidder is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.AddMemberMessagesAAQToBidderResponse AddMemberMessagesAAQToBidder(eBay.Service.Core.Soap.AddMemberMessagesAAQToBidderRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.AddMemberMessagesAAQToBidderResponse> AddMemberMessagesAAQToBidderAsync(eBay.Service.Core.Soap.AddMemberMessagesAAQToBidderRequest request);
         
+        // CODEGEN: Generating message contract since the operation AddOrder is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.AddOrderResponse AddOrder(eBay.Service.Core.Soap.AddOrderRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.AddOrderResponse> AddOrderAsync(eBay.Service.Core.Soap.AddOrderRequest request);
         
+        // CODEGEN: Generating message contract since the operation AddSecondChanceItem is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.AddSecondChanceItemResponse AddSecondChanceItem(eBay.Service.Core.Soap.AddSecondChanceItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.AddSecondChanceItemResponse> AddSecondChanceItemAsync(eBay.Service.Core.Soap.AddSecondChanceItemRequest request);
         
+        // CODEGEN: Generating message contract since the operation AddToItemDescription is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.AddToItemDescriptionResponse AddToItemDescription(eBay.Service.Core.Soap.AddToItemDescriptionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.AddToItemDescriptionResponse> AddToItemDescriptionAsync(eBay.Service.Core.Soap.AddToItemDescriptionRequest request);
         
+        // CODEGEN: Generating message contract since the operation AddToWatchList is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.AddToWatchListResponse AddToWatchList(eBay.Service.Core.Soap.AddToWatchListRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.AddToWatchListResponse> AddToWatchListAsync(eBay.Service.Core.Soap.AddToWatchListRequest request);
         
+        // CODEGEN: Generating message contract since the operation CompleteSale is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.CompleteSaleResponse CompleteSale(eBay.Service.Core.Soap.CompleteSaleRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.CompleteSaleResponse> CompleteSaleAsync(eBay.Service.Core.Soap.CompleteSaleRequest request);
         
+        // CODEGEN: Generating message contract since the operation ConfirmIdentity is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.ConfirmIdentityResponse ConfirmIdentity(eBay.Service.Core.Soap.ConfirmIdentityRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.ConfirmIdentityResponse> ConfirmIdentityAsync(eBay.Service.Core.Soap.ConfirmIdentityRequest request);
         
+        // CODEGEN: Generating message contract since the operation DeleteMyMessages is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.DeleteMyMessagesResponse DeleteMyMessages(eBay.Service.Core.Soap.DeleteMyMessagesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.DeleteMyMessagesResponse> DeleteMyMessagesAsync(eBay.Service.Core.Soap.DeleteMyMessagesRequest request);
         
+        // CODEGEN: Generating message contract since the operation EndFixedPriceItem is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.EndFixedPriceItemResponse EndFixedPriceItem(eBay.Service.Core.Soap.EndFixedPriceItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.EndFixedPriceItemResponse> EndFixedPriceItemAsync(eBay.Service.Core.Soap.EndFixedPriceItemRequest request);
         
+        // CODEGEN: Generating message contract since the operation EndItem is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.EndItemResponse EndItem(eBay.Service.Core.Soap.EndItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.EndItemResponse> EndItemAsync(eBay.Service.Core.Soap.EndItemRequest request);
         
+        // CODEGEN: Generating message contract since the operation EndItems is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.EndItemsResponse EndItems(eBay.Service.Core.Soap.EndItemsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.EndItemsResponse> EndItemsAsync(eBay.Service.Core.Soap.EndItemsRequest request);
         
+        // CODEGEN: Generating message contract since the operation ExtendSiteHostedPictures is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.ExtendSiteHostedPicturesResponse ExtendSiteHostedPictures(eBay.Service.Core.Soap.ExtendSiteHostedPicturesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.ExtendSiteHostedPicturesResponse> ExtendSiteHostedPicturesAsync(eBay.Service.Core.Soap.ExtendSiteHostedPicturesRequest request);
         
+        // CODEGEN: Generating message contract since the operation FetchToken is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.FetchTokenResponse FetchToken(eBay.Service.Core.Soap.FetchTokenRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.FetchTokenResponse> FetchTokenAsync(eBay.Service.Core.Soap.FetchTokenRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetAccount is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetAccountResponse GetAccount(eBay.Service.Core.Soap.GetAccountRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetAccountResponse> GetAccountAsync(eBay.Service.Core.Soap.GetAccountRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetAdFormatLeads is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetAdFormatLeadsResponse GetAdFormatLeads(eBay.Service.Core.Soap.GetAdFormatLeadsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetAdFormatLeadsResponse> GetAdFormatLeadsAsync(eBay.Service.Core.Soap.GetAdFormatLeadsRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetAllBidders is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetAllBiddersResponse GetAllBidders(eBay.Service.Core.Soap.GetAllBiddersRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetAllBiddersResponse> GetAllBiddersAsync(eBay.Service.Core.Soap.GetAllBiddersRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetBestOffers is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetBestOffersResponse GetBestOffers(eBay.Service.Core.Soap.GetBestOffersRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetBestOffersResponse> GetBestOffersAsync(eBay.Service.Core.Soap.GetBestOffersRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetBidderList is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetBidderListResponse GetBidderList(eBay.Service.Core.Soap.GetBidderListRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetBidderListResponse> GetBidderListAsync(eBay.Service.Core.Soap.GetBidderListRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetCategories is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetCategoriesResponse GetCategories(eBay.Service.Core.Soap.GetCategoriesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetCategoriesResponse> GetCategoriesAsync(eBay.Service.Core.Soap.GetCategoriesRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetCategoryFeatures is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetCategoryFeaturesResponse GetCategoryFeatures(eBay.Service.Core.Soap.GetCategoryFeaturesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetCategoryFeaturesResponse> GetCategoryFeaturesAsync(eBay.Service.Core.Soap.GetCategoryFeaturesRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetCategoryMappings is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetCategoryMappingsResponse GetCategoryMappings(eBay.Service.Core.Soap.GetCategoryMappingsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetCategoryMappingsResponse> GetCategoryMappingsAsync(eBay.Service.Core.Soap.GetCategoryMappingsRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetChallengeToken is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetChallengeTokenResponse GetChallengeToken(eBay.Service.Core.Soap.GetChallengeTokenRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetChallengeTokenResponse> GetChallengeTokenAsync(eBay.Service.Core.Soap.GetChallengeTokenRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetClientAlertsAuthToken is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetClientAlertsAuthTokenResponse GetClientAlertsAuthToken(eBay.Service.Core.Soap.GetClientAlertsAuthTokenRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetClientAlertsAuthTokenResponse> GetClientAlertsAuthTokenAsync(eBay.Service.Core.Soap.GetClientAlertsAuthTokenRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetDescriptionTemplates is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetDescriptionTemplatesResponse GetDescriptionTemplates(eBay.Service.Core.Soap.GetDescriptionTemplatesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetDescriptionTemplatesResponse> GetDescriptionTemplatesAsync(eBay.Service.Core.Soap.GetDescriptionTemplatesRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetFeedback is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetFeedbackResponse GetFeedback(eBay.Service.Core.Soap.GetFeedbackRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetFeedbackResponse> GetFeedbackAsync(eBay.Service.Core.Soap.GetFeedbackRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetItem is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetItemResponse GetItem(eBay.Service.Core.Soap.GetItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetItemResponse> GetItemAsync(eBay.Service.Core.Soap.GetItemRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetItemShipping is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetItemShippingResponse GetItemShipping(eBay.Service.Core.Soap.GetItemShippingRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetItemShippingResponse> GetItemShippingAsync(eBay.Service.Core.Soap.GetItemShippingRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetItemTransactions is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetItemTransactionsResponse GetItemTransactions(eBay.Service.Core.Soap.GetItemTransactionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetItemTransactionsResponse> GetItemTransactionsAsync(eBay.Service.Core.Soap.GetItemTransactionsRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetItemsAwaitingFeedback is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetItemsAwaitingFeedbackResponse GetItemsAwaitingFeedback(eBay.Service.Core.Soap.GetItemsAwaitingFeedbackRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetItemsAwaitingFeedbackResponse> GetItemsAwaitingFeedbackAsync(eBay.Service.Core.Soap.GetItemsAwaitingFeedbackRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetMemberMessages is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetMemberMessagesResponse GetMemberMessages(eBay.Service.Core.Soap.GetMemberMessagesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetMemberMessagesResponse> GetMemberMessagesAsync(eBay.Service.Core.Soap.GetMemberMessagesRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetMessagePreferences is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetMessagePreferencesResponse GetMessagePreferences(eBay.Service.Core.Soap.GetMessagePreferencesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetMessagePreferencesResponse> GetMessagePreferencesAsync(eBay.Service.Core.Soap.GetMessagePreferencesRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetMyMessages is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetMyMessagesResponse GetMyMessages(eBay.Service.Core.Soap.GetMyMessagesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetMyMessagesResponse> GetMyMessagesAsync(eBay.Service.Core.Soap.GetMyMessagesRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetMyeBayBuying is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetMyeBayBuyingResponse GetMyeBayBuying(eBay.Service.Core.Soap.GetMyeBayBuyingRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetMyeBayBuyingResponse> GetMyeBayBuyingAsync(eBay.Service.Core.Soap.GetMyeBayBuyingRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetMyeBaySelling is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetMyeBaySellingResponse GetMyeBaySelling(eBay.Service.Core.Soap.GetMyeBaySellingRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetMyeBaySellingResponse> GetMyeBaySellingAsync(eBay.Service.Core.Soap.GetMyeBaySellingRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetNotificationPreferences is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetNotificationPreferencesResponse GetNotificationPreferences(eBay.Service.Core.Soap.GetNotificationPreferencesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetNotificationPreferencesResponse> GetNotificationPreferencesAsync(eBay.Service.Core.Soap.GetNotificationPreferencesRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetNotificationsUsage is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetNotificationsUsageResponse GetNotificationsUsage(eBay.Service.Core.Soap.GetNotificationsUsageRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetNotificationsUsageResponse> GetNotificationsUsageAsync(eBay.Service.Core.Soap.GetNotificationsUsageRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetOrders is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetOrdersResponse GetOrders(eBay.Service.Core.Soap.GetOrdersRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetOrdersResponse> GetOrdersAsync(eBay.Service.Core.Soap.GetOrdersRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetSellerEvents is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetSellerEventsResponse GetSellerEvents(eBay.Service.Core.Soap.GetSellerEventsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetSellerEventsResponse> GetSellerEventsAsync(eBay.Service.Core.Soap.GetSellerEventsRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetSellerList is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetSellerListResponse GetSellerList(eBay.Service.Core.Soap.GetSellerListRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetSellerListResponse> GetSellerListAsync(eBay.Service.Core.Soap.GetSellerListRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetSellerTransactions is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetSellerTransactionsResponse GetSellerTransactions(eBay.Service.Core.Soap.GetSellerTransactionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetSellerTransactionsResponse> GetSellerTransactionsAsync(eBay.Service.Core.Soap.GetSellerTransactionsRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetSessionID is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetSessionIDResponse GetSessionID(eBay.Service.Core.Soap.GetSessionIDRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetSessionIDResponse> GetSessionIDAsync(eBay.Service.Core.Soap.GetSessionIDRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetShippingDiscountProfiles is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetShippingDiscountProfilesResponse GetShippingDiscountProfiles(eBay.Service.Core.Soap.GetShippingDiscountProfilesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetShippingDiscountProfilesResponse> GetShippingDiscountProfilesAsync(eBay.Service.Core.Soap.GetShippingDiscountProfilesRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetStore is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetStoreResponse GetStore(eBay.Service.Core.Soap.GetStoreRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetStoreResponse> GetStoreAsync(eBay.Service.Core.Soap.GetStoreRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetStoreCategoryUpdateStatus is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetStoreCategoryUpdateStatusResponse GetStoreCategoryUpdateStatus(eBay.Service.Core.Soap.GetStoreCategoryUpdateStatusRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetStoreCategoryUpdateStatusResponse> GetStoreCategoryUpdateStatusAsync(eBay.Service.Core.Soap.GetStoreCategoryUpdateStatusRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetSuggestedCategories is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetSuggestedCategoriesResponse GetSuggestedCategories(eBay.Service.Core.Soap.GetSuggestedCategoriesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetSuggestedCategoriesResponse> GetSuggestedCategoriesAsync(eBay.Service.Core.Soap.GetSuggestedCategoriesRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetTaxTable is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetTaxTableResponse GetTaxTable(eBay.Service.Core.Soap.GetTaxTableRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetTaxTableResponse> GetTaxTableAsync(eBay.Service.Core.Soap.GetTaxTableRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetTokenStatus is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetTokenStatusResponse GetTokenStatus(eBay.Service.Core.Soap.GetTokenStatusRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetTokenStatusResponse> GetTokenStatusAsync(eBay.Service.Core.Soap.GetTokenStatusRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetUser is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetUserResponse GetUser(eBay.Service.Core.Soap.GetUserRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetUserResponse> GetUserAsync(eBay.Service.Core.Soap.GetUserRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetUserContactDetails is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetUserContactDetailsResponse GetUserContactDetails(eBay.Service.Core.Soap.GetUserContactDetailsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetUserContactDetailsResponse> GetUserContactDetailsAsync(eBay.Service.Core.Soap.GetUserContactDetailsRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetUserPreferences is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetUserPreferencesResponse GetUserPreferences(eBay.Service.Core.Soap.GetUserPreferencesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetUserPreferencesResponse> GetUserPreferencesAsync(eBay.Service.Core.Soap.GetUserPreferencesRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetVeROReasonCodeDetails is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetVeROReasonCodeDetailsResponse GetVeROReasonCodeDetails(eBay.Service.Core.Soap.GetVeROReasonCodeDetailsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetVeROReasonCodeDetailsResponse> GetVeROReasonCodeDetailsAsync(eBay.Service.Core.Soap.GetVeROReasonCodeDetailsRequest request);
         
+        // CODEGEN: Generating message contract since the operation GetVeROReportStatus is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GetVeROReportStatusResponse GetVeROReportStatus(eBay.Service.Core.Soap.GetVeROReportStatusRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetVeROReportStatusResponse> GetVeROReportStatusAsync(eBay.Service.Core.Soap.GetVeROReportStatusRequest request);
         
+        // CODEGEN: Generating message contract since the operation GeteBayDetails is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GeteBayDetailsResponse GeteBayDetails(eBay.Service.Core.Soap.GeteBayDetailsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GeteBayDetailsResponse> GeteBayDetailsAsync(eBay.Service.Core.Soap.GeteBayDetailsRequest request);
         
+        // CODEGEN: Generating message contract since the operation GeteBayOfficialTime is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.GeteBayOfficialTimeResponse GeteBayOfficialTime(eBay.Service.Core.Soap.GeteBayOfficialTimeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GeteBayOfficialTimeResponse> GeteBayOfficialTimeAsync(eBay.Service.Core.Soap.GeteBayOfficialTimeRequest request);
         
+        // CODEGEN: Generating message contract since the operation LeaveFeedback is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.LeaveFeedbackResponse LeaveFeedback(eBay.Service.Core.Soap.LeaveFeedbackRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.LeaveFeedbackResponse> LeaveFeedbackAsync(eBay.Service.Core.Soap.LeaveFeedbackRequest request);
         
+        // CODEGEN: Generating message contract since the operation PlaceOffer is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.PlaceOfferResponse PlaceOffer(eBay.Service.Core.Soap.PlaceOfferRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.PlaceOfferResponse> PlaceOfferAsync(eBay.Service.Core.Soap.PlaceOfferRequest request);
         
+        // CODEGEN: Generating message contract since the operation RelistFixedPriceItem is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.RelistFixedPriceItemResponse RelistFixedPriceItem(eBay.Service.Core.Soap.RelistFixedPriceItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.RelistFixedPriceItemResponse> RelistFixedPriceItemAsync(eBay.Service.Core.Soap.RelistFixedPriceItemRequest request);
         
+        // CODEGEN: Generating message contract since the operation RelistItem is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.RelistItemResponse RelistItem(eBay.Service.Core.Soap.RelistItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.RelistItemResponse> RelistItemAsync(eBay.Service.Core.Soap.RelistItemRequest request);
         
+        // CODEGEN: Generating message contract since the operation RemoveFromWatchList is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.RemoveFromWatchListResponse RemoveFromWatchList(eBay.Service.Core.Soap.RemoveFromWatchListRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.RemoveFromWatchListResponse> RemoveFromWatchListAsync(eBay.Service.Core.Soap.RemoveFromWatchListRequest request);
         
+        // CODEGEN: Generating message contract since the operation RespondToBestOffer is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.RespondToBestOfferResponse RespondToBestOffer(eBay.Service.Core.Soap.RespondToBestOfferRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.RespondToBestOfferResponse> RespondToBestOfferAsync(eBay.Service.Core.Soap.RespondToBestOfferRequest request);
         
+        // CODEGEN: Generating message contract since the operation RespondToFeedback is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.RespondToFeedbackResponse RespondToFeedback(eBay.Service.Core.Soap.RespondToFeedbackRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.RespondToFeedbackResponse> RespondToFeedbackAsync(eBay.Service.Core.Soap.RespondToFeedbackRequest request);
         
+        // CODEGEN: Generating message contract since the operation ReviseFixedPriceItem is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.ReviseFixedPriceItemResponse ReviseFixedPriceItem(eBay.Service.Core.Soap.ReviseFixedPriceItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.ReviseFixedPriceItemResponse> ReviseFixedPriceItemAsync(eBay.Service.Core.Soap.ReviseFixedPriceItemRequest request);
         
+        // CODEGEN: Generating message contract since the operation ReviseInventoryStatus is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.ReviseInventoryStatusResponse ReviseInventoryStatus(eBay.Service.Core.Soap.ReviseInventoryStatusRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.ReviseInventoryStatusResponse> ReviseInventoryStatusAsync(eBay.Service.Core.Soap.ReviseInventoryStatusRequest request);
         
+        // CODEGEN: Generating message contract since the operation ReviseItem is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.ReviseItemResponse ReviseItem(eBay.Service.Core.Soap.ReviseItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.ReviseItemResponse> ReviseItemAsync(eBay.Service.Core.Soap.ReviseItemRequest request);
         
+        // CODEGEN: Generating message contract since the operation ReviseMyMessages is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.ReviseMyMessagesResponse ReviseMyMessages(eBay.Service.Core.Soap.ReviseMyMessagesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.ReviseMyMessagesResponse> ReviseMyMessagesAsync(eBay.Service.Core.Soap.ReviseMyMessagesRequest request);
         
+        // CODEGEN: Generating message contract since the operation ReviseMyMessagesFolders is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.ReviseMyMessagesFoldersResponse ReviseMyMessagesFolders(eBay.Service.Core.Soap.ReviseMyMessagesFoldersRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.ReviseMyMessagesFoldersResponse> ReviseMyMessagesFoldersAsync(eBay.Service.Core.Soap.ReviseMyMessagesFoldersRequest request);
         
+        // CODEGEN: Generating message contract since the operation RevokeToken is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.RevokeTokenResponse RevokeToken(eBay.Service.Core.Soap.RevokeTokenRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.RevokeTokenResponse> RevokeTokenAsync(eBay.Service.Core.Soap.RevokeTokenRequest request);
         
+        // CODEGEN: Generating message contract since the operation SendInvoice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.SendInvoiceResponse SendInvoice(eBay.Service.Core.Soap.SendInvoiceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.SendInvoiceResponse> SendInvoiceAsync(eBay.Service.Core.Soap.SendInvoiceRequest request);
         
+        // CODEGEN: Generating message contract since the operation SetMessagePreferences is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.SetMessagePreferencesResponse SetMessagePreferences(eBay.Service.Core.Soap.SetMessagePreferencesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.SetMessagePreferencesResponse> SetMessagePreferencesAsync(eBay.Service.Core.Soap.SetMessagePreferencesRequest request);
         
+        // CODEGEN: Generating message contract since the operation SetNotificationPreferences is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.SetNotificationPreferencesResponse SetNotificationPreferences(eBay.Service.Core.Soap.SetNotificationPreferencesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.SetNotificationPreferencesResponse> SetNotificationPreferencesAsync(eBay.Service.Core.Soap.SetNotificationPreferencesRequest request);
         
+        // CODEGEN: Generating message contract since the operation SetShippingDiscountProfiles is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.SetShippingDiscountProfilesResponse SetShippingDiscountProfiles(eBay.Service.Core.Soap.SetShippingDiscountProfilesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.SetShippingDiscountProfilesResponse> SetShippingDiscountProfilesAsync(eBay.Service.Core.Soap.SetShippingDiscountProfilesRequest request);
         
+        // CODEGEN: Generating message contract since the operation SetStoreCategories is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.SetStoreCategoriesResponse SetStoreCategories(eBay.Service.Core.Soap.SetStoreCategoriesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.SetStoreCategoriesResponse> SetStoreCategoriesAsync(eBay.Service.Core.Soap.SetStoreCategoriesRequest request);
         
+        // CODEGEN: Generating message contract since the operation SetTaxTable is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.SetTaxTableResponse SetTaxTable(eBay.Service.Core.Soap.SetTaxTableRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.SetTaxTableResponse> SetTaxTableAsync(eBay.Service.Core.Soap.SetTaxTableRequest request);
         
+        // CODEGEN: Generating message contract since the operation SetUserNotes is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.SetUserNotesResponse SetUserNotes(eBay.Service.Core.Soap.SetUserNotesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.SetUserNotesResponse> SetUserNotesAsync(eBay.Service.Core.Soap.SetUserNotesRequest request);
         
+        // CODEGEN: Generating message contract since the operation SetUserPreferences is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.SetUserPreferencesResponse SetUserPreferences(eBay.Service.Core.Soap.SetUserPreferencesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.SetUserPreferencesResponse> SetUserPreferencesAsync(eBay.Service.Core.Soap.SetUserPreferencesRequest request);
         
+        // CODEGEN: Generating message contract since the operation UploadSiteHostedPictures is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.UploadSiteHostedPicturesResponse UploadSiteHostedPictures(eBay.Service.Core.Soap.UploadSiteHostedPicturesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.UploadSiteHostedPicturesResponse> UploadSiteHostedPicturesAsync(eBay.Service.Core.Soap.UploadSiteHostedPicturesRequest request);
         
+        // CODEGEN: Generating message contract since the operation ValidateChallengeInput is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.ValidateChallengeInputResponse ValidateChallengeInput(eBay.Service.Core.Soap.ValidateChallengeInputRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.ValidateChallengeInputResponse> ValidateChallengeInputAsync(eBay.Service.Core.Soap.ValidateChallengeInputRequest request);
         
+        // CODEGEN: Generating message contract since the operation ValidateTestUserRegistration is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.ValidateTestUserRegistrationResponse ValidateTestUserRegistration(eBay.Service.Core.Soap.ValidateTestUserRegistrationRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.ValidateTestUserRegistrationResponse> ValidateTestUserRegistrationAsync(eBay.Service.Core.Soap.ValidateTestUserRegistrationRequest request);
         
+        // CODEGEN: Generating message contract since the operation VeROReportItems is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.VeROReportItemsResponse VeROReportItems(eBay.Service.Core.Soap.VeROReportItemsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.VeROReportItemsResponse> VeROReportItemsAsync(eBay.Service.Core.Soap.VeROReportItemsRequest request);
         
+        // CODEGEN: Generating message contract since the operation VerifyAddFixedPriceItem is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.VerifyAddFixedPriceItemResponse VerifyAddFixedPriceItem(eBay.Service.Core.Soap.VerifyAddFixedPriceItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.VerifyAddFixedPriceItemResponse> VerifyAddFixedPriceItemAsync(eBay.Service.Core.Soap.VerifyAddFixedPriceItemRequest request);
         
+        // CODEGEN: Generating message contract since the operation VerifyAddItem is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.VerifyAddItemResponse VerifyAddItem(eBay.Service.Core.Soap.VerifyAddItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.VerifyAddItemResponse> VerifyAddItemAsync(eBay.Service.Core.Soap.VerifyAddItemRequest request);
         
+        // CODEGEN: Generating message contract since the operation VerifyAddSecondChanceItem is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
-        System.Threading.Tasks.Task<eBay.Service.Core.Soap.VerifyAddSecondChanceItemResponse> VerifyAddSecondChanceItemAsync(eBay.Service.Core.Soap.VerifyAddSecondChanceItemRequest request);
+        eBay.Service.Core.Soap.VerifyAddSecondChanceItemResponse VerifyAddSecondChanceItem(eBay.Service.Core.Soap.VerifyAddSecondChanceItemRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        System.Threading.Tasks.Task<eBay.Service.Core.Soap.VerifyAddSecondChanceItemResponse> VerifyAddSecondChanceItemAsync(eBay.Service.Core.Soap.VerifyAddSecondChanceItemRequest request);
+        
+        // CODEGEN: Generating message contract since the operation VerifyRelistItem is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractResponseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRequestType))]
+        eBay.Service.Core.Soap.VerifyRelistItemResponse VerifyRelistItem(eBay.Service.Core.Soap.VerifyRelistItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.VerifyRelistItemResponse> VerifyRelistItemAsync(eBay.Service.Core.Soap.VerifyRelistItemRequest request);
     }
     
@@ -22418,9 +22770,9 @@ namespace eBay.Service.Core.Soap
                 this.isSecureDescriptionFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlAnyElementAttribute(Order=124)]
+        [System.Xml.Serialization.XmlAnyElementAttribute(Order = 124)]
         public System.Xml.XmlElement[] Any
         {
             get
@@ -58564,7 +58916,6 @@ namespace eBay.Service.Core.Soap
         
         private string externalUserDataField;
         
-        private System.Xml.XmlElement[] anyField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -58803,20 +59154,20 @@ namespace eBay.Service.Core.Soap
                 this.externalUserDataField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlAnyElementAttribute(Order=15)]
-        public System.Xml.XmlElement[] Any
-        {
-            get
-            {
-                return this.anyField;
-            }
-            set
-            {
-                this.anyField = value;
-            }
-        }
+        //[System.Xml.Serialization.XmlAnyElementAttribute(Order = 15)]
+        //public System.Xml.XmlElement[] Any
+        //{
+        //    get
+        //    {
+        //        return this.anyField;
+        //    }
+        //    set
+        //    {
+        //        this.anyField = value;
+        //    }
+        //}
     }
     
     /// <remarks/>
@@ -66464,9 +66815,8 @@ namespace eBay.Service.Core.Soap
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:ebay:apis:eBLBaseComponents")]
     public partial class GetItemResponseType : AbstractResponseType
     {
-        
         private ItemType itemField;
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public ItemType Item
@@ -85716,6 +86066,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.AddFixedPriceItemResponse eBay.Service.Core.Soap.eBayAPIInterface.AddFixedPriceItem(eBay.Service.Core.Soap.AddFixedPriceItemRequest request)
+        {
+            return base.Channel.AddFixedPriceItem(request);
+        }
+        
+        public eBay.Service.Core.Soap.AddFixedPriceItemResponseType AddFixedPriceItem(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.AddFixedPriceItemRequestType AddFixedPriceItemRequest1)
+        {
+            eBay.Service.Core.Soap.AddFixedPriceItemRequest inValue = new eBay.Service.Core.Soap.AddFixedPriceItemRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.AddFixedPriceItemRequest1 = AddFixedPriceItemRequest1;
+            eBay.Service.Core.Soap.AddFixedPriceItemResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).AddFixedPriceItem(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.AddFixedPriceItemResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.AddFixedPriceItemResponse> eBay.Service.Core.Soap.eBayAPIInterface.AddFixedPriceItemAsync(eBay.Service.Core.Soap.AddFixedPriceItemRequest request)
         {
             return base.Channel.AddFixedPriceItemAsync(request);
@@ -85727,6 +86093,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.AddFixedPriceItemRequest1 = AddFixedPriceItemRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).AddFixedPriceItemAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.AddItemResponse eBay.Service.Core.Soap.eBayAPIInterface.AddItem(eBay.Service.Core.Soap.AddItemRequest request)
+        {
+            return base.Channel.AddItem(request);
+        }
+        
+        public eBay.Service.Core.Soap.AddItemResponseType AddItem(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.AddItemRequestType AddItemRequest1)
+        {
+            eBay.Service.Core.Soap.AddItemRequest inValue = new eBay.Service.Core.Soap.AddItemRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.AddItemRequest1 = AddItemRequest1;
+            eBay.Service.Core.Soap.AddItemResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).AddItem(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.AddItemResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -85744,6 +86126,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.AddItemsResponse eBay.Service.Core.Soap.eBayAPIInterface.AddItems(eBay.Service.Core.Soap.AddItemsRequest request)
+        {
+            return base.Channel.AddItems(request);
+        }
+        
+        public eBay.Service.Core.Soap.AddItemsResponseType AddItems(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.AddItemsRequestType AddItemsRequest1)
+        {
+            eBay.Service.Core.Soap.AddItemsRequest inValue = new eBay.Service.Core.Soap.AddItemsRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.AddItemsRequest1 = AddItemsRequest1;
+            eBay.Service.Core.Soap.AddItemsResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).AddItems(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.AddItemsResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.AddItemsResponse> eBay.Service.Core.Soap.eBayAPIInterface.AddItemsAsync(eBay.Service.Core.Soap.AddItemsRequest request)
         {
             return base.Channel.AddItemsAsync(request);
@@ -85755,6 +86153,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.AddItemsRequest1 = AddItemsRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).AddItemsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.AddMemberMessageAAQToPartnerResponse eBay.Service.Core.Soap.eBayAPIInterface.AddMemberMessageAAQToPartner(eBay.Service.Core.Soap.AddMemberMessageAAQToPartnerRequest request)
+        {
+            return base.Channel.AddMemberMessageAAQToPartner(request);
+        }
+        
+        public eBay.Service.Core.Soap.AddMemberMessageAAQToPartnerResponseType AddMemberMessageAAQToPartner(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.AddMemberMessageAAQToPartnerRequestType AddMemberMessageAAQToPartnerRequest1)
+        {
+            eBay.Service.Core.Soap.AddMemberMessageAAQToPartnerRequest inValue = new eBay.Service.Core.Soap.AddMemberMessageAAQToPartnerRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.AddMemberMessageAAQToPartnerRequest1 = AddMemberMessageAAQToPartnerRequest1;
+            eBay.Service.Core.Soap.AddMemberMessageAAQToPartnerResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).AddMemberMessageAAQToPartner(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.AddMemberMessageAAQToPartnerResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -85772,6 +86186,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.AddMemberMessageRTQResponse eBay.Service.Core.Soap.eBayAPIInterface.AddMemberMessageRTQ(eBay.Service.Core.Soap.AddMemberMessageRTQRequest request)
+        {
+            return base.Channel.AddMemberMessageRTQ(request);
+        }
+        
+        public eBay.Service.Core.Soap.AddMemberMessageRTQResponseType AddMemberMessageRTQ(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.AddMemberMessageRTQRequestType AddMemberMessageRTQRequest1)
+        {
+            eBay.Service.Core.Soap.AddMemberMessageRTQRequest inValue = new eBay.Service.Core.Soap.AddMemberMessageRTQRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.AddMemberMessageRTQRequest1 = AddMemberMessageRTQRequest1;
+            eBay.Service.Core.Soap.AddMemberMessageRTQResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).AddMemberMessageRTQ(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.AddMemberMessageRTQResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.AddMemberMessageRTQResponse> eBay.Service.Core.Soap.eBayAPIInterface.AddMemberMessageRTQAsync(eBay.Service.Core.Soap.AddMemberMessageRTQRequest request)
         {
             return base.Channel.AddMemberMessageRTQAsync(request);
@@ -85783,6 +86213,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.AddMemberMessageRTQRequest1 = AddMemberMessageRTQRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).AddMemberMessageRTQAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.AddMemberMessagesAAQToBidderResponse eBay.Service.Core.Soap.eBayAPIInterface.AddMemberMessagesAAQToBidder(eBay.Service.Core.Soap.AddMemberMessagesAAQToBidderRequest request)
+        {
+            return base.Channel.AddMemberMessagesAAQToBidder(request);
+        }
+        
+        public eBay.Service.Core.Soap.AddMemberMessagesAAQToBidderResponseType AddMemberMessagesAAQToBidder(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.AddMemberMessagesAAQToBidderRequestType AddMemberMessagesAAQToBidderRequest1)
+        {
+            eBay.Service.Core.Soap.AddMemberMessagesAAQToBidderRequest inValue = new eBay.Service.Core.Soap.AddMemberMessagesAAQToBidderRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.AddMemberMessagesAAQToBidderRequest1 = AddMemberMessagesAAQToBidderRequest1;
+            eBay.Service.Core.Soap.AddMemberMessagesAAQToBidderResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).AddMemberMessagesAAQToBidder(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.AddMemberMessagesAAQToBidderResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -85800,6 +86246,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.AddOrderResponse eBay.Service.Core.Soap.eBayAPIInterface.AddOrder(eBay.Service.Core.Soap.AddOrderRequest request)
+        {
+            return base.Channel.AddOrder(request);
+        }
+        
+        public eBay.Service.Core.Soap.AddOrderResponseType AddOrder(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.AddOrderRequestType AddOrderRequest1)
+        {
+            eBay.Service.Core.Soap.AddOrderRequest inValue = new eBay.Service.Core.Soap.AddOrderRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.AddOrderRequest1 = AddOrderRequest1;
+            eBay.Service.Core.Soap.AddOrderResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).AddOrder(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.AddOrderResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.AddOrderResponse> eBay.Service.Core.Soap.eBayAPIInterface.AddOrderAsync(eBay.Service.Core.Soap.AddOrderRequest request)
         {
             return base.Channel.AddOrderAsync(request);
@@ -85811,6 +86273,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.AddOrderRequest1 = AddOrderRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).AddOrderAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.AddSecondChanceItemResponse eBay.Service.Core.Soap.eBayAPIInterface.AddSecondChanceItem(eBay.Service.Core.Soap.AddSecondChanceItemRequest request)
+        {
+            return base.Channel.AddSecondChanceItem(request);
+        }
+        
+        public eBay.Service.Core.Soap.AddSecondChanceItemResponseType AddSecondChanceItem(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.AddSecondChanceItemRequestType AddSecondChanceItemRequest1)
+        {
+            eBay.Service.Core.Soap.AddSecondChanceItemRequest inValue = new eBay.Service.Core.Soap.AddSecondChanceItemRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.AddSecondChanceItemRequest1 = AddSecondChanceItemRequest1;
+            eBay.Service.Core.Soap.AddSecondChanceItemResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).AddSecondChanceItem(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.AddSecondChanceItemResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -85828,6 +86306,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.AddToItemDescriptionResponse eBay.Service.Core.Soap.eBayAPIInterface.AddToItemDescription(eBay.Service.Core.Soap.AddToItemDescriptionRequest request)
+        {
+            return base.Channel.AddToItemDescription(request);
+        }
+        
+        public eBay.Service.Core.Soap.AddToItemDescriptionResponseType AddToItemDescription(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.AddToItemDescriptionRequestType AddToItemDescriptionRequest1)
+        {
+            eBay.Service.Core.Soap.AddToItemDescriptionRequest inValue = new eBay.Service.Core.Soap.AddToItemDescriptionRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.AddToItemDescriptionRequest1 = AddToItemDescriptionRequest1;
+            eBay.Service.Core.Soap.AddToItemDescriptionResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).AddToItemDescription(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.AddToItemDescriptionResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.AddToItemDescriptionResponse> eBay.Service.Core.Soap.eBayAPIInterface.AddToItemDescriptionAsync(eBay.Service.Core.Soap.AddToItemDescriptionRequest request)
         {
             return base.Channel.AddToItemDescriptionAsync(request);
@@ -85839,6 +86333,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.AddToItemDescriptionRequest1 = AddToItemDescriptionRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).AddToItemDescriptionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.AddToWatchListResponse eBay.Service.Core.Soap.eBayAPIInterface.AddToWatchList(eBay.Service.Core.Soap.AddToWatchListRequest request)
+        {
+            return base.Channel.AddToWatchList(request);
+        }
+        
+        public eBay.Service.Core.Soap.AddToWatchListResponseType AddToWatchList(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.AddToWatchListRequestType AddToWatchListRequest1)
+        {
+            eBay.Service.Core.Soap.AddToWatchListRequest inValue = new eBay.Service.Core.Soap.AddToWatchListRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.AddToWatchListRequest1 = AddToWatchListRequest1;
+            eBay.Service.Core.Soap.AddToWatchListResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).AddToWatchList(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.AddToWatchListResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -85856,6 +86366,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.CompleteSaleResponse eBay.Service.Core.Soap.eBayAPIInterface.CompleteSale(eBay.Service.Core.Soap.CompleteSaleRequest request)
+        {
+            return base.Channel.CompleteSale(request);
+        }
+        
+        public eBay.Service.Core.Soap.CompleteSaleResponseType CompleteSale(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.CompleteSaleRequestType CompleteSaleRequest1)
+        {
+            eBay.Service.Core.Soap.CompleteSaleRequest inValue = new eBay.Service.Core.Soap.CompleteSaleRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.CompleteSaleRequest1 = CompleteSaleRequest1;
+            eBay.Service.Core.Soap.CompleteSaleResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).CompleteSale(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.CompleteSaleResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.CompleteSaleResponse> eBay.Service.Core.Soap.eBayAPIInterface.CompleteSaleAsync(eBay.Service.Core.Soap.CompleteSaleRequest request)
         {
             return base.Channel.CompleteSaleAsync(request);
@@ -85867,6 +86393,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.CompleteSaleRequest1 = CompleteSaleRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).CompleteSaleAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.ConfirmIdentityResponse eBay.Service.Core.Soap.eBayAPIInterface.ConfirmIdentity(eBay.Service.Core.Soap.ConfirmIdentityRequest request)
+        {
+            return base.Channel.ConfirmIdentity(request);
+        }
+        
+        public eBay.Service.Core.Soap.ConfirmIdentityResponseType ConfirmIdentity(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.ConfirmIdentityRequestType ConfirmIdentityRequest1)
+        {
+            eBay.Service.Core.Soap.ConfirmIdentityRequest inValue = new eBay.Service.Core.Soap.ConfirmIdentityRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.ConfirmIdentityRequest1 = ConfirmIdentityRequest1;
+            eBay.Service.Core.Soap.ConfirmIdentityResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).ConfirmIdentity(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.ConfirmIdentityResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -85884,6 +86426,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.DeleteMyMessagesResponse eBay.Service.Core.Soap.eBayAPIInterface.DeleteMyMessages(eBay.Service.Core.Soap.DeleteMyMessagesRequest request)
+        {
+            return base.Channel.DeleteMyMessages(request);
+        }
+        
+        public eBay.Service.Core.Soap.DeleteMyMessagesResponseType DeleteMyMessages(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.DeleteMyMessagesRequestType DeleteMyMessagesRequest1)
+        {
+            eBay.Service.Core.Soap.DeleteMyMessagesRequest inValue = new eBay.Service.Core.Soap.DeleteMyMessagesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.DeleteMyMessagesRequest1 = DeleteMyMessagesRequest1;
+            eBay.Service.Core.Soap.DeleteMyMessagesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).DeleteMyMessages(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.DeleteMyMessagesResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.DeleteMyMessagesResponse> eBay.Service.Core.Soap.eBayAPIInterface.DeleteMyMessagesAsync(eBay.Service.Core.Soap.DeleteMyMessagesRequest request)
         {
             return base.Channel.DeleteMyMessagesAsync(request);
@@ -85895,6 +86453,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.DeleteMyMessagesRequest1 = DeleteMyMessagesRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).DeleteMyMessagesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.EndFixedPriceItemResponse eBay.Service.Core.Soap.eBayAPIInterface.EndFixedPriceItem(eBay.Service.Core.Soap.EndFixedPriceItemRequest request)
+        {
+            return base.Channel.EndFixedPriceItem(request);
+        }
+        
+        public eBay.Service.Core.Soap.EndFixedPriceItemResponseType EndFixedPriceItem(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.EndFixedPriceItemRequestType EndFixedPriceItemRequest1)
+        {
+            eBay.Service.Core.Soap.EndFixedPriceItemRequest inValue = new eBay.Service.Core.Soap.EndFixedPriceItemRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.EndFixedPriceItemRequest1 = EndFixedPriceItemRequest1;
+            eBay.Service.Core.Soap.EndFixedPriceItemResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).EndFixedPriceItem(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.EndFixedPriceItemResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -85912,6 +86486,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.EndItemResponse eBay.Service.Core.Soap.eBayAPIInterface.EndItem(eBay.Service.Core.Soap.EndItemRequest request)
+        {
+            return base.Channel.EndItem(request);
+        }
+        
+        public eBay.Service.Core.Soap.EndItemResponseType EndItem(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.EndItemRequestType EndItemRequest1)
+        {
+            eBay.Service.Core.Soap.EndItemRequest inValue = new eBay.Service.Core.Soap.EndItemRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.EndItemRequest1 = EndItemRequest1;
+            eBay.Service.Core.Soap.EndItemResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).EndItem(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.EndItemResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.EndItemResponse> eBay.Service.Core.Soap.eBayAPIInterface.EndItemAsync(eBay.Service.Core.Soap.EndItemRequest request)
         {
             return base.Channel.EndItemAsync(request);
@@ -85923,6 +86513,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.EndItemRequest1 = EndItemRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).EndItemAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.EndItemsResponse eBay.Service.Core.Soap.eBayAPIInterface.EndItems(eBay.Service.Core.Soap.EndItemsRequest request)
+        {
+            return base.Channel.EndItems(request);
+        }
+        
+        public eBay.Service.Core.Soap.EndItemsResponseType EndItems(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.EndItemsRequestType EndItemsRequest1)
+        {
+            eBay.Service.Core.Soap.EndItemsRequest inValue = new eBay.Service.Core.Soap.EndItemsRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.EndItemsRequest1 = EndItemsRequest1;
+            eBay.Service.Core.Soap.EndItemsResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).EndItems(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.EndItemsResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -85940,6 +86546,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.ExtendSiteHostedPicturesResponse eBay.Service.Core.Soap.eBayAPIInterface.ExtendSiteHostedPictures(eBay.Service.Core.Soap.ExtendSiteHostedPicturesRequest request)
+        {
+            return base.Channel.ExtendSiteHostedPictures(request);
+        }
+        
+        public eBay.Service.Core.Soap.ExtendSiteHostedPicturesResponseType ExtendSiteHostedPictures(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.ExtendSiteHostedPicturesRequestType ExtendSiteHostedPicturesRequest1)
+        {
+            eBay.Service.Core.Soap.ExtendSiteHostedPicturesRequest inValue = new eBay.Service.Core.Soap.ExtendSiteHostedPicturesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.ExtendSiteHostedPicturesRequest1 = ExtendSiteHostedPicturesRequest1;
+            eBay.Service.Core.Soap.ExtendSiteHostedPicturesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).ExtendSiteHostedPictures(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.ExtendSiteHostedPicturesResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.ExtendSiteHostedPicturesResponse> eBay.Service.Core.Soap.eBayAPIInterface.ExtendSiteHostedPicturesAsync(eBay.Service.Core.Soap.ExtendSiteHostedPicturesRequest request)
         {
             return base.Channel.ExtendSiteHostedPicturesAsync(request);
@@ -85951,6 +86573,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.ExtendSiteHostedPicturesRequest1 = ExtendSiteHostedPicturesRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).ExtendSiteHostedPicturesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.FetchTokenResponse eBay.Service.Core.Soap.eBayAPIInterface.FetchToken(eBay.Service.Core.Soap.FetchTokenRequest request)
+        {
+            return base.Channel.FetchToken(request);
+        }
+        
+        public eBay.Service.Core.Soap.FetchTokenResponseType FetchToken(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.FetchTokenRequestType FetchTokenRequest1)
+        {
+            eBay.Service.Core.Soap.FetchTokenRequest inValue = new eBay.Service.Core.Soap.FetchTokenRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.FetchTokenRequest1 = FetchTokenRequest1;
+            eBay.Service.Core.Soap.FetchTokenResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).FetchToken(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.FetchTokenResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -85968,6 +86606,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetAccountResponse eBay.Service.Core.Soap.eBayAPIInterface.GetAccount(eBay.Service.Core.Soap.GetAccountRequest request)
+        {
+            return base.Channel.GetAccount(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetAccountResponseType GetAccount(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetAccountRequestType GetAccountRequest1)
+        {
+            eBay.Service.Core.Soap.GetAccountRequest inValue = new eBay.Service.Core.Soap.GetAccountRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetAccountRequest1 = GetAccountRequest1;
+            eBay.Service.Core.Soap.GetAccountResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetAccount(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetAccountResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetAccountResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetAccountAsync(eBay.Service.Core.Soap.GetAccountRequest request)
         {
             return base.Channel.GetAccountAsync(request);
@@ -85979,6 +86633,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetAccountRequest1 = GetAccountRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetAccountAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetAdFormatLeadsResponse eBay.Service.Core.Soap.eBayAPIInterface.GetAdFormatLeads(eBay.Service.Core.Soap.GetAdFormatLeadsRequest request)
+        {
+            return base.Channel.GetAdFormatLeads(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetAdFormatLeadsResponseType GetAdFormatLeads(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetAdFormatLeadsRequestType GetAdFormatLeadsRequest1)
+        {
+            eBay.Service.Core.Soap.GetAdFormatLeadsRequest inValue = new eBay.Service.Core.Soap.GetAdFormatLeadsRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetAdFormatLeadsRequest1 = GetAdFormatLeadsRequest1;
+            eBay.Service.Core.Soap.GetAdFormatLeadsResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetAdFormatLeads(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetAdFormatLeadsResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -85996,6 +86666,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetAllBiddersResponse eBay.Service.Core.Soap.eBayAPIInterface.GetAllBidders(eBay.Service.Core.Soap.GetAllBiddersRequest request)
+        {
+            return base.Channel.GetAllBidders(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetAllBiddersResponseType GetAllBidders(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetAllBiddersRequestType GetAllBiddersRequest1)
+        {
+            eBay.Service.Core.Soap.GetAllBiddersRequest inValue = new eBay.Service.Core.Soap.GetAllBiddersRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetAllBiddersRequest1 = GetAllBiddersRequest1;
+            eBay.Service.Core.Soap.GetAllBiddersResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetAllBidders(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetAllBiddersResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetAllBiddersResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetAllBiddersAsync(eBay.Service.Core.Soap.GetAllBiddersRequest request)
         {
             return base.Channel.GetAllBiddersAsync(request);
@@ -86007,6 +86693,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetAllBiddersRequest1 = GetAllBiddersRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetAllBiddersAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetBestOffersResponse eBay.Service.Core.Soap.eBayAPIInterface.GetBestOffers(eBay.Service.Core.Soap.GetBestOffersRequest request)
+        {
+            return base.Channel.GetBestOffers(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetBestOffersResponseType GetBestOffers(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetBestOffersRequestType GetBestOffersRequest1)
+        {
+            eBay.Service.Core.Soap.GetBestOffersRequest inValue = new eBay.Service.Core.Soap.GetBestOffersRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetBestOffersRequest1 = GetBestOffersRequest1;
+            eBay.Service.Core.Soap.GetBestOffersResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetBestOffers(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetBestOffersResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86024,6 +86726,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetBidderListResponse eBay.Service.Core.Soap.eBayAPIInterface.GetBidderList(eBay.Service.Core.Soap.GetBidderListRequest request)
+        {
+            return base.Channel.GetBidderList(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetBidderListResponseType GetBidderList(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetBidderListRequestType GetBidderListRequest1)
+        {
+            eBay.Service.Core.Soap.GetBidderListRequest inValue = new eBay.Service.Core.Soap.GetBidderListRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetBidderListRequest1 = GetBidderListRequest1;
+            eBay.Service.Core.Soap.GetBidderListResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetBidderList(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetBidderListResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetBidderListResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetBidderListAsync(eBay.Service.Core.Soap.GetBidderListRequest request)
         {
             return base.Channel.GetBidderListAsync(request);
@@ -86035,6 +86753,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetBidderListRequest1 = GetBidderListRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetBidderListAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetCategoriesResponse eBay.Service.Core.Soap.eBayAPIInterface.GetCategories(eBay.Service.Core.Soap.GetCategoriesRequest request)
+        {
+            return base.Channel.GetCategories(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetCategoriesResponseType GetCategories(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetCategoriesRequestType GetCategoriesRequest1)
+        {
+            eBay.Service.Core.Soap.GetCategoriesRequest inValue = new eBay.Service.Core.Soap.GetCategoriesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetCategoriesRequest1 = GetCategoriesRequest1;
+            eBay.Service.Core.Soap.GetCategoriesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetCategories(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetCategoriesResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86052,6 +86786,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetCategoryFeaturesResponse eBay.Service.Core.Soap.eBayAPIInterface.GetCategoryFeatures(eBay.Service.Core.Soap.GetCategoryFeaturesRequest request)
+        {
+            return base.Channel.GetCategoryFeatures(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetCategoryFeaturesResponseType GetCategoryFeatures(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetCategoryFeaturesRequestType GetCategoryFeaturesRequest1)
+        {
+            eBay.Service.Core.Soap.GetCategoryFeaturesRequest inValue = new eBay.Service.Core.Soap.GetCategoryFeaturesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetCategoryFeaturesRequest1 = GetCategoryFeaturesRequest1;
+            eBay.Service.Core.Soap.GetCategoryFeaturesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetCategoryFeatures(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetCategoryFeaturesResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetCategoryFeaturesResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetCategoryFeaturesAsync(eBay.Service.Core.Soap.GetCategoryFeaturesRequest request)
         {
             return base.Channel.GetCategoryFeaturesAsync(request);
@@ -86063,6 +86813,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetCategoryFeaturesRequest1 = GetCategoryFeaturesRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetCategoryFeaturesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetCategoryMappingsResponse eBay.Service.Core.Soap.eBayAPIInterface.GetCategoryMappings(eBay.Service.Core.Soap.GetCategoryMappingsRequest request)
+        {
+            return base.Channel.GetCategoryMappings(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetCategoryMappingsResponseType GetCategoryMappings(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetCategoryMappingsRequestType GetCategoryMappingsRequest1)
+        {
+            eBay.Service.Core.Soap.GetCategoryMappingsRequest inValue = new eBay.Service.Core.Soap.GetCategoryMappingsRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetCategoryMappingsRequest1 = GetCategoryMappingsRequest1;
+            eBay.Service.Core.Soap.GetCategoryMappingsResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetCategoryMappings(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetCategoryMappingsResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86080,6 +86846,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetChallengeTokenResponse eBay.Service.Core.Soap.eBayAPIInterface.GetChallengeToken(eBay.Service.Core.Soap.GetChallengeTokenRequest request)
+        {
+            return base.Channel.GetChallengeToken(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetChallengeTokenResponseType GetChallengeToken(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetChallengeTokenRequestType GetChallengeTokenRequest1)
+        {
+            eBay.Service.Core.Soap.GetChallengeTokenRequest inValue = new eBay.Service.Core.Soap.GetChallengeTokenRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetChallengeTokenRequest1 = GetChallengeTokenRequest1;
+            eBay.Service.Core.Soap.GetChallengeTokenResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetChallengeToken(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetChallengeTokenResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetChallengeTokenResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetChallengeTokenAsync(eBay.Service.Core.Soap.GetChallengeTokenRequest request)
         {
             return base.Channel.GetChallengeTokenAsync(request);
@@ -86091,6 +86873,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetChallengeTokenRequest1 = GetChallengeTokenRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetChallengeTokenAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetClientAlertsAuthTokenResponse eBay.Service.Core.Soap.eBayAPIInterface.GetClientAlertsAuthToken(eBay.Service.Core.Soap.GetClientAlertsAuthTokenRequest request)
+        {
+            return base.Channel.GetClientAlertsAuthToken(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetClientAlertsAuthTokenResponseType GetClientAlertsAuthToken(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetClientAlertsAuthTokenRequestType GetClientAlertsAuthTokenRequest1)
+        {
+            eBay.Service.Core.Soap.GetClientAlertsAuthTokenRequest inValue = new eBay.Service.Core.Soap.GetClientAlertsAuthTokenRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetClientAlertsAuthTokenRequest1 = GetClientAlertsAuthTokenRequest1;
+            eBay.Service.Core.Soap.GetClientAlertsAuthTokenResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetClientAlertsAuthToken(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetClientAlertsAuthTokenResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86108,6 +86906,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetDescriptionTemplatesResponse eBay.Service.Core.Soap.eBayAPIInterface.GetDescriptionTemplates(eBay.Service.Core.Soap.GetDescriptionTemplatesRequest request)
+        {
+            return base.Channel.GetDescriptionTemplates(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetDescriptionTemplatesResponseType GetDescriptionTemplates(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetDescriptionTemplatesRequestType GetDescriptionTemplatesRequest1)
+        {
+            eBay.Service.Core.Soap.GetDescriptionTemplatesRequest inValue = new eBay.Service.Core.Soap.GetDescriptionTemplatesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetDescriptionTemplatesRequest1 = GetDescriptionTemplatesRequest1;
+            eBay.Service.Core.Soap.GetDescriptionTemplatesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetDescriptionTemplates(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetDescriptionTemplatesResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetDescriptionTemplatesResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetDescriptionTemplatesAsync(eBay.Service.Core.Soap.GetDescriptionTemplatesRequest request)
         {
             return base.Channel.GetDescriptionTemplatesAsync(request);
@@ -86119,6 +86933,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetDescriptionTemplatesRequest1 = GetDescriptionTemplatesRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetDescriptionTemplatesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetFeedbackResponse eBay.Service.Core.Soap.eBayAPIInterface.GetFeedback(eBay.Service.Core.Soap.GetFeedbackRequest request)
+        {
+            return base.Channel.GetFeedback(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetFeedbackResponseType GetFeedback(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetFeedbackRequestType GetFeedbackRequest1)
+        {
+            eBay.Service.Core.Soap.GetFeedbackRequest inValue = new eBay.Service.Core.Soap.GetFeedbackRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetFeedbackRequest1 = GetFeedbackRequest1;
+            eBay.Service.Core.Soap.GetFeedbackResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetFeedback(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetFeedbackResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86136,6 +86966,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetItemResponse eBay.Service.Core.Soap.eBayAPIInterface.GetItem(eBay.Service.Core.Soap.GetItemRequest request)
+        {
+            return base.Channel.GetItem(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetItemResponseType GetItem(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetItemRequestType GetItemRequest1)
+        {
+            eBay.Service.Core.Soap.GetItemRequest inValue = new eBay.Service.Core.Soap.GetItemRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetItemRequest1 = GetItemRequest1;
+            eBay.Service.Core.Soap.GetItemResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetItem(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetItemResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetItemResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetItemAsync(eBay.Service.Core.Soap.GetItemRequest request)
         {
             return base.Channel.GetItemAsync(request);
@@ -86147,6 +86993,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetItemRequest1 = GetItemRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetItemAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetItemShippingResponse eBay.Service.Core.Soap.eBayAPIInterface.GetItemShipping(eBay.Service.Core.Soap.GetItemShippingRequest request)
+        {
+            return base.Channel.GetItemShipping(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetItemShippingResponseType GetItemShipping(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetItemShippingRequestType GetItemShippingRequest1)
+        {
+            eBay.Service.Core.Soap.GetItemShippingRequest inValue = new eBay.Service.Core.Soap.GetItemShippingRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetItemShippingRequest1 = GetItemShippingRequest1;
+            eBay.Service.Core.Soap.GetItemShippingResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetItemShipping(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetItemShippingResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86164,6 +87026,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetItemTransactionsResponse eBay.Service.Core.Soap.eBayAPIInterface.GetItemTransactions(eBay.Service.Core.Soap.GetItemTransactionsRequest request)
+        {
+            return base.Channel.GetItemTransactions(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetItemTransactionsResponseType GetItemTransactions(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetItemTransactionsRequestType GetItemTransactionsRequest1)
+        {
+            eBay.Service.Core.Soap.GetItemTransactionsRequest inValue = new eBay.Service.Core.Soap.GetItemTransactionsRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetItemTransactionsRequest1 = GetItemTransactionsRequest1;
+            eBay.Service.Core.Soap.GetItemTransactionsResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetItemTransactions(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetItemTransactionsResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetItemTransactionsResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetItemTransactionsAsync(eBay.Service.Core.Soap.GetItemTransactionsRequest request)
         {
             return base.Channel.GetItemTransactionsAsync(request);
@@ -86175,6 +87053,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetItemTransactionsRequest1 = GetItemTransactionsRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetItemTransactionsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetItemsAwaitingFeedbackResponse eBay.Service.Core.Soap.eBayAPIInterface.GetItemsAwaitingFeedback(eBay.Service.Core.Soap.GetItemsAwaitingFeedbackRequest request)
+        {
+            return base.Channel.GetItemsAwaitingFeedback(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetItemsAwaitingFeedbackResponseType GetItemsAwaitingFeedback(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetItemsAwaitingFeedbackRequestType GetItemsAwaitingFeedbackRequest1)
+        {
+            eBay.Service.Core.Soap.GetItemsAwaitingFeedbackRequest inValue = new eBay.Service.Core.Soap.GetItemsAwaitingFeedbackRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetItemsAwaitingFeedbackRequest1 = GetItemsAwaitingFeedbackRequest1;
+            eBay.Service.Core.Soap.GetItemsAwaitingFeedbackResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetItemsAwaitingFeedback(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetItemsAwaitingFeedbackResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86192,6 +87086,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetMemberMessagesResponse eBay.Service.Core.Soap.eBayAPIInterface.GetMemberMessages(eBay.Service.Core.Soap.GetMemberMessagesRequest request)
+        {
+            return base.Channel.GetMemberMessages(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetMemberMessagesResponseType GetMemberMessages(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetMemberMessagesRequestType GetMemberMessagesRequest1)
+        {
+            eBay.Service.Core.Soap.GetMemberMessagesRequest inValue = new eBay.Service.Core.Soap.GetMemberMessagesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetMemberMessagesRequest1 = GetMemberMessagesRequest1;
+            eBay.Service.Core.Soap.GetMemberMessagesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetMemberMessages(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetMemberMessagesResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetMemberMessagesResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetMemberMessagesAsync(eBay.Service.Core.Soap.GetMemberMessagesRequest request)
         {
             return base.Channel.GetMemberMessagesAsync(request);
@@ -86203,6 +87113,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetMemberMessagesRequest1 = GetMemberMessagesRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetMemberMessagesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetMessagePreferencesResponse eBay.Service.Core.Soap.eBayAPIInterface.GetMessagePreferences(eBay.Service.Core.Soap.GetMessagePreferencesRequest request)
+        {
+            return base.Channel.GetMessagePreferences(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetMessagePreferencesResponseType GetMessagePreferences(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetMessagePreferencesRequestType GetMessagePreferencesRequest1)
+        {
+            eBay.Service.Core.Soap.GetMessagePreferencesRequest inValue = new eBay.Service.Core.Soap.GetMessagePreferencesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetMessagePreferencesRequest1 = GetMessagePreferencesRequest1;
+            eBay.Service.Core.Soap.GetMessagePreferencesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetMessagePreferences(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetMessagePreferencesResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86220,6 +87146,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetMyMessagesResponse eBay.Service.Core.Soap.eBayAPIInterface.GetMyMessages(eBay.Service.Core.Soap.GetMyMessagesRequest request)
+        {
+            return base.Channel.GetMyMessages(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetMyMessagesResponseType GetMyMessages(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetMyMessagesRequestType GetMyMessagesRequest1)
+        {
+            eBay.Service.Core.Soap.GetMyMessagesRequest inValue = new eBay.Service.Core.Soap.GetMyMessagesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetMyMessagesRequest1 = GetMyMessagesRequest1;
+            eBay.Service.Core.Soap.GetMyMessagesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetMyMessages(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetMyMessagesResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetMyMessagesResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetMyMessagesAsync(eBay.Service.Core.Soap.GetMyMessagesRequest request)
         {
             return base.Channel.GetMyMessagesAsync(request);
@@ -86231,6 +87173,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetMyMessagesRequest1 = GetMyMessagesRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetMyMessagesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetMyeBayBuyingResponse eBay.Service.Core.Soap.eBayAPIInterface.GetMyeBayBuying(eBay.Service.Core.Soap.GetMyeBayBuyingRequest request)
+        {
+            return base.Channel.GetMyeBayBuying(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetMyeBayBuyingResponseType GetMyeBayBuying(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetMyeBayBuyingRequestType GetMyeBayBuyingRequest1)
+        {
+            eBay.Service.Core.Soap.GetMyeBayBuyingRequest inValue = new eBay.Service.Core.Soap.GetMyeBayBuyingRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetMyeBayBuyingRequest1 = GetMyeBayBuyingRequest1;
+            eBay.Service.Core.Soap.GetMyeBayBuyingResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetMyeBayBuying(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetMyeBayBuyingResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86248,6 +87206,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetMyeBaySellingResponse eBay.Service.Core.Soap.eBayAPIInterface.GetMyeBaySelling(eBay.Service.Core.Soap.GetMyeBaySellingRequest request)
+        {
+            return base.Channel.GetMyeBaySelling(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetMyeBaySellingResponseType GetMyeBaySelling(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetMyeBaySellingRequestType GetMyeBaySellingRequest1)
+        {
+            eBay.Service.Core.Soap.GetMyeBaySellingRequest inValue = new eBay.Service.Core.Soap.GetMyeBaySellingRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetMyeBaySellingRequest1 = GetMyeBaySellingRequest1;
+            eBay.Service.Core.Soap.GetMyeBaySellingResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetMyeBaySelling(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetMyeBaySellingResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetMyeBaySellingResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetMyeBaySellingAsync(eBay.Service.Core.Soap.GetMyeBaySellingRequest request)
         {
             return base.Channel.GetMyeBaySellingAsync(request);
@@ -86259,6 +87233,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetMyeBaySellingRequest1 = GetMyeBaySellingRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetMyeBaySellingAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetNotificationPreferencesResponse eBay.Service.Core.Soap.eBayAPIInterface.GetNotificationPreferences(eBay.Service.Core.Soap.GetNotificationPreferencesRequest request)
+        {
+            return base.Channel.GetNotificationPreferences(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetNotificationPreferencesResponseType GetNotificationPreferences(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetNotificationPreferencesRequestType GetNotificationPreferencesRequest1)
+        {
+            eBay.Service.Core.Soap.GetNotificationPreferencesRequest inValue = new eBay.Service.Core.Soap.GetNotificationPreferencesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetNotificationPreferencesRequest1 = GetNotificationPreferencesRequest1;
+            eBay.Service.Core.Soap.GetNotificationPreferencesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetNotificationPreferences(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetNotificationPreferencesResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86276,6 +87266,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetNotificationsUsageResponse eBay.Service.Core.Soap.eBayAPIInterface.GetNotificationsUsage(eBay.Service.Core.Soap.GetNotificationsUsageRequest request)
+        {
+            return base.Channel.GetNotificationsUsage(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetNotificationsUsageResponseType GetNotificationsUsage(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetNotificationsUsageRequestType GetNotificationsUsageRequest1)
+        {
+            eBay.Service.Core.Soap.GetNotificationsUsageRequest inValue = new eBay.Service.Core.Soap.GetNotificationsUsageRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetNotificationsUsageRequest1 = GetNotificationsUsageRequest1;
+            eBay.Service.Core.Soap.GetNotificationsUsageResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetNotificationsUsage(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetNotificationsUsageResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetNotificationsUsageResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetNotificationsUsageAsync(eBay.Service.Core.Soap.GetNotificationsUsageRequest request)
         {
             return base.Channel.GetNotificationsUsageAsync(request);
@@ -86287,6 +87293,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetNotificationsUsageRequest1 = GetNotificationsUsageRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetNotificationsUsageAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetOrdersResponse eBay.Service.Core.Soap.eBayAPIInterface.GetOrders(eBay.Service.Core.Soap.GetOrdersRequest request)
+        {
+            return base.Channel.GetOrders(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetOrdersResponseType GetOrders(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetOrdersRequestType GetOrdersRequest1)
+        {
+            eBay.Service.Core.Soap.GetOrdersRequest inValue = new eBay.Service.Core.Soap.GetOrdersRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetOrdersRequest1 = GetOrdersRequest1;
+            eBay.Service.Core.Soap.GetOrdersResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetOrders(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetOrdersResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86304,6 +87326,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetSellerEventsResponse eBay.Service.Core.Soap.eBayAPIInterface.GetSellerEvents(eBay.Service.Core.Soap.GetSellerEventsRequest request)
+        {
+            return base.Channel.GetSellerEvents(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetSellerEventsResponseType GetSellerEvents(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetSellerEventsRequestType GetSellerEventsRequest1)
+        {
+            eBay.Service.Core.Soap.GetSellerEventsRequest inValue = new eBay.Service.Core.Soap.GetSellerEventsRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetSellerEventsRequest1 = GetSellerEventsRequest1;
+            eBay.Service.Core.Soap.GetSellerEventsResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetSellerEvents(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetSellerEventsResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetSellerEventsResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetSellerEventsAsync(eBay.Service.Core.Soap.GetSellerEventsRequest request)
         {
             return base.Channel.GetSellerEventsAsync(request);
@@ -86315,6 +87353,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetSellerEventsRequest1 = GetSellerEventsRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetSellerEventsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetSellerListResponse eBay.Service.Core.Soap.eBayAPIInterface.GetSellerList(eBay.Service.Core.Soap.GetSellerListRequest request)
+        {
+            return base.Channel.GetSellerList(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetSellerListResponseType GetSellerList(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetSellerListRequestType GetSellerListRequest1)
+        {
+            eBay.Service.Core.Soap.GetSellerListRequest inValue = new eBay.Service.Core.Soap.GetSellerListRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetSellerListRequest1 = GetSellerListRequest1;
+            eBay.Service.Core.Soap.GetSellerListResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetSellerList(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetSellerListResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86332,6 +87386,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetSellerTransactionsResponse eBay.Service.Core.Soap.eBayAPIInterface.GetSellerTransactions(eBay.Service.Core.Soap.GetSellerTransactionsRequest request)
+        {
+            return base.Channel.GetSellerTransactions(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetSellerTransactionsResponseType GetSellerTransactions(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetSellerTransactionsRequestType GetSellerTransactionsRequest1)
+        {
+            eBay.Service.Core.Soap.GetSellerTransactionsRequest inValue = new eBay.Service.Core.Soap.GetSellerTransactionsRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetSellerTransactionsRequest1 = GetSellerTransactionsRequest1;
+            eBay.Service.Core.Soap.GetSellerTransactionsResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetSellerTransactions(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetSellerTransactionsResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetSellerTransactionsResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetSellerTransactionsAsync(eBay.Service.Core.Soap.GetSellerTransactionsRequest request)
         {
             return base.Channel.GetSellerTransactionsAsync(request);
@@ -86343,6 +87413,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetSellerTransactionsRequest1 = GetSellerTransactionsRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetSellerTransactionsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetSessionIDResponse eBay.Service.Core.Soap.eBayAPIInterface.GetSessionID(eBay.Service.Core.Soap.GetSessionIDRequest request)
+        {
+            return base.Channel.GetSessionID(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetSessionIDResponseType GetSessionID(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetSessionIDRequestType GetSessionIDRequest1)
+        {
+            eBay.Service.Core.Soap.GetSessionIDRequest inValue = new eBay.Service.Core.Soap.GetSessionIDRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetSessionIDRequest1 = GetSessionIDRequest1;
+            eBay.Service.Core.Soap.GetSessionIDResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetSessionID(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetSessionIDResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86360,6 +87446,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetShippingDiscountProfilesResponse eBay.Service.Core.Soap.eBayAPIInterface.GetShippingDiscountProfiles(eBay.Service.Core.Soap.GetShippingDiscountProfilesRequest request)
+        {
+            return base.Channel.GetShippingDiscountProfiles(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetShippingDiscountProfilesResponseType GetShippingDiscountProfiles(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetShippingDiscountProfilesRequestType GetShippingDiscountProfilesRequest1)
+        {
+            eBay.Service.Core.Soap.GetShippingDiscountProfilesRequest inValue = new eBay.Service.Core.Soap.GetShippingDiscountProfilesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetShippingDiscountProfilesRequest1 = GetShippingDiscountProfilesRequest1;
+            eBay.Service.Core.Soap.GetShippingDiscountProfilesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetShippingDiscountProfiles(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetShippingDiscountProfilesResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetShippingDiscountProfilesResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetShippingDiscountProfilesAsync(eBay.Service.Core.Soap.GetShippingDiscountProfilesRequest request)
         {
             return base.Channel.GetShippingDiscountProfilesAsync(request);
@@ -86371,6 +87473,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetShippingDiscountProfilesRequest1 = GetShippingDiscountProfilesRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetShippingDiscountProfilesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetStoreResponse eBay.Service.Core.Soap.eBayAPIInterface.GetStore(eBay.Service.Core.Soap.GetStoreRequest request)
+        {
+            return base.Channel.GetStore(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetStoreResponseType GetStore(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetStoreRequestType GetStoreRequest1)
+        {
+            eBay.Service.Core.Soap.GetStoreRequest inValue = new eBay.Service.Core.Soap.GetStoreRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetStoreRequest1 = GetStoreRequest1;
+            eBay.Service.Core.Soap.GetStoreResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetStore(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetStoreResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86388,6 +87506,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetStoreCategoryUpdateStatusResponse eBay.Service.Core.Soap.eBayAPIInterface.GetStoreCategoryUpdateStatus(eBay.Service.Core.Soap.GetStoreCategoryUpdateStatusRequest request)
+        {
+            return base.Channel.GetStoreCategoryUpdateStatus(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetStoreCategoryUpdateStatusResponseType GetStoreCategoryUpdateStatus(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetStoreCategoryUpdateStatusRequestType GetStoreCategoryUpdateStatusRequest1)
+        {
+            eBay.Service.Core.Soap.GetStoreCategoryUpdateStatusRequest inValue = new eBay.Service.Core.Soap.GetStoreCategoryUpdateStatusRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetStoreCategoryUpdateStatusRequest1 = GetStoreCategoryUpdateStatusRequest1;
+            eBay.Service.Core.Soap.GetStoreCategoryUpdateStatusResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetStoreCategoryUpdateStatus(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetStoreCategoryUpdateStatusResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetStoreCategoryUpdateStatusResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetStoreCategoryUpdateStatusAsync(eBay.Service.Core.Soap.GetStoreCategoryUpdateStatusRequest request)
         {
             return base.Channel.GetStoreCategoryUpdateStatusAsync(request);
@@ -86399,6 +87533,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetStoreCategoryUpdateStatusRequest1 = GetStoreCategoryUpdateStatusRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetStoreCategoryUpdateStatusAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetSuggestedCategoriesResponse eBay.Service.Core.Soap.eBayAPIInterface.GetSuggestedCategories(eBay.Service.Core.Soap.GetSuggestedCategoriesRequest request)
+        {
+            return base.Channel.GetSuggestedCategories(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetSuggestedCategoriesResponseType GetSuggestedCategories(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetSuggestedCategoriesRequestType GetSuggestedCategoriesRequest1)
+        {
+            eBay.Service.Core.Soap.GetSuggestedCategoriesRequest inValue = new eBay.Service.Core.Soap.GetSuggestedCategoriesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetSuggestedCategoriesRequest1 = GetSuggestedCategoriesRequest1;
+            eBay.Service.Core.Soap.GetSuggestedCategoriesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetSuggestedCategories(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetSuggestedCategoriesResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86416,6 +87566,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetTaxTableResponse eBay.Service.Core.Soap.eBayAPIInterface.GetTaxTable(eBay.Service.Core.Soap.GetTaxTableRequest request)
+        {
+            return base.Channel.GetTaxTable(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetTaxTableResponseType GetTaxTable(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetTaxTableRequestType GetTaxTableRequest1)
+        {
+            eBay.Service.Core.Soap.GetTaxTableRequest inValue = new eBay.Service.Core.Soap.GetTaxTableRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetTaxTableRequest1 = GetTaxTableRequest1;
+            eBay.Service.Core.Soap.GetTaxTableResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetTaxTable(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetTaxTableResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetTaxTableResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetTaxTableAsync(eBay.Service.Core.Soap.GetTaxTableRequest request)
         {
             return base.Channel.GetTaxTableAsync(request);
@@ -86427,6 +87593,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetTaxTableRequest1 = GetTaxTableRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetTaxTableAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetTokenStatusResponse eBay.Service.Core.Soap.eBayAPIInterface.GetTokenStatus(eBay.Service.Core.Soap.GetTokenStatusRequest request)
+        {
+            return base.Channel.GetTokenStatus(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetTokenStatusResponseType GetTokenStatus(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetTokenStatusRequestType GetTokenStatusRequest1)
+        {
+            eBay.Service.Core.Soap.GetTokenStatusRequest inValue = new eBay.Service.Core.Soap.GetTokenStatusRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetTokenStatusRequest1 = GetTokenStatusRequest1;
+            eBay.Service.Core.Soap.GetTokenStatusResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetTokenStatus(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetTokenStatusResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86444,6 +87626,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetUserResponse eBay.Service.Core.Soap.eBayAPIInterface.GetUser(eBay.Service.Core.Soap.GetUserRequest request)
+        {
+            return base.Channel.GetUser(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetUserResponseType GetUser(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetUserRequestType GetUserRequest1)
+        {
+            eBay.Service.Core.Soap.GetUserRequest inValue = new eBay.Service.Core.Soap.GetUserRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetUserRequest1 = GetUserRequest1;
+            eBay.Service.Core.Soap.GetUserResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetUser(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetUserResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetUserResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetUserAsync(eBay.Service.Core.Soap.GetUserRequest request)
         {
             return base.Channel.GetUserAsync(request);
@@ -86455,6 +87653,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetUserRequest1 = GetUserRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetUserAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetUserContactDetailsResponse eBay.Service.Core.Soap.eBayAPIInterface.GetUserContactDetails(eBay.Service.Core.Soap.GetUserContactDetailsRequest request)
+        {
+            return base.Channel.GetUserContactDetails(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetUserContactDetailsResponseType GetUserContactDetails(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetUserContactDetailsRequestType GetUserContactDetailsRequest1)
+        {
+            eBay.Service.Core.Soap.GetUserContactDetailsRequest inValue = new eBay.Service.Core.Soap.GetUserContactDetailsRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetUserContactDetailsRequest1 = GetUserContactDetailsRequest1;
+            eBay.Service.Core.Soap.GetUserContactDetailsResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetUserContactDetails(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetUserContactDetailsResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86472,6 +87686,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetUserPreferencesResponse eBay.Service.Core.Soap.eBayAPIInterface.GetUserPreferences(eBay.Service.Core.Soap.GetUserPreferencesRequest request)
+        {
+            return base.Channel.GetUserPreferences(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetUserPreferencesResponseType GetUserPreferences(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetUserPreferencesRequestType GetUserPreferencesRequest1)
+        {
+            eBay.Service.Core.Soap.GetUserPreferencesRequest inValue = new eBay.Service.Core.Soap.GetUserPreferencesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetUserPreferencesRequest1 = GetUserPreferencesRequest1;
+            eBay.Service.Core.Soap.GetUserPreferencesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetUserPreferences(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetUserPreferencesResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetUserPreferencesResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetUserPreferencesAsync(eBay.Service.Core.Soap.GetUserPreferencesRequest request)
         {
             return base.Channel.GetUserPreferencesAsync(request);
@@ -86483,6 +87713,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetUserPreferencesRequest1 = GetUserPreferencesRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetUserPreferencesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetVeROReasonCodeDetailsResponse eBay.Service.Core.Soap.eBayAPIInterface.GetVeROReasonCodeDetails(eBay.Service.Core.Soap.GetVeROReasonCodeDetailsRequest request)
+        {
+            return base.Channel.GetVeROReasonCodeDetails(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetVeROReasonCodeDetailsResponseType GetVeROReasonCodeDetails(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetVeROReasonCodeDetailsRequestType GetVeROReasonCodeDetailsRequest1)
+        {
+            eBay.Service.Core.Soap.GetVeROReasonCodeDetailsRequest inValue = new eBay.Service.Core.Soap.GetVeROReasonCodeDetailsRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetVeROReasonCodeDetailsRequest1 = GetVeROReasonCodeDetailsRequest1;
+            eBay.Service.Core.Soap.GetVeROReasonCodeDetailsResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetVeROReasonCodeDetails(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetVeROReasonCodeDetailsResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86500,6 +87746,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GetVeROReportStatusResponse eBay.Service.Core.Soap.eBayAPIInterface.GetVeROReportStatus(eBay.Service.Core.Soap.GetVeROReportStatusRequest request)
+        {
+            return base.Channel.GetVeROReportStatus(request);
+        }
+        
+        public eBay.Service.Core.Soap.GetVeROReportStatusResponseType GetVeROReportStatus(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GetVeROReportStatusRequestType GetVeROReportStatusRequest1)
+        {
+            eBay.Service.Core.Soap.GetVeROReportStatusRequest inValue = new eBay.Service.Core.Soap.GetVeROReportStatusRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GetVeROReportStatusRequest1 = GetVeROReportStatusRequest1;
+            eBay.Service.Core.Soap.GetVeROReportStatusResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetVeROReportStatus(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GetVeROReportStatusResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GetVeROReportStatusResponse> eBay.Service.Core.Soap.eBayAPIInterface.GetVeROReportStatusAsync(eBay.Service.Core.Soap.GetVeROReportStatusRequest request)
         {
             return base.Channel.GetVeROReportStatusAsync(request);
@@ -86511,6 +87773,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GetVeROReportStatusRequest1 = GetVeROReportStatusRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GetVeROReportStatusAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GeteBayDetailsResponse eBay.Service.Core.Soap.eBayAPIInterface.GeteBayDetails(eBay.Service.Core.Soap.GeteBayDetailsRequest request)
+        {
+            return base.Channel.GeteBayDetails(request);
+        }
+        
+        public eBay.Service.Core.Soap.GeteBayDetailsResponseType GeteBayDetails(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GeteBayDetailsRequestType GeteBayDetailsRequest1)
+        {
+            eBay.Service.Core.Soap.GeteBayDetailsRequest inValue = new eBay.Service.Core.Soap.GeteBayDetailsRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GeteBayDetailsRequest1 = GeteBayDetailsRequest1;
+            eBay.Service.Core.Soap.GeteBayDetailsResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GeteBayDetails(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GeteBayDetailsResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86528,6 +87806,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.GeteBayOfficialTimeResponse eBay.Service.Core.Soap.eBayAPIInterface.GeteBayOfficialTime(eBay.Service.Core.Soap.GeteBayOfficialTimeRequest request)
+        {
+            return base.Channel.GeteBayOfficialTime(request);
+        }
+        
+        public eBay.Service.Core.Soap.GeteBayOfficialTimeResponseType GeteBayOfficialTime(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.GeteBayOfficialTimeRequestType GeteBayOfficialTimeRequest1)
+        {
+            eBay.Service.Core.Soap.GeteBayOfficialTimeRequest inValue = new eBay.Service.Core.Soap.GeteBayOfficialTimeRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.GeteBayOfficialTimeRequest1 = GeteBayOfficialTimeRequest1;
+            eBay.Service.Core.Soap.GeteBayOfficialTimeResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GeteBayOfficialTime(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.GeteBayOfficialTimeResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.GeteBayOfficialTimeResponse> eBay.Service.Core.Soap.eBayAPIInterface.GeteBayOfficialTimeAsync(eBay.Service.Core.Soap.GeteBayOfficialTimeRequest request)
         {
             return base.Channel.GeteBayOfficialTimeAsync(request);
@@ -86539,6 +87833,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.GeteBayOfficialTimeRequest1 = GeteBayOfficialTimeRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).GeteBayOfficialTimeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.LeaveFeedbackResponse eBay.Service.Core.Soap.eBayAPIInterface.LeaveFeedback(eBay.Service.Core.Soap.LeaveFeedbackRequest request)
+        {
+            return base.Channel.LeaveFeedback(request);
+        }
+        
+        public eBay.Service.Core.Soap.LeaveFeedbackResponseType LeaveFeedback(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.LeaveFeedbackRequestType LeaveFeedbackRequest1)
+        {
+            eBay.Service.Core.Soap.LeaveFeedbackRequest inValue = new eBay.Service.Core.Soap.LeaveFeedbackRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.LeaveFeedbackRequest1 = LeaveFeedbackRequest1;
+            eBay.Service.Core.Soap.LeaveFeedbackResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).LeaveFeedback(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.LeaveFeedbackResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86556,6 +87866,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.PlaceOfferResponse eBay.Service.Core.Soap.eBayAPIInterface.PlaceOffer(eBay.Service.Core.Soap.PlaceOfferRequest request)
+        {
+            return base.Channel.PlaceOffer(request);
+        }
+        
+        public eBay.Service.Core.Soap.PlaceOfferResponseType PlaceOffer(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.PlaceOfferRequestType PlaceOfferRequest1)
+        {
+            eBay.Service.Core.Soap.PlaceOfferRequest inValue = new eBay.Service.Core.Soap.PlaceOfferRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.PlaceOfferRequest1 = PlaceOfferRequest1;
+            eBay.Service.Core.Soap.PlaceOfferResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).PlaceOffer(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.PlaceOfferResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.PlaceOfferResponse> eBay.Service.Core.Soap.eBayAPIInterface.PlaceOfferAsync(eBay.Service.Core.Soap.PlaceOfferRequest request)
         {
             return base.Channel.PlaceOfferAsync(request);
@@ -86567,6 +87893,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.PlaceOfferRequest1 = PlaceOfferRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).PlaceOfferAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.RelistFixedPriceItemResponse eBay.Service.Core.Soap.eBayAPIInterface.RelistFixedPriceItem(eBay.Service.Core.Soap.RelistFixedPriceItemRequest request)
+        {
+            return base.Channel.RelistFixedPriceItem(request);
+        }
+        
+        public eBay.Service.Core.Soap.RelistFixedPriceItemResponseType RelistFixedPriceItem(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.RelistFixedPriceItemRequestType RelistFixedPriceItemRequest1)
+        {
+            eBay.Service.Core.Soap.RelistFixedPriceItemRequest inValue = new eBay.Service.Core.Soap.RelistFixedPriceItemRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.RelistFixedPriceItemRequest1 = RelistFixedPriceItemRequest1;
+            eBay.Service.Core.Soap.RelistFixedPriceItemResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).RelistFixedPriceItem(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.RelistFixedPriceItemResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86584,6 +87926,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.RelistItemResponse eBay.Service.Core.Soap.eBayAPIInterface.RelistItem(eBay.Service.Core.Soap.RelistItemRequest request)
+        {
+            return base.Channel.RelistItem(request);
+        }
+        
+        public eBay.Service.Core.Soap.RelistItemResponseType RelistItem(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.RelistItemRequestType RelistItemRequest1)
+        {
+            eBay.Service.Core.Soap.RelistItemRequest inValue = new eBay.Service.Core.Soap.RelistItemRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.RelistItemRequest1 = RelistItemRequest1;
+            eBay.Service.Core.Soap.RelistItemResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).RelistItem(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.RelistItemResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.RelistItemResponse> eBay.Service.Core.Soap.eBayAPIInterface.RelistItemAsync(eBay.Service.Core.Soap.RelistItemRequest request)
         {
             return base.Channel.RelistItemAsync(request);
@@ -86595,6 +87953,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.RelistItemRequest1 = RelistItemRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).RelistItemAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.RemoveFromWatchListResponse eBay.Service.Core.Soap.eBayAPIInterface.RemoveFromWatchList(eBay.Service.Core.Soap.RemoveFromWatchListRequest request)
+        {
+            return base.Channel.RemoveFromWatchList(request);
+        }
+        
+        public eBay.Service.Core.Soap.RemoveFromWatchListResponseType RemoveFromWatchList(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.RemoveFromWatchListRequestType RemoveFromWatchListRequest1)
+        {
+            eBay.Service.Core.Soap.RemoveFromWatchListRequest inValue = new eBay.Service.Core.Soap.RemoveFromWatchListRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.RemoveFromWatchListRequest1 = RemoveFromWatchListRequest1;
+            eBay.Service.Core.Soap.RemoveFromWatchListResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).RemoveFromWatchList(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.RemoveFromWatchListResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86612,6 +87986,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.RespondToBestOfferResponse eBay.Service.Core.Soap.eBayAPIInterface.RespondToBestOffer(eBay.Service.Core.Soap.RespondToBestOfferRequest request)
+        {
+            return base.Channel.RespondToBestOffer(request);
+        }
+        
+        public eBay.Service.Core.Soap.RespondToBestOfferResponseType RespondToBestOffer(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.RespondToBestOfferRequestType RespondToBestOfferRequest1)
+        {
+            eBay.Service.Core.Soap.RespondToBestOfferRequest inValue = new eBay.Service.Core.Soap.RespondToBestOfferRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.RespondToBestOfferRequest1 = RespondToBestOfferRequest1;
+            eBay.Service.Core.Soap.RespondToBestOfferResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).RespondToBestOffer(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.RespondToBestOfferResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.RespondToBestOfferResponse> eBay.Service.Core.Soap.eBayAPIInterface.RespondToBestOfferAsync(eBay.Service.Core.Soap.RespondToBestOfferRequest request)
         {
             return base.Channel.RespondToBestOfferAsync(request);
@@ -86623,6 +88013,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.RespondToBestOfferRequest1 = RespondToBestOfferRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).RespondToBestOfferAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.RespondToFeedbackResponse eBay.Service.Core.Soap.eBayAPIInterface.RespondToFeedback(eBay.Service.Core.Soap.RespondToFeedbackRequest request)
+        {
+            return base.Channel.RespondToFeedback(request);
+        }
+        
+        public eBay.Service.Core.Soap.RespondToFeedbackResponseType RespondToFeedback(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.RespondToFeedbackRequestType RespondToFeedbackRequest1)
+        {
+            eBay.Service.Core.Soap.RespondToFeedbackRequest inValue = new eBay.Service.Core.Soap.RespondToFeedbackRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.RespondToFeedbackRequest1 = RespondToFeedbackRequest1;
+            eBay.Service.Core.Soap.RespondToFeedbackResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).RespondToFeedback(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.RespondToFeedbackResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86640,6 +88046,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.ReviseFixedPriceItemResponse eBay.Service.Core.Soap.eBayAPIInterface.ReviseFixedPriceItem(eBay.Service.Core.Soap.ReviseFixedPriceItemRequest request)
+        {
+            return base.Channel.ReviseFixedPriceItem(request);
+        }
+        
+        public eBay.Service.Core.Soap.ReviseFixedPriceItemResponseType ReviseFixedPriceItem(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.ReviseFixedPriceItemRequestType ReviseFixedPriceItemRequest1)
+        {
+            eBay.Service.Core.Soap.ReviseFixedPriceItemRequest inValue = new eBay.Service.Core.Soap.ReviseFixedPriceItemRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.ReviseFixedPriceItemRequest1 = ReviseFixedPriceItemRequest1;
+            eBay.Service.Core.Soap.ReviseFixedPriceItemResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).ReviseFixedPriceItem(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.ReviseFixedPriceItemResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.ReviseFixedPriceItemResponse> eBay.Service.Core.Soap.eBayAPIInterface.ReviseFixedPriceItemAsync(eBay.Service.Core.Soap.ReviseFixedPriceItemRequest request)
         {
             return base.Channel.ReviseFixedPriceItemAsync(request);
@@ -86651,6 +88073,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.ReviseFixedPriceItemRequest1 = ReviseFixedPriceItemRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).ReviseFixedPriceItemAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.ReviseInventoryStatusResponse eBay.Service.Core.Soap.eBayAPIInterface.ReviseInventoryStatus(eBay.Service.Core.Soap.ReviseInventoryStatusRequest request)
+        {
+            return base.Channel.ReviseInventoryStatus(request);
+        }
+        
+        public eBay.Service.Core.Soap.ReviseInventoryStatusResponseType ReviseInventoryStatus(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.ReviseInventoryStatusRequestType ReviseInventoryStatusRequest1)
+        {
+            eBay.Service.Core.Soap.ReviseInventoryStatusRequest inValue = new eBay.Service.Core.Soap.ReviseInventoryStatusRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.ReviseInventoryStatusRequest1 = ReviseInventoryStatusRequest1;
+            eBay.Service.Core.Soap.ReviseInventoryStatusResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).ReviseInventoryStatus(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.ReviseInventoryStatusResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86668,6 +88106,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.ReviseItemResponse eBay.Service.Core.Soap.eBayAPIInterface.ReviseItem(eBay.Service.Core.Soap.ReviseItemRequest request)
+        {
+            return base.Channel.ReviseItem(request);
+        }
+        
+        public eBay.Service.Core.Soap.ReviseItemResponseType ReviseItem(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.ReviseItemRequestType ReviseItemRequest1)
+        {
+            eBay.Service.Core.Soap.ReviseItemRequest inValue = new eBay.Service.Core.Soap.ReviseItemRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.ReviseItemRequest1 = ReviseItemRequest1;
+            eBay.Service.Core.Soap.ReviseItemResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).ReviseItem(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.ReviseItemResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.ReviseItemResponse> eBay.Service.Core.Soap.eBayAPIInterface.ReviseItemAsync(eBay.Service.Core.Soap.ReviseItemRequest request)
         {
             return base.Channel.ReviseItemAsync(request);
@@ -86679,6 +88133,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.ReviseItemRequest1 = ReviseItemRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).ReviseItemAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.ReviseMyMessagesResponse eBay.Service.Core.Soap.eBayAPIInterface.ReviseMyMessages(eBay.Service.Core.Soap.ReviseMyMessagesRequest request)
+        {
+            return base.Channel.ReviseMyMessages(request);
+        }
+        
+        public eBay.Service.Core.Soap.ReviseMyMessagesResponseType ReviseMyMessages(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.ReviseMyMessagesRequestType ReviseMyMessagesRequest1)
+        {
+            eBay.Service.Core.Soap.ReviseMyMessagesRequest inValue = new eBay.Service.Core.Soap.ReviseMyMessagesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.ReviseMyMessagesRequest1 = ReviseMyMessagesRequest1;
+            eBay.Service.Core.Soap.ReviseMyMessagesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).ReviseMyMessages(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.ReviseMyMessagesResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86696,6 +88166,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.ReviseMyMessagesFoldersResponse eBay.Service.Core.Soap.eBayAPIInterface.ReviseMyMessagesFolders(eBay.Service.Core.Soap.ReviseMyMessagesFoldersRequest request)
+        {
+            return base.Channel.ReviseMyMessagesFolders(request);
+        }
+        
+        public eBay.Service.Core.Soap.ReviseMyMessagesFoldersResponseType ReviseMyMessagesFolders(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.ReviseMyMessagesFoldersRequestType ReviseMyMessagesFoldersRequest1)
+        {
+            eBay.Service.Core.Soap.ReviseMyMessagesFoldersRequest inValue = new eBay.Service.Core.Soap.ReviseMyMessagesFoldersRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.ReviseMyMessagesFoldersRequest1 = ReviseMyMessagesFoldersRequest1;
+            eBay.Service.Core.Soap.ReviseMyMessagesFoldersResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).ReviseMyMessagesFolders(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.ReviseMyMessagesFoldersResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.ReviseMyMessagesFoldersResponse> eBay.Service.Core.Soap.eBayAPIInterface.ReviseMyMessagesFoldersAsync(eBay.Service.Core.Soap.ReviseMyMessagesFoldersRequest request)
         {
             return base.Channel.ReviseMyMessagesFoldersAsync(request);
@@ -86707,6 +88193,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.ReviseMyMessagesFoldersRequest1 = ReviseMyMessagesFoldersRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).ReviseMyMessagesFoldersAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.RevokeTokenResponse eBay.Service.Core.Soap.eBayAPIInterface.RevokeToken(eBay.Service.Core.Soap.RevokeTokenRequest request)
+        {
+            return base.Channel.RevokeToken(request);
+        }
+        
+        public eBay.Service.Core.Soap.RevokeTokenResponseType RevokeToken(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.RevokeTokenRequestType RevokeTokenRequest1)
+        {
+            eBay.Service.Core.Soap.RevokeTokenRequest inValue = new eBay.Service.Core.Soap.RevokeTokenRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.RevokeTokenRequest1 = RevokeTokenRequest1;
+            eBay.Service.Core.Soap.RevokeTokenResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).RevokeToken(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.RevokeTokenResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86724,6 +88226,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.SendInvoiceResponse eBay.Service.Core.Soap.eBayAPIInterface.SendInvoice(eBay.Service.Core.Soap.SendInvoiceRequest request)
+        {
+            return base.Channel.SendInvoice(request);
+        }
+        
+        public eBay.Service.Core.Soap.SendInvoiceResponseType SendInvoice(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.SendInvoiceRequestType SendInvoiceRequest1)
+        {
+            eBay.Service.Core.Soap.SendInvoiceRequest inValue = new eBay.Service.Core.Soap.SendInvoiceRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.SendInvoiceRequest1 = SendInvoiceRequest1;
+            eBay.Service.Core.Soap.SendInvoiceResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).SendInvoice(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.SendInvoiceResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.SendInvoiceResponse> eBay.Service.Core.Soap.eBayAPIInterface.SendInvoiceAsync(eBay.Service.Core.Soap.SendInvoiceRequest request)
         {
             return base.Channel.SendInvoiceAsync(request);
@@ -86735,6 +88253,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.SendInvoiceRequest1 = SendInvoiceRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).SendInvoiceAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.SetMessagePreferencesResponse eBay.Service.Core.Soap.eBayAPIInterface.SetMessagePreferences(eBay.Service.Core.Soap.SetMessagePreferencesRequest request)
+        {
+            return base.Channel.SetMessagePreferences(request);
+        }
+        
+        public eBay.Service.Core.Soap.SetMessagePreferencesResponseType SetMessagePreferences(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.SetMessagePreferencesRequestType SetMessagePreferencesRequest1)
+        {
+            eBay.Service.Core.Soap.SetMessagePreferencesRequest inValue = new eBay.Service.Core.Soap.SetMessagePreferencesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.SetMessagePreferencesRequest1 = SetMessagePreferencesRequest1;
+            eBay.Service.Core.Soap.SetMessagePreferencesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).SetMessagePreferences(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.SetMessagePreferencesResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86752,6 +88286,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.SetNotificationPreferencesResponse eBay.Service.Core.Soap.eBayAPIInterface.SetNotificationPreferences(eBay.Service.Core.Soap.SetNotificationPreferencesRequest request)
+        {
+            return base.Channel.SetNotificationPreferences(request);
+        }
+        
+        public eBay.Service.Core.Soap.SetNotificationPreferencesResponseType SetNotificationPreferences(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.SetNotificationPreferencesRequestType SetNotificationPreferencesRequest1)
+        {
+            eBay.Service.Core.Soap.SetNotificationPreferencesRequest inValue = new eBay.Service.Core.Soap.SetNotificationPreferencesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.SetNotificationPreferencesRequest1 = SetNotificationPreferencesRequest1;
+            eBay.Service.Core.Soap.SetNotificationPreferencesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).SetNotificationPreferences(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.SetNotificationPreferencesResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.SetNotificationPreferencesResponse> eBay.Service.Core.Soap.eBayAPIInterface.SetNotificationPreferencesAsync(eBay.Service.Core.Soap.SetNotificationPreferencesRequest request)
         {
             return base.Channel.SetNotificationPreferencesAsync(request);
@@ -86763,6 +88313,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.SetNotificationPreferencesRequest1 = SetNotificationPreferencesRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).SetNotificationPreferencesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.SetShippingDiscountProfilesResponse eBay.Service.Core.Soap.eBayAPIInterface.SetShippingDiscountProfiles(eBay.Service.Core.Soap.SetShippingDiscountProfilesRequest request)
+        {
+            return base.Channel.SetShippingDiscountProfiles(request);
+        }
+        
+        public eBay.Service.Core.Soap.SetShippingDiscountProfilesResponseType SetShippingDiscountProfiles(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.SetShippingDiscountProfilesRequestType SetShippingDiscountProfilesRequest1)
+        {
+            eBay.Service.Core.Soap.SetShippingDiscountProfilesRequest inValue = new eBay.Service.Core.Soap.SetShippingDiscountProfilesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.SetShippingDiscountProfilesRequest1 = SetShippingDiscountProfilesRequest1;
+            eBay.Service.Core.Soap.SetShippingDiscountProfilesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).SetShippingDiscountProfiles(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.SetShippingDiscountProfilesResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86780,6 +88346,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.SetStoreCategoriesResponse eBay.Service.Core.Soap.eBayAPIInterface.SetStoreCategories(eBay.Service.Core.Soap.SetStoreCategoriesRequest request)
+        {
+            return base.Channel.SetStoreCategories(request);
+        }
+        
+        public eBay.Service.Core.Soap.SetStoreCategoriesResponseType SetStoreCategories(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.SetStoreCategoriesRequestType SetStoreCategoriesRequest1)
+        {
+            eBay.Service.Core.Soap.SetStoreCategoriesRequest inValue = new eBay.Service.Core.Soap.SetStoreCategoriesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.SetStoreCategoriesRequest1 = SetStoreCategoriesRequest1;
+            eBay.Service.Core.Soap.SetStoreCategoriesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).SetStoreCategories(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.SetStoreCategoriesResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.SetStoreCategoriesResponse> eBay.Service.Core.Soap.eBayAPIInterface.SetStoreCategoriesAsync(eBay.Service.Core.Soap.SetStoreCategoriesRequest request)
         {
             return base.Channel.SetStoreCategoriesAsync(request);
@@ -86791,6 +88373,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.SetStoreCategoriesRequest1 = SetStoreCategoriesRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).SetStoreCategoriesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.SetTaxTableResponse eBay.Service.Core.Soap.eBayAPIInterface.SetTaxTable(eBay.Service.Core.Soap.SetTaxTableRequest request)
+        {
+            return base.Channel.SetTaxTable(request);
+        }
+        
+        public eBay.Service.Core.Soap.SetTaxTableResponseType SetTaxTable(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.SetTaxTableRequestType SetTaxTableRequest1)
+        {
+            eBay.Service.Core.Soap.SetTaxTableRequest inValue = new eBay.Service.Core.Soap.SetTaxTableRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.SetTaxTableRequest1 = SetTaxTableRequest1;
+            eBay.Service.Core.Soap.SetTaxTableResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).SetTaxTable(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.SetTaxTableResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86808,6 +88406,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.SetUserNotesResponse eBay.Service.Core.Soap.eBayAPIInterface.SetUserNotes(eBay.Service.Core.Soap.SetUserNotesRequest request)
+        {
+            return base.Channel.SetUserNotes(request);
+        }
+        
+        public eBay.Service.Core.Soap.SetUserNotesResponseType SetUserNotes(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.SetUserNotesRequestType SetUserNotesRequest1)
+        {
+            eBay.Service.Core.Soap.SetUserNotesRequest inValue = new eBay.Service.Core.Soap.SetUserNotesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.SetUserNotesRequest1 = SetUserNotesRequest1;
+            eBay.Service.Core.Soap.SetUserNotesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).SetUserNotes(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.SetUserNotesResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.SetUserNotesResponse> eBay.Service.Core.Soap.eBayAPIInterface.SetUserNotesAsync(eBay.Service.Core.Soap.SetUserNotesRequest request)
         {
             return base.Channel.SetUserNotesAsync(request);
@@ -86819,6 +88433,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.SetUserNotesRequest1 = SetUserNotesRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).SetUserNotesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.SetUserPreferencesResponse eBay.Service.Core.Soap.eBayAPIInterface.SetUserPreferences(eBay.Service.Core.Soap.SetUserPreferencesRequest request)
+        {
+            return base.Channel.SetUserPreferences(request);
+        }
+        
+        public eBay.Service.Core.Soap.SetUserPreferencesResponseType SetUserPreferences(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.SetUserPreferencesRequestType SetUserPreferencesRequest1)
+        {
+            eBay.Service.Core.Soap.SetUserPreferencesRequest inValue = new eBay.Service.Core.Soap.SetUserPreferencesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.SetUserPreferencesRequest1 = SetUserPreferencesRequest1;
+            eBay.Service.Core.Soap.SetUserPreferencesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).SetUserPreferences(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.SetUserPreferencesResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86836,6 +88466,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.UploadSiteHostedPicturesResponse eBay.Service.Core.Soap.eBayAPIInterface.UploadSiteHostedPictures(eBay.Service.Core.Soap.UploadSiteHostedPicturesRequest request)
+        {
+            return base.Channel.UploadSiteHostedPictures(request);
+        }
+        
+        public eBay.Service.Core.Soap.UploadSiteHostedPicturesResponseType UploadSiteHostedPictures(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.UploadSiteHostedPicturesRequestType UploadSiteHostedPicturesRequest1)
+        {
+            eBay.Service.Core.Soap.UploadSiteHostedPicturesRequest inValue = new eBay.Service.Core.Soap.UploadSiteHostedPicturesRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.UploadSiteHostedPicturesRequest1 = UploadSiteHostedPicturesRequest1;
+            eBay.Service.Core.Soap.UploadSiteHostedPicturesResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).UploadSiteHostedPictures(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.UploadSiteHostedPicturesResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.UploadSiteHostedPicturesResponse> eBay.Service.Core.Soap.eBayAPIInterface.UploadSiteHostedPicturesAsync(eBay.Service.Core.Soap.UploadSiteHostedPicturesRequest request)
         {
             return base.Channel.UploadSiteHostedPicturesAsync(request);
@@ -86847,6 +88493,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.UploadSiteHostedPicturesRequest1 = UploadSiteHostedPicturesRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).UploadSiteHostedPicturesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.ValidateChallengeInputResponse eBay.Service.Core.Soap.eBayAPIInterface.ValidateChallengeInput(eBay.Service.Core.Soap.ValidateChallengeInputRequest request)
+        {
+            return base.Channel.ValidateChallengeInput(request);
+        }
+        
+        public eBay.Service.Core.Soap.ValidateChallengeInputResponseType ValidateChallengeInput(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.ValidateChallengeInputRequestType ValidateChallengeInputRequest1)
+        {
+            eBay.Service.Core.Soap.ValidateChallengeInputRequest inValue = new eBay.Service.Core.Soap.ValidateChallengeInputRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.ValidateChallengeInputRequest1 = ValidateChallengeInputRequest1;
+            eBay.Service.Core.Soap.ValidateChallengeInputResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).ValidateChallengeInput(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.ValidateChallengeInputResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86864,6 +88526,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.ValidateTestUserRegistrationResponse eBay.Service.Core.Soap.eBayAPIInterface.ValidateTestUserRegistration(eBay.Service.Core.Soap.ValidateTestUserRegistrationRequest request)
+        {
+            return base.Channel.ValidateTestUserRegistration(request);
+        }
+        
+        public eBay.Service.Core.Soap.ValidateTestUserRegistrationResponseType ValidateTestUserRegistration(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.ValidateTestUserRegistrationRequestType ValidateTestUserRegistrationRequest1)
+        {
+            eBay.Service.Core.Soap.ValidateTestUserRegistrationRequest inValue = new eBay.Service.Core.Soap.ValidateTestUserRegistrationRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.ValidateTestUserRegistrationRequest1 = ValidateTestUserRegistrationRequest1;
+            eBay.Service.Core.Soap.ValidateTestUserRegistrationResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).ValidateTestUserRegistration(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.ValidateTestUserRegistrationResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.ValidateTestUserRegistrationResponse> eBay.Service.Core.Soap.eBayAPIInterface.ValidateTestUserRegistrationAsync(eBay.Service.Core.Soap.ValidateTestUserRegistrationRequest request)
         {
             return base.Channel.ValidateTestUserRegistrationAsync(request);
@@ -86875,6 +88553,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.ValidateTestUserRegistrationRequest1 = ValidateTestUserRegistrationRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).ValidateTestUserRegistrationAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.VeROReportItemsResponse eBay.Service.Core.Soap.eBayAPIInterface.VeROReportItems(eBay.Service.Core.Soap.VeROReportItemsRequest request)
+        {
+            return base.Channel.VeROReportItems(request);
+        }
+        
+        public eBay.Service.Core.Soap.VeROReportItemsResponseType VeROReportItems(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.VeROReportItemsRequestType VeROReportItemsRequest1)
+        {
+            eBay.Service.Core.Soap.VeROReportItemsRequest inValue = new eBay.Service.Core.Soap.VeROReportItemsRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.VeROReportItemsRequest1 = VeROReportItemsRequest1;
+            eBay.Service.Core.Soap.VeROReportItemsResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).VeROReportItems(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.VeROReportItemsResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86892,6 +88586,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.VerifyAddFixedPriceItemResponse eBay.Service.Core.Soap.eBayAPIInterface.VerifyAddFixedPriceItem(eBay.Service.Core.Soap.VerifyAddFixedPriceItemRequest request)
+        {
+            return base.Channel.VerifyAddFixedPriceItem(request);
+        }
+        
+        public eBay.Service.Core.Soap.VerifyAddFixedPriceItemResponseType VerifyAddFixedPriceItem(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.VerifyAddFixedPriceItemRequestType VerifyAddFixedPriceItemRequest1)
+        {
+            eBay.Service.Core.Soap.VerifyAddFixedPriceItemRequest inValue = new eBay.Service.Core.Soap.VerifyAddFixedPriceItemRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.VerifyAddFixedPriceItemRequest1 = VerifyAddFixedPriceItemRequest1;
+            eBay.Service.Core.Soap.VerifyAddFixedPriceItemResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).VerifyAddFixedPriceItem(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.VerifyAddFixedPriceItemResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.VerifyAddFixedPriceItemResponse> eBay.Service.Core.Soap.eBayAPIInterface.VerifyAddFixedPriceItemAsync(eBay.Service.Core.Soap.VerifyAddFixedPriceItemRequest request)
         {
             return base.Channel.VerifyAddFixedPriceItemAsync(request);
@@ -86903,6 +88613,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.VerifyAddFixedPriceItemRequest1 = VerifyAddFixedPriceItemRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).VerifyAddFixedPriceItemAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.VerifyAddItemResponse eBay.Service.Core.Soap.eBayAPIInterface.VerifyAddItem(eBay.Service.Core.Soap.VerifyAddItemRequest request)
+        {
+            return base.Channel.VerifyAddItem(request);
+        }
+        
+        public eBay.Service.Core.Soap.VerifyAddItemResponseType VerifyAddItem(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.VerifyAddItemRequestType VerifyAddItemRequest1)
+        {
+            eBay.Service.Core.Soap.VerifyAddItemRequest inValue = new eBay.Service.Core.Soap.VerifyAddItemRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.VerifyAddItemRequest1 = VerifyAddItemRequest1;
+            eBay.Service.Core.Soap.VerifyAddItemResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).VerifyAddItem(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.VerifyAddItemResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -86920,6 +88646,22 @@ namespace eBay.Service.Core.Soap
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.VerifyAddSecondChanceItemResponse eBay.Service.Core.Soap.eBayAPIInterface.VerifyAddSecondChanceItem(eBay.Service.Core.Soap.VerifyAddSecondChanceItemRequest request)
+        {
+            return base.Channel.VerifyAddSecondChanceItem(request);
+        }
+        
+        public eBay.Service.Core.Soap.VerifyAddSecondChanceItemResponseType VerifyAddSecondChanceItem(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.VerifyAddSecondChanceItemRequestType VerifyAddSecondChanceItemRequest1)
+        {
+            eBay.Service.Core.Soap.VerifyAddSecondChanceItemRequest inValue = new eBay.Service.Core.Soap.VerifyAddSecondChanceItemRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.VerifyAddSecondChanceItemRequest1 = VerifyAddSecondChanceItemRequest1;
+            eBay.Service.Core.Soap.VerifyAddSecondChanceItemResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).VerifyAddSecondChanceItem(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.VerifyAddSecondChanceItemResponse1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<eBay.Service.Core.Soap.VerifyAddSecondChanceItemResponse> eBay.Service.Core.Soap.eBayAPIInterface.VerifyAddSecondChanceItemAsync(eBay.Service.Core.Soap.VerifyAddSecondChanceItemRequest request)
         {
             return base.Channel.VerifyAddSecondChanceItemAsync(request);
@@ -86931,6 +88673,22 @@ namespace eBay.Service.Core.Soap
             inValue.RequesterCredentials = RequesterCredentials;
             inValue.VerifyAddSecondChanceItemRequest1 = VerifyAddSecondChanceItemRequest1;
             return ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).VerifyAddSecondChanceItemAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        eBay.Service.Core.Soap.VerifyRelistItemResponse eBay.Service.Core.Soap.eBayAPIInterface.VerifyRelistItem(eBay.Service.Core.Soap.VerifyRelistItemRequest request)
+        {
+            return base.Channel.VerifyRelistItem(request);
+        }
+        
+        public eBay.Service.Core.Soap.VerifyRelistItemResponseType VerifyRelistItem(ref eBay.Service.Core.Soap.CustomSecurityHeaderType RequesterCredentials, eBay.Service.Core.Soap.VerifyRelistItemRequestType VerifyRelistItemRequest1)
+        {
+            eBay.Service.Core.Soap.VerifyRelistItemRequest inValue = new eBay.Service.Core.Soap.VerifyRelistItemRequest();
+            inValue.RequesterCredentials = RequesterCredentials;
+            inValue.VerifyRelistItemRequest1 = VerifyRelistItemRequest1;
+            eBay.Service.Core.Soap.VerifyRelistItemResponse retVal = ((eBay.Service.Core.Soap.eBayAPIInterface)(this)).VerifyRelistItem(inValue);
+            RequesterCredentials = retVal.RequesterCredentials;
+            return retVal.VerifyRelistItemResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

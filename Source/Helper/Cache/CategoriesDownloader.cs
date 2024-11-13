@@ -66,7 +66,7 @@ namespace Samples.Helper.Cache
 		/// <summary>
 		/// Get all categories for a given site
 		/// </summary>
-		public CategoryTypeCollection GetAllCategories()
+		public CategoryType[] GetAllCategories()
 		{
 			object obj = getObject();
 			GetCategoriesResponseType response = (GetCategoriesResponseType)obj;
@@ -86,7 +86,7 @@ namespace Samples.Helper.Cache
 		{
 			GetCategoriesCall api = new GetCategoriesCall(context);			
 			//set output selector
-			api.ApiRequest.OutputSelector = new StringCollection(new String[]{"UpdateTime"});
+			api.ApiRequest.OutputSelector = new[]{"UpdateTime"};
 			//execute call
 			api.GetCategories();
 
@@ -104,7 +104,7 @@ namespace Samples.Helper.Cache
 		{
 			GetCategoriesCall api = new GetCategoriesCall(context);
 			//set detail level
-			api.DetailLevelList.Add(DetailLevelCodeType.ReturnAll);	
+			api.DetailLevelList = new [] { DetailLevelCodeType.ReturnAll };	
 			api.Timeout = 480000;
 			api.ViewAllNodes =true;
 			//execute call

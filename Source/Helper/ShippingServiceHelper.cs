@@ -58,31 +58,31 @@ namespace Samples.Helper
 		private void Init()
 		{
 			InitShipToLocations();
-			InitShippingServiceOptions();
-			InitIntlShippingServiceOptions();
-			InitInsuranceOptions();
+			//InitShippingServiceOptions();
+			//InitIntlShippingServiceOptions();
+			//InitInsuranceOptions();
 			InitPackageSizeOptions();
 			InitSalesTaxStateOptions();
 		}
 
-		private void InitInsuranceOptions()
-		{
-			InsuranceOptionCodeType[] options = 
-				new InsuranceOptionCodeType[] {
-												  InsuranceOptionCodeType.Optional,
-												  InsuranceOptionCodeType.IncludedInShippingHandling,
-												  InsuranceOptionCodeType.NotOffered,
-												  InsuranceOptionCodeType.Required
-											  };
+		//private void InitInsuranceOptions()
+		//{
+		//	InsuranceOptionCodeType[] options = 
+		//		new InsuranceOptionCodeType[] {
+		//										  InsuranceOptionCodeType.Optional,
+		//										  InsuranceOptionCodeType.IncludedInShippingHandling,
+		//										  InsuranceOptionCodeType.NotOffered,
+		//										  InsuranceOptionCodeType.Required
+		//									  };
 
-			int len = options.Length;
-			ControlTagItem[] items = new ControlTagItem[len];
-			for (int i = 0; i < len; i++) 
-			{
-				items[i] = new ControlTagItem(options[i].ToString(), options[i]);
-			}
-			this.htInsuranceOptionControlTagItems.Add(SiteCodeType.US, items);
-		}
+		//	int len = options.Length;
+		//	ControlTagItem[] items = new ControlTagItem[len];
+		//	for (int i = 0; i < len; i++) 
+		//	{
+		//		items[i] = new ControlTagItem(options[i].ToString(), options[i]);
+		//	}
+		//	this.htInsuranceOptionControlTagItems.Add(SiteCodeType.US, items);
+		//}
 
 		private void InitPackageSizeOptions()
 		{
@@ -107,63 +107,63 @@ namespace Samples.Helper
 			this.htShippingPackageSizeControlTagItems.Add(SiteCodeType.US, items);
 		}
 
-		private void InitShippingServiceOptions()
-		{
-			ShippingServiceCodeType[] options = 
-				new ShippingServiceCodeType[] {
-												  ShippingServiceCodeType.UPSGround,
-												  ShippingServiceCodeType.UPS3rdDay,
-												  ShippingServiceCodeType.UPS2ndDay,
-												  ShippingServiceCodeType.UPSNextDay,
-												  ShippingServiceCodeType.USPSPriority,
-												  ShippingServiceCodeType.USPSParcel,
-												  ShippingServiceCodeType.USPSMedia,
-												  ShippingServiceCodeType.USPSFirstClass,
-												  ShippingServiceCodeType.ShippingMethodStandard,
-												  ShippingServiceCodeType.ShippingMethodExpress,
-												  ShippingServiceCodeType.USPSExpressMail,
-												  ShippingServiceCodeType.UPSNextDayAir,
-												  ShippingServiceCodeType.UPS2DayAirAM,
-												  ShippingServiceCodeType.LocalDelivery,
-												  ShippingServiceCodeType.Other};
+		//private void InitShippingServiceOptions()
+		//{
+		//	ShippingServiceCodeType[] options = 
+		//		new ShippingServiceCodeType[] {
+		//										  ShippingServiceCodeType.UPSGround,
+		//										  ShippingServiceCodeType.UPS3rdDay,
+		//										  ShippingServiceCodeType.UPS2ndDay,
+		//										  ShippingServiceCodeType.UPSNextDay,
+		//										  ShippingServiceCodeType.USPSPriority,
+		//										  ShippingServiceCodeType.USPSParcel,
+		//										  ShippingServiceCodeType.USPSMedia,
+		//										  ShippingServiceCodeType.USPSFirstClass,
+		//										  ShippingServiceCodeType.ShippingMethodStandard,
+		//										  ShippingServiceCodeType.ShippingMethodExpress,
+		//										  ShippingServiceCodeType.USPSExpressMail,
+		//										  ShippingServiceCodeType.UPSNextDayAir,
+		//										  ShippingServiceCodeType.UPS2DayAirAM,
+		//										  ShippingServiceCodeType.LocalDelivery,
+		//										  ShippingServiceCodeType.Other};
 	
-			int len = options.Length;
-			ControlTagItem[] items = new ControlTagItem[len];
-			for (int i = 0; i < len; i++) 
-			{
-				items[i] = new ControlTagItem(options[i].ToString(), options[i]);
-			}
-			this.htFlatRateShippingServiceControlTagItems.Add(SiteCodeType.US, items);
-			this.htCalcRateShippingServiceControlTagItems.Add(SiteCodeType.US, items);
-		}
+		//	int len = options.Length;
+		//	ControlTagItem[] items = new ControlTagItem[len];
+		//	for (int i = 0; i < len; i++) 
+		//	{
+		//		items[i] = new ControlTagItem(options[i].ToString(), options[i]);
+		//	}
+		//	this.htFlatRateShippingServiceControlTagItems.Add(SiteCodeType.US, items);
+		//	this.htCalcRateShippingServiceControlTagItems.Add(SiteCodeType.US, items);
+		//}
 
-		private void InitIntlShippingServiceOptions()
-		{
-			ShippingServiceCodeType[] options = 
-				new ShippingServiceCodeType[] {
-												  ShippingServiceCodeType.StandardInternational,
-												  ShippingServiceCodeType.ExpeditedInternational,
-												  ShippingServiceCodeType.USPSGlobalExpress,
-												  ShippingServiceCodeType.USPSGlobalPriority,
-												  ShippingServiceCodeType.USPSEconomyParcel,
-												  ShippingServiceCodeType.USPSEconomyLetter,
-												  ShippingServiceCodeType.USPSAirmailLetter,
-												  ShippingServiceCodeType.USPSAirmailParcel,
-												  ShippingServiceCodeType.UPSWorldWideExpressPlus,
-												  ShippingServiceCodeType.UPSWorldWideExpress,
-												  ShippingServiceCodeType.UPSWorldWideExpedited,
-												  ShippingServiceCodeType.UPSStandardToCanada,
-												  ShippingServiceCodeType.OtherInternational
-											  };
+		//private void InitIntlShippingServiceOptions()
+		//{
+		//	ShippingServiceCodeType[] options = 
+		//		new ShippingServiceCodeType[] {
+		//										  ShippingServiceCodeType.StandardInternational,
+		//										  ShippingServiceCodeType.ExpeditedInternational,
+		//										  ShippingServiceCodeType.USPSGlobalExpress,
+		//										  ShippingServiceCodeType.USPSGlobalPriority,
+		//										  ShippingServiceCodeType.USPSEconomyParcel,
+		//										  ShippingServiceCodeType.USPSEconomyLetter,
+		//										  ShippingServiceCodeType.USPSAirmailLetter,
+		//										  ShippingServiceCodeType.USPSAirmailParcel,
+		//										  ShippingServiceCodeType.UPSWorldWideExpressPlus,
+		//										  ShippingServiceCodeType.UPSWorldWideExpress,
+		//										  ShippingServiceCodeType.UPSWorldWideExpedited,
+		//										  ShippingServiceCodeType.UPSStandardToCanada,
+		//										  ShippingServiceCodeType.OtherInternational
+		//									  };
 
-			int len = options.Length;
-			ControlTagItem[] items = new ControlTagItem[len];
-			for (int i = 0; i < len; i++) 
-			{
-				items[i] = new ControlTagItem(options[i].ToString(), options[i]);
-			}
-			this.htIntlShippingServiceControlTagItems.Add(SiteCodeType.US, items);
-		}
+		//	int len = options.Length;
+		//	ControlTagItem[] items = new ControlTagItem[len];
+		//	for (int i = 0; i < len; i++) 
+		//	{
+		//		items[i] = new ControlTagItem(options[i].ToString(), options[i]);
+		//	}
+		//	this.htIntlShippingServiceControlTagItems.Add(SiteCodeType.US, items);
+		//}
 
 		private void InitSalesTaxStateOptions()
 		{

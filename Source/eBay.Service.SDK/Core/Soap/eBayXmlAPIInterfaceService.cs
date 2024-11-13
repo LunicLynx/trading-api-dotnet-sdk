@@ -25,6 +25,7 @@ using eBay.Service.Core.Sdk;
 using eBay.Service.Util;
 using System.Xml;
 using System.IO;
+using System.Xml.Serialization;
 
 namespace eBay.Service.Core.Soap
 {
@@ -32,9 +33,10 @@ namespace eBay.Service.Core.Soap
     public partial class CustomSecurityHeaderType
     {
         private string moAuthToken;
-        /// <summary>
-        /// 
-        /// </summary>
+		/// <summary>
+		/// 
+		/// </summary>
+		[XmlElement(Order = 103)]
         public string oAuthToken
         {
             get

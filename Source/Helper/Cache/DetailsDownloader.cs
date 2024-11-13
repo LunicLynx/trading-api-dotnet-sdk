@@ -74,10 +74,10 @@ namespace Samples.Helper.Cache
         {
             GeteBayDetailsCall api = new GeteBayDetailsCall(context);
             //set output selector
-            api.ApiRequest.OutputSelector = new StringCollection(new String[] { "UpdateTime" });
+            api.ApiRequest.OutputSelector = new []{ "UpdateTime" };
 
             //execute call
-            DetailNameCodeTypeCollection dns = this.getDetailsNames();
+            var dns = this.GetDetailsNames();
             api.GeteBayDetails(dns);
 
             DateTime updateTime = api.ApiResponse.UpdateTime;
@@ -85,15 +85,13 @@ namespace Samples.Helper.Cache
             return updateTime.ToString("yyyy-MM-dd-hh-mm-ss");
         }
 
-        private DetailNameCodeTypeCollection getDetailsNames()
-        {
-        	DetailNameCodeTypeCollection names=new DetailNameCodeTypeCollection();
-			names.Add(DetailNameCodeType.ShippingLocationDetails);
-			names.Add(DetailNameCodeType.ShippingServiceDetails);
-			names.Add(DetailNameCodeType.ReturnPolicyDetails);
-            return names;
-        }
-
+        private DetailNameCodeType[] GetDetailsNames() =>
+            new[]
+            {
+                DetailNameCodeType.ShippingLocationDetails,
+                DetailNameCodeType.ShippingServiceDetails,
+                DetailNameCodeType.ReturnPolicyDetails
+            };
 
         /// <summary>
         /// call GeteBayDetails to get eBay details for a given site
@@ -102,7 +100,7 @@ namespace Samples.Helper.Cache
         protected override object callApi()
         {
             GeteBayDetailsCall api = new GeteBayDetailsCall(context);
-            DetailNameCodeTypeCollection dns = this.getDetailsNames();
+            var dns = this.GetDetailsNames();
             api.GeteBayDetails(dns);
 
             return api.ApiResponse;

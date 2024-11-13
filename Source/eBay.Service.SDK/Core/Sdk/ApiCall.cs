@@ -24,6 +24,7 @@ using System.Reflection;
 using System.Collections;
 //using System.Web.Services.Protocols;
 using System.Runtime.InteropServices;
+using System.ServiceModel;
 using eBay.Service.Call;
 using eBay.Service.Util;
 using eBay.Service.Core.Soap;
@@ -44,7 +45,7 @@ namespace eBay.Service.Core.Sdk
     public class ApiCall
     {
 
-        private Type mServiceType = typeof(eBayAPIInterfaceService2);
+        //private Type mServiceType = typeof(eBayAPIInterfaceService2);
 
         #region Constructors
         /// <summary>
@@ -132,6 +133,7 @@ namespace eBay.Service.Core.Sdk
         /// </summary>
         internal void SendRequest()
         {
+
             try
             {
                 if (AbstractRequest == null)
@@ -157,232 +159,264 @@ namespace eBay.Service.Core.Sdk
                     BindingFlags.Instance | BindingFlags.Public, null,
                     CallingConventions.HasThis, null, null);
                     */
-                ConstructorInfo svcCCTor = this.mServiceType.GetConstructor(new Type[] { });
+                //ConstructorInfo svcCCTor = this.mServiceType.GetConstructor(new Type[] { });
 
-                object svcInst = svcCCTor.Invoke(null);
-
-                PropertyInfo pi;
-
-                pi = this.mServiceType.GetProperty("ApiLogManager");
-                if (pi == null)
-                    throw new SdkException("ApiLogManager was not found in InterfaceServiceType");
-                pi.SetValue(svcInst, this.mApiContext.ApiLogManager, null);
-
-                pi = this.mServiceType.GetProperty("EnableComression");
-                if (pi == null)
-                    throw new SdkException("EnableComression was not found in InterfaceServiceType");
-                pi.SetValue(svcInst, this.mEnableCompression, null);
-
-                //Add oAuth 
-                //if (pi == null)
-                //    throw new SdkException("RequesterCredentials was not found in InterfaceServiceType");
-                //pi.SetValue(svcInst, this., null);
-                if (string.IsNullOrEmpty(this.ApiContext.ApiCredential.oAuthToken))
+                //object svcInst = svcCCTor.Invoke(null);
+                var svcInst = new eBayAPIInterfaceService2();
+                //using (var scope = new OperationContextScope(svcInst.InnerChannel))
                 {
-                    pi = this.mServiceType.GetProperty("RequesterCredentials");
-                    if (pi == null)
-                        throw new SdkException("RequesterCredentials was not found in InterfaceServiceType");
-                    pi.SetValue(svcInst, secHdr, null);
-                }
 
-                pi = this.mServiceType.GetProperty("WebProxy");
-                if (pi == null)
-                    throw new SdkException("WebProxy was not found in InterfaceServiceType");
-                pi.SetValue(svcInst, this.mApiContext.WebProxy, null);
-                if (this.mApiContext.WebProxy != null)
-                {
-                    LogMessage("Proxy Server is Set", MessageType.Information, MessageSeverity.Informational);
-                }
+                    PropertyInfo pi;
 
-                pi = this.mServiceType.GetProperty("CallMetricsEntry");
-                if (pi == null)
-                    throw new SdkException("CallMetricsEntry was not found in InterfaceServiceType");
-                if (this.ApiContext.EnableMetrics)
-                    pi.SetValue(svcInst, this.mCallMetrics, null);
-                else
-                    pi.SetValue(svcInst, null, null);
+                    //pi = this.mServiceType.GetProperty("ApiLogManager");
+                    //if (pi == null)
+                    //    throw new SdkException("ApiLogManager was not found in InterfaceServiceType");
+                    //pi.SetValue(svcInst, this.mApiContext.ApiLogManager, null);
+                    svcInst.ApiLogManager = this.mApiContext.ApiLogManager;
 
-                pi = this.mServiceType.GetProperty("OAuthToken");
-                if (!string.IsNullOrEmpty(this.ApiContext.ApiCredential.oAuthToken))
-                {
-                    this.mOAuth = this.ApiContext.ApiCredential.oAuthToken;
-                    pi.SetValue(svcInst, this.OAuth, null);
-                }
+                    //pi = this.mServiceType.GetProperty("EnableComression");
+                    //if (pi == null)
+                    //    throw new SdkException("EnableComression was not found in InterfaceServiceType");
+                    //pi.SetValue(svcInst, this.mEnableCompression, null);
+                    svcInst.EnableComression = this.mEnableCompression;
 
-                string url = "";
-                try
-                {
-                    if (ApiContext.SoapApiServerUrl != null && ApiContext.SoapApiServerUrl.Length > 0)
-                        url = String.Format(System.Globalization.CultureInfo.InvariantCulture, "{0}?callname={1}&siteid={2}&client=netsoap",
-                            ApiContext.SoapApiServerUrl, apiName, SiteUtility.GetSiteID(Site).ToString(System.Globalization.CultureInfo.InvariantCulture));
-                    else
+                    //Add oAuth 
+                    //if (pi == null)
+                    //    throw new SdkException("RequesterCredentials was not found in InterfaceServiceType");
+                    //pi.SetValue(svcInst, this., null);
+                    //if (string.IsNullOrEmpty(this.ApiContext.ApiCredential.oAuthToken))
+                    //{
+                    //    pi = this.mServiceType.GetProperty("RequesterCredentials");
+                    //    if (pi == null)
+                    //        throw new SdkException("RequesterCredentials was not found in InterfaceServiceType");
+                    //    pi.SetValue(svcInst, secHdr, null);
+                    //}
+
+                    //pi = this.mServiceType.GetProperty("WebProxy");
+                    //if (pi == null)
+                    //    throw new SdkException("WebProxy was not found in InterfaceServiceType");
+                    //pi.SetValue(svcInst, this.mApiContext.WebProxy, null);
+                    svcInst.WebProxy = mApiContext.WebProxy;
+                    if (this.mApiContext.WebProxy != null)
                     {
-                        url = (string)this.mServiceType.GetProperty("Url").GetValue(svcInst, null);
-                        url = String.Format(System.Globalization.CultureInfo.InvariantCulture, "{0}?callname={1}&siteid={2}&client=netsoap",
-                            url, apiName, SiteUtility.GetSiteID(Site).ToString(System.Globalization.CultureInfo.InvariantCulture));
+                        LogMessage("Proxy Server is Set", MessageType.Information, MessageSeverity.Informational);
                     }
 
-                    //svcCCTor.Url = url;
-                    this.mServiceType.GetProperty("Url").SetValue(svcInst, url, null);
-                }
-                catch (Exception ex)
-                {
-                    throw new ApiException(ex.Message, ex);
-                }
+                    //pi = this.mServiceType.GetProperty("CallMetricsEntry");
+                    //if (pi == null)
+                    //    throw new SdkException("CallMetricsEntry was not found in InterfaceServiceType");
+                    //pi.SetValue(svcInst, this.ApiContext.EnableMetrics ? this.mCallMetrics : null, null);
+                    svcInst.CallMetricsEntry = this.ApiContext.EnableMetrics ? this.mCallMetrics : null;
 
-                LogMessage(url, MessageType.Information, MessageSeverity.Informational);
+                    //pi = this.mServiceType.GetProperty("OAuthToken");
+                    if (!string.IsNullOrEmpty(this.ApiContext.ApiCredential.oAuthToken))
+                    {
+                        //this.mOAuth = this.ApiContext.ApiCredential.oAuthToken;
+                        //pi.SetValue(svcInst, this.OAuth, null);
+                        svcInst.OAuthToken = this.OAuth;
+                    }
 
-                //svcCCTor.Timeout = Timeout;
-                this.mServiceType.GetProperty("Timeout").SetValue(svcInst, Timeout, null);
-
-                AbstractRequest.Version = Version;
-
-                if (!mDetailLevelOverride && AbstractRequest.DetailLevel == null)
-                {
-                    AbstractRequest.DetailLevel = mDetailLevelList;
-                }
-
-                //Added OutputSelector to base call JIRA-SDK-561
-                AbstractRequest.OutputSelector = mOutputSelector;
-
-                if (ApiContext.ErrorLanguage != ErrorLanguageCodeType.CustomCode)
-                    AbstractRequest.ErrorLanguage = ApiContext.ErrorLanguage.ToString();
-
-                //Populate the message
-                AbstractRequest.MessageID = System.Guid.NewGuid().ToString();
-
-                Type methodtype = svcInst.GetType();
-                object[] reqparm = new object[] { AbstractRequest };
-
-                int retries = 0;
-                int maxRetries = 0;
-                bool doretry = false;
-                CallRetry retry = null;
-                if (mCallRetry != null)
-                {
-                    retry = mCallRetry;
-                    maxRetries = retry.MaximumRetries;
-                }
-                else if (ApiContext.CallRetry != null)
-                {
-                    retry = ApiContext.CallRetry;
-                    maxRetries = retry.MaximumRetries;
-                }
-
-
-                do
-                {
-                    Exception callException = null;
+                    string url = "";
                     try
                     {
-                        mResponse = null;
-                        mApiException = null;
-
-                        if (retries > 0)
+                        // TODO Write into endpoint instead
+                        if (ApiContext.SoapApiServerUrl != null && ApiContext.SoapApiServerUrl.Length > 0)
+                            url = String.Format(System.Globalization.CultureInfo.InvariantCulture,
+                                "{0}?callname={1}&siteid={2}&client=netsoap",
+                                ApiContext.SoapApiServerUrl, apiName,
+                                SiteUtility.GetSiteID(Site)
+                                    .ToString(System.Globalization.CultureInfo.InvariantCulture));
+                        else
                         {
-                            LogMessage("Invoking Call Retry", MessageType.Information, MessageSeverity.Informational);
-                            System.Threading.Thread.Sleep(retry.DelayTime);
+                            //url = (string)this.mServiceType.GetProperty("Url").GetValue(svcInst, null);
+                            url = svcInst.Endpoint.Address.Uri.ToString();
+                            url = String.Format(System.Globalization.CultureInfo.InvariantCulture,
+                                "{0}?callname={1}&siteid={2}&client=netsoap",
+                                url, apiName,
+                                SiteUtility.GetSiteID(Site)
+                                    .ToString(System.Globalization.CultureInfo.InvariantCulture));
                         }
 
-                        if (BeforeRequest != null)
-                            BeforeRequest(this, new BeforeRequestEventArgs(AbstractRequest));
-
-
-                        //Invoke the Service
-                        DateTime start = DateTime.Now;
-                        mResponse = (AbstractResponseType)methodtype.GetMethod(apiName).Invoke(svcInst, reqparm);
-                        mResponseTime = DateTime.Now - start;
-
-                        if (AfterRequest != null)
-                            AfterRequest(this, new AfterRequestEventArgs(mResponse));
-
-                        // Catch Token Expiration warning
-                        if (mResponse != null && secHdr.HardExpirationWarning != null)
+                        //svcCCTor.Url = url;
+                        //this.mServiceType.GetProperty("Url").SetValue(svcInst, url, null);
+                        svcInst.Endpoint.Address = new EndpointAddress(url)
                         {
-                            ApiContext.ApiCredential.TokenHardExpirationWarning(
-                                System.Convert.ToDateTime(secHdr.HardExpirationWarning, System.Globalization.CultureInfo.CurrentUICulture));
-                        }
-
-
-                        if (mResponse != null && mResponse.Errors != null && mResponse.Errors.Length > 0)
-                        {
-                            throw new ApiException(mResponse.Errors);
-                        }
+                            Headers = { }
+                        };
                     }
-
                     catch (Exception ex)
                     {
-                        // this catches soap faults 
-                        if (ex.GetType() == typeof(TargetInvocationException))
-                        {
-                            // we never care about the outer exception
-                            Exception iex = ex.InnerException;
+                        throw new ApiException(ex.Message, ex);
+                    }
 
-                            // Parse Soap Faults
-                            if (iex.GetType() == typeof(SoapException))
+                    LogMessage(url, MessageType.Information, MessageSeverity.Informational);
+
+                    //svcCCTor.Timeout = Timeout;
+                    //this.mServiceType.GetProperty("Timeout").SetValue(svcInst, Timeout, null);
+                    svcInst.Timeout = Timeout;
+
+
+                    AbstractRequest.Version = Version;
+
+                    if (!mDetailLevelOverride && AbstractRequest.DetailLevel == null)
+                    {
+                        AbstractRequest.DetailLevel = mDetailLevelList;
+                    }
+
+                    //Added OutputSelector to base call JIRA-SDK-561
+                    AbstractRequest.OutputSelector = mOutputSelector;
+
+                    if (ApiContext.ErrorLanguage != ErrorLanguageCodeType.CustomCode)
+                        AbstractRequest.ErrorLanguage = ApiContext.ErrorLanguage.ToString();
+
+                    //Populate the message
+                    AbstractRequest.MessageID = System.Guid.NewGuid().ToString();
+
+                    Type methodtype = svcInst.GetType();
+                    object[] reqparm = new object[] { secHdr, AbstractRequest };
+
+                    int retries = 0;
+                    int maxRetries = 0;
+                    bool doretry = false;
+                    CallRetry retry = null;
+                    if (mCallRetry != null)
+                    {
+                        retry = mCallRetry;
+                        maxRetries = retry.MaximumRetries;
+                    }
+                    else if (ApiContext.CallRetry != null)
+                    {
+                        retry = ApiContext.CallRetry;
+                        maxRetries = retry.MaximumRetries;
+                    }
+
+
+                    do
+                    {
+                        Exception callException = null;
+                        try
+                        {
+                            mResponse = null;
+                            mApiException = null;
+
+                            if (retries > 0)
                             {
-                                ex = ApiException.FromSoapException((SoapException)iex);
+                                LogMessage("Invoking Call Retry", MessageType.Information,
+                                    MessageSeverity.Informational);
+                                System.Threading.Thread.Sleep(retry.DelayTime);
                             }
-                            else if (iex.GetType() == typeof(InvalidOperationException))
+
+                            if (BeforeRequest != null)
+                                BeforeRequest(this, new BeforeRequestEventArgs(AbstractRequest));
+
+
+                            //Invoke the Service
+                            DateTime start = DateTime.Now;
+                            var methodInfo = methodtype.GetMethod(apiName);
+                            mResponse = (AbstractResponseType)methodInfo.Invoke(svcInst, reqparm);
+                            mResponseTime = DateTime.Now - start;
+
+                            if (AfterRequest != null)
+                                AfterRequest(this, new AfterRequestEventArgs(mResponse));
+
+                            // Catch Token Expiration warning
+                            if (mResponse != null && secHdr.HardExpirationWarning != null)
                             {
-                                // Go to innermost exception
-                                while (iex.InnerException != null)
-                                    iex = iex.InnerException;
-                                ex = new ApiException(iex.Message, iex);
+                                ApiContext.ApiCredential.TokenHardExpirationWarning(
+                                    System.Convert.ToDateTime(secHdr.HardExpirationWarning,
+                                        System.Globalization.CultureInfo.CurrentUICulture));
                             }
-                            else if (iex.GetType() == typeof(HttpException))
+
+
+                            if (mResponse != null && mResponse.Errors != null && mResponse.Errors.Length > 0)
                             {
-                                HttpException httpEx = (HttpException)iex;
-                                String str = "HTTP Error Code: " + httpEx.StatusCode;
-                                ex = new ApiException(str, iex);
+                                throw new ApiException(mResponse.Errors);
+                            }
+                        }
+
+                        catch (Exception ex)
+                        {
+                            // this catches soap faults 
+                            if (ex.GetType() == typeof(TargetInvocationException))
+                            {
+                                // we never care about the outer exception
+                                Exception iex = ex.InnerException;
+
+                                // Parse Soap Faults
+                                if (iex.GetType() == typeof(SoapException))
+                                {
+                                    ex = ApiException.FromSoapException((SoapException)iex);
+                                }
+                                else if (iex.GetType() == typeof(InvalidOperationException))
+                                {
+                                    // Go to innermost exception
+                                    while (iex.InnerException != null)
+                                        iex = iex.InnerException;
+                                    ex = new ApiException(iex.Message, iex);
+                                }
+                                else if (iex.GetType() == typeof(HttpException))
+                                {
+                                    HttpException httpEx = (HttpException)iex;
+                                    String str = "HTTP Error Code: " + httpEx.StatusCode;
+                                    ex = new ApiException(str, iex);
+                                }
+                                else
+                                {
+                                    ex = new ApiException(iex.Message, iex);
+                                }
+                            }
+
+                            callException = ex;
+
+                            // log the message - override current switches - *if* (a) we wouldn't normally log it, and (b) 
+                            // the exception matches the exception filter.
+
+                            if (retry != null)
+                                doretry = retry.ShouldRetry(ex);
+
+                            if (!doretry || retries == maxRetries)
+                            {
+                                throw ex;
                             }
                             else
                             {
-                                ex = new ApiException(iex.Message, iex);
+                                //string soapReq = (string)this.mServiceType.GetProperty("SoapRequest").GetValue(svcInst, null);
+                                //string soapResp = (string)this.mServiceType.GetProperty("SoapResponse").GetValue(svcInst, null);
+                                var soapReq = svcInst.SoapRequest;
+                                var soapResp = svcInst.SoapResponse;
+
+                                LogMessagePayload(soapReq + "\r\n\r\n" + soapResp, MessageSeverity.Informational, ex);
+                                MessageSeverity svr = ((ApiException)ex).SeverityErrorCount > 0
+                                    ? MessageSeverity.Error
+                                    : MessageSeverity.Warning;
+                                LogMessage(ex.Message, MessageType.Exception, svr);
                             }
                         }
-                        callException = ex;
 
-                        // log the message - override current switches - *if* (a) we wouldn't normally log it, and (b) 
-                        // the exception matches the exception filter.
-
-                        if (retry != null)
-                            doretry = retry.ShouldRetry(ex);
-
-                        if (!doretry || retries == maxRetries)
+                        finally
                         {
-                            throw ex;
+                            //string soapReq = (string)this.mServiceType.GetProperty("SoapRequest").GetValue(svcInst, null);
+                            //string soapResp = (string)this.mServiceType.GetProperty("SoapResponse").GetValue(svcInst, null);
+                            var soapReq = svcInst.SoapRequest;
+                            var soapResp = svcInst.SoapResponse;
+
+
+                            if (!doretry || retries == maxRetries)
+                                LogMessagePayload(soapReq + "\r\n\r\n" + soapResp, MessageSeverity.Informational,
+                                    callException);
+
+                            if (mResponse != null && mResponse.TimestampSpecified)
+                                ApiContext.CallUpdate(mResponse.Timestamp);
+                            else
+                                ApiContext.CallUpdate(new DateTime(0));
+
+                            mSoapRequest = soapReq;
+                            mSoapResponse = soapResp;
+                            retries++;
                         }
-                        else
-                        {
-                            string soapReq = (string)this.mServiceType.GetProperty("SoapRequest").GetValue(svcInst, null);
-                            string soapResp = (string)this.mServiceType.GetProperty("SoapResponse").GetValue(svcInst, null);
 
-                            LogMessagePayload(soapReq + "\r\n\r\n" + soapResp, MessageSeverity.Informational, ex);
-                            MessageSeverity svr = ((ApiException)ex).SeverityErrorCount > 0 ? MessageSeverity.Error : MessageSeverity.Warning;
-                            LogMessage(ex.Message, MessageType.Exception, svr);
-                        }
-                    }
-
-                    finally
-                    {
-                        string soapReq = (string)this.mServiceType.GetProperty("SoapRequest").GetValue(svcInst, null);
-                        string soapResp = (string)this.mServiceType.GetProperty("SoapResponse").GetValue(svcInst, null);
-
-                        if (!doretry || retries == maxRetries)
-                            LogMessagePayload(soapReq + "\r\n\r\n" + soapResp, MessageSeverity.Informational, callException);
-
-                        if (mResponse != null && mResponse.TimestampSpecified)
-                            ApiContext.CallUpdate(mResponse.Timestamp);
-                        else
-                            ApiContext.CallUpdate(new DateTime(0));
-
-                        mSoapRequest = soapReq;
-                        mSoapResponse = soapResp;
-                        retries++;
-                    }
-
-                } while (doretry && retries <= maxRetries);
+                    } while (doretry && retries <= maxRetries);
+                }
             }
 
             catch (Exception ex)
@@ -465,11 +499,11 @@ namespace eBay.Service.Core.Sdk
         /// <summary>
         /// Reserved for eBay internal use. The type to be used to create the Web Service service instance. 
         /// </summary>
-        public Type InterfaceServiceType
-        {
-            get { return this.mServiceType; }
-            set { this.mServiceType = value; }
-        }
+        //public Type InterfaceServiceType
+        //{
+        //    get { return this.mServiceType; }
+        //    set { this.mServiceType = value; }
+        //}
 
         /// <summary>
         /// Returns the ApiException object that is created if an error occured during the API call request to the eBay API server. 

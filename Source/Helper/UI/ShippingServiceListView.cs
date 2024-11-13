@@ -22,6 +22,7 @@ using System;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Collections;
+using System.Collections.Generic;
 using eBay.Service.Core.Soap;
 using eBay.Service.Util;
 
@@ -151,7 +152,7 @@ namespace Samples.Helper.UI
 		/// <returns></returns>
 		public virtual ICollection GetShippingServiceOptions()
 		{
-			ShippingServiceOptionsTypeCollection ssos = new ShippingServiceOptionsTypeCollection();
+			var  ssos = new List< ShippingServiceOptionsType>();
 
 			int row = this.Items.Count;
 			int col = this.Items[0].SubItems.Count;

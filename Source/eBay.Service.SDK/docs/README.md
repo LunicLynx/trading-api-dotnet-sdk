@@ -1,0 +1,1 @@
+This is a fork of https://github.com/eBay/trading-api-dotnet-sdk made compatible with net core / standard non framework.

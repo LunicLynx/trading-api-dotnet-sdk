@@ -4,7 +4,7 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeGen", "CodeGen.csproj", "{F90A425F-5082-4CC7-B3CE-1720F7D4555B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eBayCodeGenerator", "..\Generator\eBayCodeGenerator.csproj", "{3F2008E7-727E-4B26-BAB7-43E02198176E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eBayCodeGenerator", "..\Generator\eBayCodeGenerator.csproj", "{3F2008E7-727E-4B26-BAB7-43E02198176E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

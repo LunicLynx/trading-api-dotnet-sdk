@@ -38,6 +38,9 @@ using System.Reflection;
 using System.Diagnostics;
 
 using CustomToolGenerator;
+using EnvDTE;
+using EnvDTE80;
+using CodeNamespace = System.CodeDom.CodeNamespace;
 
 namespace eBay.WebService.CodeGenerator
 {

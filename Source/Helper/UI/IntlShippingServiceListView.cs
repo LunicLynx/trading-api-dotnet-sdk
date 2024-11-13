@@ -22,6 +22,7 @@ using System;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Collections;
+using System.Collections.Generic;
 using eBay.Service.Core.Soap;
 using eBay.Service.Util;
 
@@ -236,7 +237,7 @@ namespace Samples.Helper.UI
 		/// <returns></returns>
 		public override ICollection GetShippingServiceOptions()
 		{
-			InternationalShippingServiceOptionsTypeCollection ssos = new InternationalShippingServiceOptionsTypeCollection();
+			var ssos = new List<InternationalShippingServiceOptionsType>();
 
 			int row = this.Items.Count;
 			int col = this.Items[0].SubItems.Count;
@@ -287,9 +288,9 @@ namespace Samples.Helper.UI
 			return ssos;
 		}
 
-		private StringCollection GetShipToLocationCollection(string text)
+		private String[] GetShipToLocationCollection(string text)
 		{
-			StringCollection sc = new StringCollection();
+			var sc = new List<string>();
 			string [] s = text.Split(DELIMITER.ToCharArray());
 			int len = s.Length;
 			for (int i = 0; i < len; i++) 
@@ -300,7 +301,7 @@ namespace Samples.Helper.UI
 					sc.Add(code);
 				}
 			}
-			return sc;
+			return sc.ToArray();
 		}
 
 		private string GetShipToLocationCode(string stl)

@@ -27,7 +27,7 @@ namespace eBay.Service.Core.Sdk
 	/// <summary>
 	/// Enhanced eBayAPIInterfaceService with GZIP compression support.
 	/// </summary>
-	internal class eBayAPIInterfaceService2 //: eBayAPIInterfaceService
+	internal class eBayAPIInterfaceService2 : eBayAPIInterfaceClient //: eBayAPIInterfaceService
 	{
 		private bool mEnableComression = false;
 		private ApiLogManager mLogger = null;
@@ -35,6 +35,10 @@ namespace eBay.Service.Core.Sdk
         private IWebProxy mWebProxy = null;
         private string moAuthToken = null;
 
+		public string Url { get; set; }
+		public int Timeout { get; set; }
+		public string SoapRequest { get; set; }
+		public string SoapResponse { get; set; }
         public bool EnableComression
 		{
 			get { return this.mEnableComression; }

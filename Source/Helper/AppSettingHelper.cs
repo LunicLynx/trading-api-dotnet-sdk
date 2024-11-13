@@ -129,9 +129,9 @@ namespace Samples.Helper
 		/// <returns></returns>
 		public static XmlDocument GetConfiguration()
 		{
-			if (_config == null) 
-			{
-				string fileName = System.AppDomain.CurrentDomain.SetupInformation.ConfigurationFile;
+			if (_config == null)
+            {
+                string fileName = string.Empty; //System.AppDomain.CurrentDomain.SetupInformation.ConfigurationFile;
 				if (!File.Exists(fileName)) 
 				{
 					return null;
@@ -228,9 +228,9 @@ namespace Samples.Helper
 			{
 				fileName = _fileName;
 			}
-			else 
-			{
-				fileName = System.AppDomain.CurrentDomain.SetupInformation.ConfigurationFile;
+			else
+            {
+                fileName = string.Empty; // System.AppDomain.CurrentDomain.SetupInformation.ConfigurationFile;
 			}
 			if(fileName.StartsWith("file:///")) 
 			{        
